@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 106,
+      "ypos": 191,
+      "width": 363,
+      "height": 465,
+      "type": "match"
+    },
+    {
+      "xpos": 495,
+      "ypos": 214,
+      "width": 458,
+      "height": 308,
+      "type": "match"
+    },
+    {
+      "xpos": 746,
+      "ypos": 625,
+      "width": 208,
+      "height": 73,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_user_account_screen"
+  ]
+}

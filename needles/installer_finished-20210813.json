@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 297,
+      "ypos": 139,
+      "width": 439,
+      "height": 497,
+      "type": "match"
+    },
+    {
+      "xpos": 627,
+      "ypos": 648,
+      "width": 326,
+      "height": 42,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_finished"
+  ]
+}

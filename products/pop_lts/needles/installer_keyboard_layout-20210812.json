@@ -1,0 +1,17 @@
+{
+  "area": [
+    {
+      "xpos": 76,
+      "ypos": 114,
+      "width": 875,
+      "height": 581,
+      "type": "match",
+      "match": 90,
+      "margin": 50
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_keyboard_layout"
+  ]
+}

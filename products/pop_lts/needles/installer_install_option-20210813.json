@@ -1,0 +1,43 @@
+{
+  "area": [
+    {
+      "xpos": 88,
+      "ypos": 156,
+      "width": 421,
+      "height": 453,
+      "type": "match",
+      "match": 90,
+      "margin": 50
+    },
+    {
+      "xpos": 526,
+      "ypos": 265,
+      "width": 417,
+      "height": 219,
+      "type": "match",
+      "match": 96,
+      "margin": 50
+    },
+    {
+      "xpos": 751,
+      "ypos": 649,
+      "width": 200,
+      "height": 40,
+      "type": "match",
+      "match": 90
+    },
+    {
+      "xpos": 71,
+      "ypos": 652,
+      "width": 147,
+      "height": 36,
+      "type": "match",
+      "match": 96,
+      "margin": 50
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_install_option"
+  ]
+}

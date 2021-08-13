@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 98,
+      "ypos": 106,
+      "width": 808,
+      "height": 63,
+      "type": "match"
+    },
+    {
+      "xpos": 294,
+      "ypos": 179,
+      "width": 444,
+      "height": 43,
+      "type": "match",
+      "click_point": {
+        "xpos": 222,
+        "ypos": 21.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_timezone_select_search"
+  ]
+}

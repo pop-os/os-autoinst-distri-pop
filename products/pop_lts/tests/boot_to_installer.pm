@@ -11,14 +11,21 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
-# with this program; if not, write to the Free Software Foundation, Inc.,
-# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+# with this program; if not, see <http://www.gnu.org/licenses/>.
 
+use base 'basetest';
 use strict;
 use testapi;
-use autotest;
 
-autotest::loadtest 'tests/boot_to_installer.pm';
-autotest::loadtest 'tests/installer.pm';
-autotest::loadtest 'tests/firstboot_after_install.pm';
+sub run {
+    # wait for boot to finish
+    assert_screen 'boot_finish';
+
+    # press enter to boot right away
+    #send_key 'ret';
+
+    # wait for the desktop to appear
+    assert_screen 'desktop';
+}
+
 1;
