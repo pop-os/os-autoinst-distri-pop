@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "width": 892,
+      "ypos": 42,
+      "height": 575,
+      "xpos": 65
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_language_select"
+  ]
+}

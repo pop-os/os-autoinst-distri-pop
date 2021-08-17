@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "height": 30,
+      "ypos": 1,
+      "xpos": 834,
+      "type": "match",
+      "width": 190
+    },
+    {
+      "ypos": 296,
+      "xpos": 277,
+      "width": 460,
+      "type": "match",
+      "height": 171
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "gdm"
+  ]
+}

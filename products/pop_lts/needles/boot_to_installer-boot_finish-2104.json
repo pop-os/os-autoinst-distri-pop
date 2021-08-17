@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 3,
+      "ypos": 701,
+      "width": 1019,
+      "height": 67,
+      "type": "match"
+    },
+    {
+      "xpos": 9,
+      "ypos": 3,
+      "width": 236,
+      "height": 23,
+      "type": "match"
+    },
+    {
+      "xpos": 864,
+      "ypos": 2,
+      "width": 159,
+      "height": 21,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "boot_finish"
+  ]
+}

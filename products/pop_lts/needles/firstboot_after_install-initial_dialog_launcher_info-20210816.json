@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 162,
+      "ypos": 105,
+      "width": 704,
+      "height": 149,
+      "type": "match"
+    },
+    {
+      "xpos": 225,
+      "ypos": 260,
+      "width": 579,
+      "height": 312,
+      "type": "match"
+    },
+    {
+      "xpos": 252,
+      "ypos": 625,
+      "width": 522,
+      "height": 34,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_launcher_info"
+  ]
+}
