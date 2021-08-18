@@ -18,16 +18,25 @@ use strict;
 use testapi;
 
 sub run {
-    # wait for boot to finish
-    assert_and_click "system_menu";
-    assert_and_click "system_menu_power_off";
-    assert_and_click "system_menu_power_off_power_off";
-    assert_and_click "dialog_power_off";
-    assert_screen "system_down";
-    #eject_cd;
-    #power('off');
-    assert_shutdown(120);
+
+    # restart to get around installer issue
+    eject_cd; 
+    power("reset");
     
+    
+    # Decryption prompt
+
+    assert_screen 'decyrpt_prompt';
+    type_string "system76\n";
+
+    # GDM and Desktop
+
+    assert_screen 'gdm';
+    send_key 'ret';
+    type_string "system76\n";
+    assert_screen 'desktop';
+    #$command = "gsettings set org.gnome.desktop.screensaver idle-activation-enabled 0";
+    #script_run(gsettings set $command [, timeout => 20] [, output => ''] [, quiet => true]);
 
 }
 

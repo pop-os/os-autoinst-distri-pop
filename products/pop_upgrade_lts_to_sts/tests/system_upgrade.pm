@@ -18,15 +18,25 @@ use strict;
 use testapi;
 
 sub run {
-    # wait for boot to finish
-    assert_and_click "system_menu";
-    assert_and_click "system_menu_power_off";
-    assert_and_click "system_menu_power_off_power_off";
-    assert_and_click "dialog_power_off";
-    assert_screen "system_down";
-    #eject_cd;
-    #power('off');
-    assert_shutdown(120);
+
+ # Pop Upgrade
+    send_key 'super';
+    type_string 'upgrade';
+    assert_screen 'upgrade_test';
+    assert_and_click 'os_upgrade';
+    assert_screen 'os_upgrade_screen';
+    assert_and_click 'os_upgrade_screen_download';
+    assert_screen 'os_upgrade_download_complete',1000;
+    assert_and_click 'os_upgrade_screen_upgrade';
+    assert_and_click 'os_upgrade_confirm_upgrade';
+
+    assert_screen 'decyrpt_prompt';
+    type_string "system76\n";
+
+    assert_screen 'os_upgrade_upgrading',1000;
+
+    assert_screen 'decyrpt_prompt',10000;
+    #type_string "system76\n";
     
 
 }

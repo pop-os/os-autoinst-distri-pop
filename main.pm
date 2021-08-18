@@ -19,12 +19,12 @@ use testapi;
 use autotest;
 
 
-# We set the test folder by retrieving the name of the test suite. [pop_lts,pop_sts]	
+# We set the test folder by retrieving the name of the test suite. [pop_lts,pop_sts,etc.]	
 my $distri = testapi::get_var("TEST");
-	
-#require $distri;
-
 testapi::set_var('PRODUCTDIR','products/'.$distri.'/');
+
+# We also need to set a needle directory.
+testapi::set_var('NEEDLEDIR','needles');
 
 if (index($distri,'upgrade') == -1) {
    autotest::loadtest 'products/'.$distri.'/tests/boot_to_installer.pm';
@@ -32,6 +32,10 @@ if (index($distri,'upgrade') == -1) {
    autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_install.pm';
    autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
 } else {
-   autotest::loadtest 'products/'.$distri.'/tests/run_updates.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/boot_to_desktop.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/pop_shop_upgrade.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/system_upgrade.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_upgrade.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
 }
 1;

@@ -18,16 +18,23 @@ use strict;
 use testapi;
 
 sub run {
-    # wait for boot to finish
-    assert_and_click "system_menu";
-    assert_and_click "system_menu_power_off";
-    assert_and_click "system_menu_power_off_power_off";
-    assert_and_click "dialog_power_off";
-    assert_screen "system_down";
-    #eject_cd;
-    #power('off');
-    assert_shutdown(120);
+
+    # Start Pop Shop
+    send_key 'super';
+    type_string 'pop shop';
+    send_key 'ret';
+    if (check_screen 'repo_failure') {
+    	fail();
+    }
+    assert_screen 'pop_shop_screen';
+    assert_and_click 'pop_shop_installed',6000;
+    assert_and_click 'pop_shop_upgrade',6000;
+    assert_screen 'confirm_upgrading_state',6000;
     
+	
+    assert_screen 'confirm_upgrading_state',2000;
+    assert_screen 'upgrading_complete',5000;
+    assert_and_click 'close_pop_shop';
 
 }
 
