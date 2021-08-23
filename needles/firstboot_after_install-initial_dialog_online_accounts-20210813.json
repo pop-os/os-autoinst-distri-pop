@@ -1,0 +1,50 @@
+{
+  "area": [
+    {
+      "xpos": 3,
+      "ypos": 35,
+      "width": 106,
+      "height": 35,
+      "type": "match"
+    },
+    {
+      "xpos": 955,
+      "ypos": 33,
+      "width": 66,
+      "height": 37,
+      "type": "match"
+    },
+    {
+      "xpos": 249,
+      "ypos": 107,
+      "width": 519,
+      "height": 80,
+      "type": "match"
+    },
+    {
+      "xpos": 265,
+      "ypos": 709,
+      "width": 500,
+      "height": 36,
+      "type": "match"
+    },
+    {
+      "xpos": 261,
+      "ypos": 194,
+      "width": 510,
+      "height": 422,
+      "type": "match"
+    },
+    {
+      "xpos": 447,
+      "ypos": 35,
+      "width": 130,
+      "height": 33,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_online_accounts"
+  ]
+}

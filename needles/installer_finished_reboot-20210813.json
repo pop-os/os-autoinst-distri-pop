@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 321,
+      "ypos": 154,
+      "width": 370,
+      "height": 474,
+      "type": "match"
+    },
+    {
+      "xpos": 636,
+      "ypos": 643,
+      "width": 313,
+      "height": 52,
+      "type": "match",
+      "click_point": {
+        "xpos": 110.5,
+        "ypos": 27
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_finished_reboot"
+  ]
+}

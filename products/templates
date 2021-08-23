@@ -1,0 +1,235 @@
+{
+  JobGroups    => [
+                    {
+                      group_name => "POP",
+                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: 20.04\n  pop_sts:\n    distri: pop\n    flavor: DVD\n    version: 21.04\nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts\n    - pop_upgrade_lts_to_sts\n    pop_sts:\n    - pop_sts\n   \n",
+                    },
+                    {
+                      group_name => "POP_STS",
+                      template   => "products: {}\nscenarios: {}\n",
+                    },
+                    {
+                      group_name => "PoP_LTS",
+                      template   => "products: {}\nscenarios: {}\n",
+                    }
+                  ],
+  JobTemplates => [],
+  Machines     => [
+                    {
+                      backend => "qemu",
+                      name => "32bit",
+                      settings => [
+                        { key => "QEMUCPU", value => "kvm32" },
+                        { key => "WORKER_CLASS", value => "qemu_i586" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "64bit",
+                      settings => [
+                        { key => "HDDSIZEGB", value => 20 },
+                        { key => "QEMUCPU", value => "qemu64" },
+                        { key => "QEMUCPUS", value => 3 },
+                        { key => "QEMURAM", value => 4096 },
+                        { key => "QEMUTHREADS", value => 3 },
+                        { key => "WORKER_CLASS", value => "qemu_x86_64" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "smp_32",
+                      settings => [
+                        { key => "QEMUCPU", value => "kvm32" },
+                        { key => "QEMUCPUS", value => 4 },
+                        { key => "WORKER_CLASS", value => "qemu_i586" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "smp_64",
+                      settings => [
+                        { key => "QEMUCPU", value => "qemu64" },
+                        { key => "QEMUCPUS", value => 4 },
+                        { key => "WORKER_CLASS", value => "qemu_x86_64" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "USBboot_32",
+                      settings => [
+                        { key => "QEMUCPU", value => "kvm32" },
+                        { key => "USBBOOT", value => 1 },
+                        { key => "WORKER_CLASS", value => "qemu_i586" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "USBboot_64",
+                      settings => [
+                        { key => "QEMUCPU", value => "qemu64" },
+                        { key => "USBBOOT", value => 1 },
+                        { key => "WORKER_CLASS", value => "qemu_x86_64" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "Laptop_32",
+                      settings => [
+                        { key => "LAPTOP", value => 1 },
+                        { key => "QEMUCPU", value => "kvm32" },
+                        { key => "WORKER_CLASS", value => "qemu_i586" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "Laptop_64",
+                      settings => [
+                        { key => "LAPTOP", value => 1 },
+                        { key => "QEMUCPU", value => "qemu64" },
+                        { key => "WORKER_CLASS", value => "qemu_x86_64" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "qemu32",
+                      settings => [
+                        { key => "QEMUCPU", value => "qemu32" },
+                        { key => "WORKER_CLASS", value => "qemu_i586" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "ppc64le",
+                      settings => [
+                        { key => "HDDSIZEGB", value => 20 },
+                        { key => "NOVIDEO", value => 1 },
+                        { key => "OFW", value => 1 },
+                        { key => "QEMU", value => "ppc64" },
+                        { key => "QEMUCPU", value => "host" },
+                        { key => "QEMUCPUS", value => 8 },
+                        { key => "QEMURAM", value => 4096 },
+                        { key => "QEMUTHREADS", value => 8 },
+                        { key => "QEMU_DISABLE_SNAPSHOTS", value => 1 },
+                        { key => "VNC_TYPING_LIMIT", value => 10 },
+                        { key => "WORKER_CLASS", value => "qemu_ppc64le" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "ppc64",
+                      settings => [
+                        { key => "HDDSIZEGB", value => 20 },
+                        { key => "NOVIDEO", value => 1 },
+                        { key => "OFW", value => 1 },
+                        { key => "QEMU", value => "ppc64" },
+                        { key => "QEMUCPU", value => "host" },
+                        { key => "QEMUCPUS", value => 8 },
+                        { key => "QEMURAM", value => 4096 },
+                        { key => "QEMUTHREADS", value => 8 },
+                        { key => "QEMU_DISABLE_SNAPSHOTS", value => 1 },
+                        { key => "VNC_TYPING_LIMIT", value => 10 },
+                        { key => "WORKER_CLASS", value => "qemu_ppc64" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "ppc64le-multipath",
+                      settings => [
+                        { key => "HDDSIZEGB", value => 20 },
+                        { key => "MULTIPATH", value => 1 },
+                        { key => "NOVIDEO", value => 1 },
+                        { key => "OFW", value => 1 },
+                        { key => "QEMU", value => "ppc64" },
+                        { key => "QEMUCPU", value => "host" },
+                        { key => "QEMUCPUS", value => 8 },
+                        { key => "QEMURAM", value => 4096 },
+                        { key => "QEMUTHREADS", value => 8 },
+                        { key => "WORKER_CLASS", value => "qemu_ppc64le" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "ppc64-multipath",
+                      settings => [
+                        { key => "HDDSIZEGB", value => 20 },
+                        { key => "MULTIPATH", value => 1 },
+                        { key => "NOVIDEO", value => 1 },
+                        { key => "OFW", value => 1 },
+                        { key => "QEMU", value => "ppc64" },
+                        { key => "QEMUCPU", value => "host" },
+                        { key => "QEMUCPUS", value => 8 },
+                        { key => "QEMURAM", value => 4096 },
+                        { key => "QEMUTHREADS", value => 8 },
+                        { key => "WORKER_CLASS", value => "qemu_ppc64" },
+                      ],
+                    },
+                    {
+                      backend => "qemu",
+                      name => "aarch64",
+                      settings => [
+                        { key => "BIOS", value => "qemu-uefi-aarch64.bin" },
+                        { key => "CDMODEL", value => "virtio-blk-device" },
+                        { key => "HDDMODEL", value => "virtio-blk-device" },
+                        { key => "QEMU", value => "aarch64" },
+                        { key => "QEMUCPU", value => "cortex-a57" },
+                        { key => "QEMUMACHINE", value => "virt" },
+                        { key => "QEMU_NO_KVM", value => 1 },
+                        { key => "SERIALDEV", value => "ttyAMA0" },
+                        { key => "TIMEOUT_SCALE", value => 4 },
+                        { key => "UEFI", value => 1 },
+                        { key => "VGA", value => "std" },
+                        { key => "WORKER_CLASS", value => "qemu_aarch64" },
+                      ],
+                    },
+                  ],
+  Products     => [
+                    {
+                      arch     => "x86_64",
+                      distri   => "pop",
+                      flavor   => "DVD",
+                      settings => [
+                                    { key => "ISO_MAXSIZE", value => 999999999 },
+                                    { key => "LIVECD", value => 1 },
+                                  ],
+                      version  => 20.04,
+                    },
+                    {
+                      arch     => "x86_64",
+                      distri   => "pop",
+                      flavor   => "DVD",
+                      settings => [
+                                    { key => "ISO_MAXSIZE", value => 999999999 },
+                                    { key => "LIVECD", value => 1 },
+                                  ],
+                      version  => 21.04,
+                    },
+                  ],
+  TestSuites   => [
+                    {
+                      description => "Base Pop LTS Tests",
+                      name => "pop_lts",
+                      settings => [
+                        { key => "Desktop", value => "gnome" },
+                        { key => "STORE_HDD_1", value => "pop_lts_image.qcow2" },
+                      ],
+                    },
+                    {
+                      description => "Base Pop STS Tests ",
+                      name => "pop_sts",
+                      settings => [
+                        { key => "Desktop", value => "gnome" },
+                        { key => "STORE_HDD_1", value => "pop_sts_image.qcow2" },
+                      ],
+                    },
+                    {
+                      description => "Upgrade from LTS to STS",
+                      name => "pop_upgrade_lts_to_sts",
+                      settings => [
+                        { key => "HDDVERSION", value => 20.04 },
+                        { key => "HDD_1", value => "pop_lts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_lts" },
+                      ],
+                    },
+                  ],
+}

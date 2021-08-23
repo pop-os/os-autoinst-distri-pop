@@ -1,0 +1,16 @@
+{
+  "area": [
+    {
+      "xpos": 270,
+      "ypos": 370,
+      "width": 506,
+      "height": 110,
+      "type": "match",
+      "match": 90
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "decyrpt_prompt"
+  ]
+}
