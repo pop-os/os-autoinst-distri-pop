@@ -24,7 +24,7 @@ my $distri = testapi::get_var("TEST");
 testapi::set_var('PRODUCTDIR','products/'.$distri.'/');
 
 # We also need to set a needle directory.
-testapi::set_var('NEEDLEDIR','needles');
+testapi::set_var('NEEDLES_DIR','needles');
 
 if (index($distri,'upgrade') == -1) {
    autotest::loadtest 'products/'.$distri.'/tests/boot_to_installer.pm';

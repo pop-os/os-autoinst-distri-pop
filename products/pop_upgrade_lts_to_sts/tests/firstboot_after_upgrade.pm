@@ -35,7 +35,7 @@ sub run {
 
     # Initial Setup
 
-    assert_screen 'initial_dialog';
+    assert_screen 'initial_dialog',400;
     send_key 'ret';
 
     # Cosmic Dock options
