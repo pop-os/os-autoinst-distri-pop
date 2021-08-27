@@ -72,12 +72,13 @@ sub run {
     # wait for installation to finish
 
     assert_screen 'installer_partitioning';
-    assert_screen 'installler_extracting_files';
-
+    wait_screen_change {
+        assert_screen 'installler_extracting_files';
+    };
     if(check_screen 'installer_failed',80){
        die;
     }
- 
+   
     assert_screen 'installer_finished',400;
     assert_and_click 'installer_finished_reboot';
 

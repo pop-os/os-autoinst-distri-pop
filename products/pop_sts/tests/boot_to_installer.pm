@@ -26,6 +26,23 @@ sub run {
 
     # wait for the desktop to appear
     assert_screen 'desktop';
+    
+    # Disable screen lock
+    send_key 'super';
+    type_string 'terminal';
+    hold_key 'ctrl';
+    send_key '1';
+    release_key 'ctrl';
+    
+    send_key 'super';
+    type_string 'terminal';
+    hold_key 'ctrl';
+    send_key '1';
+    release_key 'ctrl';
+    
+    assert_screen 'terminal';
+    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";    
+    type_string "exit\n";
 }
 
 1;
