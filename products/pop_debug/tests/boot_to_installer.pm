@@ -18,32 +18,30 @@ use strict;
 use testapi;
 
 sub run {
+    # wait for boot to finish
+    assert_screen 'boot_finish';
 
-    # restart to get around installer issue
-    eject_cd; 
-    #power("reset");
-    
-    # Decryption prompt
+    # press enter to boot right away
+    #send_key 'ret';
 
-    assert_screen 'decyrpt_prompt';
-    type_string "system76\n";
-
-    # GDM and Desktop
-
-    assert_screen 'gdm';
-    send_key 'ret';
-    type_string "system76\n";
+    # wait for the desktop to appear
     assert_screen 'desktop';
-    #$command = "gsettings set org.gnome.desktop.screensaver idle-activation-enabled 0";
-    #script_run(gsettings set $command [, timeout => 20] [, output => ''] [, quiet => true]);
+    
+    # Disable screen lock
     send_key 'super';
     type_string 'terminal';
-    send_key 'ret';
+    hold_key 'ctrl';
+    send_key '1';
+    release_key 'ctrl';
+    
+    send_key 'super';
+    type_string 'terminal';
+    hold_key 'ctrl';
+    send_key '1';
+    release_key 'ctrl';
     
     assert_screen 'terminal';
-    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
-    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "killall totem\n";
+    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";    
     type_string "exit\n";
 }
 

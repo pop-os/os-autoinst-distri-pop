@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 268,
+      "ypos": 326,
+      "width": 484,
+      "height": 43,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_top_bar_datetime_right_check"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 256,
+      "ypos": 242,
+      "width": 291,
+      "height": 120,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "uefi"
+  ]
+}

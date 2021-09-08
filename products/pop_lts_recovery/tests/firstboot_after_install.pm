@@ -18,33 +18,42 @@ use strict;
 use testapi;
 
 sub run {
-
-    # restart to get around installer issue
-    eject_cd; 
-    #power("reset");
-    
+    eject_cd();
+    assert_screen 'uefi';
     # Decryption prompt
 
     assert_screen 'decyrpt_prompt';
     type_string "system76\n";
 
-    # GDM and Desktop
 
+    # GDM and Desktop
+ 
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop';
-    #$command = "gsettings set org.gnome.desktop.screensaver idle-activation-enabled 0";
-    #script_run(gsettings set $command [, timeout => 20] [, output => ''] [, quiet => true]);
+
+    # changing boot option
+    
     send_key 'super';
     type_string 'terminal';
     send_key 'ret';
+    #hold_key 'ctrl';
+    #send_key '1';
+    #release_key 'ctrl';
     
     assert_screen 'terminal';
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
     type_string "killall totem\n";
-    type_string "exit\n";
+    type_string "sudo su\n";
+    type_string "system76\n";
+    type_string "cd /boot/efi/loader\n";
+    type_string "mv loader.conf loader.conf-old\n";
+    type_string 'echo "default Pop_OS-Recovery" > loader.conf';  
+    type_string "\nreboot\n";
+
+
 }
 
 1;

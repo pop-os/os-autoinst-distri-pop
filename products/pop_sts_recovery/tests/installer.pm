@@ -83,7 +83,7 @@ sub run {
     assert_and_click 'installer_finished_reboot';
 
     #assert_screen 'desktop',80;
-    #eject_cd();    
+    
       
 }
 

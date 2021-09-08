@@ -24,18 +24,23 @@ my $distri = testapi::get_var("TEST");
 testapi::set_var('PRODUCTDIR','products/'.$distri.'/');
 
 # We also need to set a needle directory.
-testapi::set_var('NEEDLEDIR','needles');
+testapi::set_var('NEEDLES_DIR','needles');
 
-if (index($distri,'upgrade') == -1) {
-   autotest::loadtest 'products/'.$distri.'/tests/boot_to_installer.pm';
-   autotest::loadtest 'products/'.$distri.'/tests/installer.pm';
-   autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_install.pm';
-   autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
-} else {
+if (index($distri,'upgrade') != -1) {
    autotest::loadtest 'products/'.$distri.'/tests/boot_to_desktop.pm';
    autotest::loadtest 'products/'.$distri.'/tests/pop_shop_upgrade.pm';
    autotest::loadtest 'products/'.$distri.'/tests/system_upgrade.pm';
    autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_upgrade.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
+} elsif (index($distri,'recovery') != -1) {
+  # autotest::loadtest 'products/'.$distri.'/tests/boot_to_recovery.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_install.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/installer.pm';
+  # autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
+} else {
+   autotest::loadtest 'products/'.$distri.'/tests/boot_to_installer.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/installer.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_install.pm';
    autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
 }
 1;

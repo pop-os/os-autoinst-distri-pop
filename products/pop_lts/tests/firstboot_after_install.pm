@@ -18,7 +18,9 @@ use strict;
 use testapi;
 
 sub run {
-
+    assert_screen 'uefi';
+    power("reset");
+    eject_cd();
     
     # Decryption prompt
 
