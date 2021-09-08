@@ -18,6 +18,10 @@ use strict;
 use testapi;
 
 sub run {
+    hold_key('F2')
+    assert_screen 'boot_options'
+    release_key('F2')
+    
     # wait for boot to finish
     assert_screen 'boot_finish';
 
@@ -26,24 +30,6 @@ sub run {
 
     # wait for the desktop to appear
     assert_screen 'desktop';
-    
-    # Disable screen lock
-    send_key 'super';
-    type_string 'terminal';
-    hold_key 'ctrl';
-    send_key '1';
-    release_key 'ctrl';
-    
-    send_key 'super';
-    type_string 'terminal';
-    hold_key 'ctrl';
-    send_key '1';
-    release_key 'ctrl';
-    
-    assert_screen 'terminal';
-    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
-    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "exit\n";
 }
 
 1;

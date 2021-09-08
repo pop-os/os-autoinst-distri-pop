@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 299,
+      "ypos": 257,
+      "width": 428,
+      "height": 297,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_decrypt_drive_select"
+  ]
+}

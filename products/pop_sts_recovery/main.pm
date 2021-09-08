@@ -11,24 +11,14 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
-# with this program; if not, see <http://www.gnu.org/licenses/>.
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-use base 'basetest';
 use strict;
 use testapi;
+use autotest;
 
-sub run {
-    # wait for boot to finish
-    assert_and_click "system_menu";
-    assert_and_click "system_menu_power_off";
-    assert_and_click "system_menu_power_off_power_off";
-    assert_and_click "dialog_power_off";
-    assert_screen "system_down";
-    #eject_cd;
-    #power('off');
-    assert_shutdown(200);
-    
-
-}
-
+autotest::loadtest 'tests/boot_to_recovery.pm';
+autotest::loadtest 'tests/installer.pm';
+autotest::loadtest 'tests/firstboot_after_install.pm';
 1;

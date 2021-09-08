@@ -18,10 +18,7 @@ use strict;
 use testapi;
 
 sub run {
-    
-    assert_screen 'boot_splash';
     eject_cd();
-    power("reset");
     
     # Decryption prompt
 
@@ -41,7 +38,6 @@ sub run {
     
     send_key 'super';
     type_string 'terminal';
-    #send_key 'ret';
     hold_key 'ctrl';
     send_key '1';
     release_key 'ctrl';

@@ -1,0 +1,43 @@
+{
+  "area": [
+    {
+      "xpos": 69,
+      "ypos": 120,
+      "width": 881,
+      "height": 49,
+      "type": "match"
+    },
+    {
+      "xpos": 523,
+      "ypos": 261,
+      "width": 429,
+      "height": 211,
+      "type": "match"
+    },
+    {
+      "xpos": 77,
+      "ypos": 179,
+      "width": 437,
+      "height": 436,
+      "type": "match"
+    },
+    {
+      "xpos": 743,
+      "ypos": 641,
+      "width": 213,
+      "height": 49,
+      "type": "match"
+    },
+    {
+      "xpos": 73,
+      "ypos": 642,
+      "width": 174,
+      "height": 54,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_install_decrypt_option"
+  ]
+}
