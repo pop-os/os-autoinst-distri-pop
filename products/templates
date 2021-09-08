@@ -2,7 +2,7 @@
   JobGroups    => [
                     {
                       group_name => "POP",
-                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_sts:\n    distri: pop\n    flavor: DVD\n    version: '21.04'\n  pop_debug:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts\n    - pop_upgrade_lts_to_sts\n    pop_sts:\n    - pop_sts\n    pop_debug:\n    - pop_debug\n   \n",
+                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_sts:\n    distri: pop\n    flavor: DVD\n    version: '21.04'\n  pop_debug:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts\n    - pop_lts_recovery\n    - pop_upgrade_lts_to_sts\n    \n    pop_sts:\n    - pop_sts\n    - pop_sts_recovery\n    \n    pop_debug:\n    - pop_debug\n   \n",
                     },
                     {
                       group_name => "POP_STS",
@@ -27,12 +27,14 @@
                       backend => "qemu",
                       name => "64bit",
                       settings => [
-                        { key => "HDDSIZEGB", value => 20 },
+                        { key => "HDDSIZEGB", value => 30 },
                         { key => "QEMUCPU", value => "qemu64" },
                         { key => "QEMUCPUS", value => 3 },
                         { key => "QEMURAM", value => 4096 },
                         { key => "QEMUTHREADS", value => 3 },
                         { key => "QEMUVGA", value => "std" },
+                        { key => "UEFI", value => 1 },
+                        { key => "UEFI_PFLASH_CODE", value => "/usr/share/ovmf/OVMF.fd" },
                         { key => "VGA", value => "std" },
                         { key => "WORKER_CLASS", value => "qemu_x86_64" },
                       ],
@@ -183,6 +185,20 @@
                         { key => "WORKER_CLASS", value => "qemu_aarch64" },
                       ],
                     },
+                    {
+                      backend => "qemu",
+                      name => "64bit-bios",
+                      settings => [
+                        { key => "HDDSIZEGB", value => 30 },
+                        { key => "QEMUCPU", value => "qemu64" },
+                        { key => "QEMUCPUS", value => 3 },
+                        { key => "QEMURAM", value => 4096 },
+                        { key => "QEMUTHREADS", value => 3 },
+                        { key => "QEMUVGA", value => "std" },
+                        { key => "VGA", value => "std" },
+                        { key => "WORKER_CLASS", value => "qemu_x86_64" },
+                      ],
+                    },
                   ],
   Products     => [
                     {
@@ -249,6 +265,26 @@
                       settings => [
                         { key => "Desktop", value => "gnome" },
                         { key => "STORE_HDD_1", value => "pop_debug_image.qcow2" },
+                      ],
+                    },
+                    {
+                      description => "Recovery tests",
+                      name => "pop_sts_recovery",
+                      settings => [
+                        { key => "HDDVERSION", value => 21.04 },
+                        { key => "HDD_1", value => "pop_sts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_sts" },
+                      ],
+                    },
+                    {
+                      description => "Recovery Tests",
+                      name => "pop_lts_recovery",
+                      settings => [
+                        { key => "HDDVERSION", value => 20.04 },
+                        { key => "HDD_1", value => "pop_lts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_lts" },
                       ],
                     },
                   ],
