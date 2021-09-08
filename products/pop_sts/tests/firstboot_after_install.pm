@@ -16,6 +16,8 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::gnome_display;
 
 sub run {
     
@@ -39,25 +41,8 @@ sub run {
     
     # Disable screen lock
     
-    send_key 'super';
-    type_string 'terminal';
-    #send_key 'ret';
-    hold_key 'ctrl';
-    send_key '1';
-    release_key 'ctrl';
+    #disable_screen_blanking '21.04';
     
-   # send_key 'super';
-   # type_string 'terminal';
-   # hold_key 'ctrl';
-   # send_key '1';
-   # release_key 'ctrl';
-    
-    assert_screen 'terminal';
-    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
-    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "killall totem\n";
-    type_string "exit\n";
-
     # Initial Setup
 
     assert_screen 'initial_dialog';

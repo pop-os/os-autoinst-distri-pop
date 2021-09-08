@@ -18,17 +18,18 @@ use strict;
 use testapi;
 
 sub run {
-    # wait for boot to finish
-    assert_and_click "system_menu";
-    assert_and_click "system_menu_power_off";
-    assert_and_click "system_menu_power_off_power_off";
-    assert_and_click "dialog_power_off";
-    assert_screen "system_down";
-    #eject_cd;
-    #power('off');
-    assert_shutdown(120);
+    hold_key('F2')
+    assert_screen 'boot_options'
+    release_key('F2')
     
+    # wait for boot to finish
+    assert_screen 'boot_finish';
 
+    # press enter to boot right away
+    #send_key 'ret';
+
+    # wait for the desktop to appear
+    assert_screen 'desktop';
 }
 
 1;

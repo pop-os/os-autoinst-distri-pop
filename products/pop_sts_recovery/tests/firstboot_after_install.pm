@@ -19,7 +19,7 @@ use testapi;
 
 sub run {
     eject_cd();
-    
+    assert_screen 'uefi';
     # Decryption prompt
 
     assert_screen 'decyrpt_prompt';
@@ -32,155 +32,29 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop';
+
+    # changing boot option
     
-    
-    # Disable screen lock
-    
-    send_key 'super';
+    hold_key 'super';
+    send_key 'a';
+    release_key 'super';
     type_string 'terminal';
-    hold_key 'ctrl';
-    send_key '1';
-    release_key 'ctrl';
-    
-   # send_key 'super';
-   # type_string 'terminal';
-   # hold_key 'ctrl';
-   # send_key '1';
-   # release_key 'ctrl';
+    send_key 'ret';
+    #hold_key 'ctrl';
+    #send_key '1';
+    #release_key 'ctrl';
     
     assert_screen 'terminal';
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
     type_string "killall totem\n";
-    type_string "exit\n";
+    type_string "sudo su\n";
+    type_string "system76\n";
+    type_string "cd /boot/efi/loader\n";
+    type_string "mv loader.conf loader.conf-old\n";
+    type_string 'echo "default Pop_OS-Recovery" > loader.conf';  
+    type_string "\nreboot\n";
 
-    # Initial Setup
-
-    assert_screen 'initial_dialog';
-    send_key 'ret';
-
-
-    # Typing screen 
- 
-    assert_screen 'initial_dialog_typing';
-
-      # Need to add input tests.
-
-    send_key 'ret';
-
-    # Cosmic Dock options
-
-    assert_screen 'initial_dialog_cosmic_dock';
-
-    assert_and_click 'initial_dialog_cosmic_dock_no_dock';
-    assert_screen 'initial_dialog_cosmic_dock_no_dock_check';
-    
-    assert_and_click 'initial_dialog_cosmic_dock_extend_dock';
-    assert_screen 'initial_dialog_cosmic_dock_extend_check';
-
-    assert_and_click 'initial_dialog_cosmic_dock_no_extend_dock';
-    assert_screen 'initial_dialog_cosmic_dock_no_extend_check';
-
-    assert_and_click 'initial_dialog_cosmic_dock_extend_dock';
-    assert_screen 'initial_dialog_cosmic_dock_extend_check';
-    
-
-    assert_and_click 'initial_dialog_cosmic_dock_click';
-    
-    # Cosmic Top Bar
-
-    assert_screen 'inital_dialog_top_bar';
-
-    assert_and_click 'initial_dialog_top_bar_workspace_off';
-    assert_screen 'initial_dialog_top_bar_workspace_off_check';
-
-    assert_and_click 'initial_dialog_top_bar_applications_off';
-    assert_screen 'initial_dialog_top_bar_applications_off_check';
-
-    assert_and_click 'initial_dialog_top_bar_workspace_on';
-    assert_screen 'initial_dialog_top_bar_workspace_on_check';
-
-    assert_and_click 'initial_dialog_top_bar_applications_on';
-    assert_screen 'initial_dialog_top_bar_applications_on_check';
-
-    assert_and_click 'initial_dialog_top_bar_datetime_list';
-    assert_screen 'initial_dialog_top_bar_datetime_list_check';
-
-    assert_and_click 'initial_dialog_top_bar_datetime_left';
-    assert_screen 'initial_dialog_top_bar_datetime_left_check';
-    
-    send_key('ret');
-    send_key('down');
-    send_key('ret');
-
-    assert_screen 'initial_dialog_top_bar_datetime_right_check';
-    
-    send_key('ret');
-    send_key('up');
-    send_key('up');
-    send_key('ret');
-    
-    assert_screen 'initial_dialog_top_bar_datetime_center_check';
-
-    assert_and_click 'initial_dialog_cosmic_dock_click';
-    #send_key('ret');
-
-    # Launcher info
-   
-    assert_screen 'initial_dialog_launcher_info';
-
-    #assert_and_click 'initial_dialog_cosmic_dock_click';
-    send_key('ret');
-
-
-    # Gestures
-   
-    assert_screen 'initial_dialog_gestures_info';
-    send_key('ret');
-
-    # Privacy
-
-    assert_screen 'initial_dialog_privacy';
-
-      # Need to add toggle test
-
-    send_key 'ret';
-
-    # Time Zone screen
-
-    check_screen 'system_timezone_updated';
-    
-    assert_screen 'initial_dialog_timezone';
-
-      # Need to add map click test
-
-    assert_and_click 'initial_dialog_timezone_select_search';
-    type_string "Denver";
-    send_key('ret');
-    assert_and_click 'initial_dialog_timezone_select_mt';
-
-    assert_screen 'initial_dialog_timezone_mt_selected';
-
-
-    assert_and_click 'initial_dialog_timezone_next';
-    assert_and_click 'initial_dialog_timezone_next';
-
-    # Online Accounts 
-
-    assert_screen 'initial_dialog_online_accounts';
-
-      # We may want to add tests here for online account setup.
-
-    assert_and_click 'initial_dialog_online_accounts_skip';
-
-   # finish Screen
-   
-   assert_screen 'finished';
-   send_key 'ret';
-
-   # Back to desktop
-
-   assert_screen 'desktop';    
 
 }
 

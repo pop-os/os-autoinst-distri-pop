@@ -16,6 +16,8 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::gnome_display;
 
 sub run {
     # wait for boot to finish
@@ -26,24 +28,11 @@ sub run {
 
     # wait for the desktop to appear
     assert_screen 'desktop';
+
+    assert_screen 'installer_launched';    
     
     # Disable screen lock
-    send_key 'super';
-    type_string 'terminal';
-    hold_key 'ctrl';
-    send_key '1';
-    release_key 'ctrl';
-    
-    send_key 'super';
-    type_string 'terminal';
-    hold_key 'ctrl';
-    send_key '1';
-    release_key 'ctrl';
-    
-    assert_screen 'terminal';
-    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
-    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "exit\n";
+    disable_screen_blanking '21.04';
 }
 
 1;

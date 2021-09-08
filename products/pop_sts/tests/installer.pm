@@ -16,6 +16,8 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::gnome_display;
 
 sub run {
     # wait for installer language select to apear
@@ -23,6 +25,8 @@ sub run {
 
     # press enter to advance 
     send_key 'ret';
+    
+   #disable_screen_blanking '21.04';
 
     # wait for the installer language region to appear
     assert_screen 'installer_language_region';
@@ -75,6 +79,7 @@ sub run {
     wait_screen_change {
         assert_screen 'installler_extracting_files';
     };
+    
     if(check_screen 'installer_failed',80){
        die;
     }
