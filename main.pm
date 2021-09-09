@@ -42,5 +42,6 @@ if (index($distri,'upgrade') != -1) {
    autotest::loadtest 'products/'.$distri.'/tests/installer.pm';
    autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_install.pm';
    autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
+
 }
 1;

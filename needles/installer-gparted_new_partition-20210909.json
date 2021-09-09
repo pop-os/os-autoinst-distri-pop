@@ -1,0 +1,36 @@
+{
+  "area": [
+    {
+      "xpos": 190,
+      "ypos": 336,
+      "width": 191,
+      "height": 47,
+      "type": "match"
+    },
+    {
+      "xpos": 186,
+      "ypos": 389,
+      "width": 198,
+      "height": 141,
+      "type": "match"
+    },
+    {
+      "xpos": 525,
+      "ypos": 387,
+      "width": 311,
+      "height": 149,
+      "type": "match"
+    },
+    {
+      "xpos": 527,
+      "ypos": 342,
+      "width": 310,
+      "height": 41,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "gparted_new_partition"
+  ]
+}

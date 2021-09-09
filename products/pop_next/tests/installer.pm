@@ -27,9 +27,9 @@ sub run {
     # wait for the installer language region to appear
     assert_screen 'installer_language_region';
 
-    #assert_and_click 'installer_lauguage_region_select';
+    assert_and_click 'installer_lauguage_region_select';
 
-    send_key 'ret';
+    #send_key 'ret';
     
     # wait for the installer keyboard layout to appear
     assert_screen 'installer_keyboard_layout';

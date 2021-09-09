@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 517,
+      "ypos": 222,
+      "width": 420,
+      "height": 248,
+      "type": "match"
+    },
+    {
+      "xpos": 624,
+      "ypos": 615,
+      "width": 328,
+      "height": 64,
+      "type": "match",
+      "click_point": {
+        "xpos": 242,
+        "ypos": 34
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_custom_confirm"
+  ]
+}

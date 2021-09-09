@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 146,
+      "ypos": 223,
+      "width": 308,
+      "height": 231,
+      "type": "match"
+    },
+    {
+      "xpos": 497,
+      "ypos": 242,
+      "width": 75,
+      "height": 78,
+      "type": "match",
+      "click_point": {
+        "xpos": 37.5,
+        "ypos": 39
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_partitions_confirm_recovery"
+  ]
+}

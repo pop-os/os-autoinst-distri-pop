@@ -16,6 +16,8 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::gnome_display;
 
 sub run {
 
@@ -38,6 +40,8 @@ sub run {
     assert_screen 'initial_dialog';
     send_key 'ret';
 
+	#disable_screen_blanking '21.04';
+	
 
     # Typing screen 
  

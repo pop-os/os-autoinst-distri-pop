@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 136,
+      "width": 756,
+      "ypos": 74,
+      "click_point": {
+        "xpos": 746,
+        "ypos": 14.5
+      },
+      "height": 58,
+      "type": "match",
+      "match": 90
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "gparted_close_window"
+  ]
+}

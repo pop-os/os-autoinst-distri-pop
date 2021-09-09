@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 537,
+      "ypos": 418,
+      "width": 304,
+      "height": 37,
+      "type": "match",
+      "click_point": {
+        "xpos": 202,
+        "ypos": 21.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "gparted_partition_type"
+  ]
+}

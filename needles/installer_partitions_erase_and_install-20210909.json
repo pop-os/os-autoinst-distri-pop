@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 87,
+      "ypos": 153,
+      "width": 845,
+      "height": 77,
+      "type": "match"
+    },
+    {
+      "xpos": 421,
+      "ypos": 585,
+      "width": 532,
+      "height": 94,
+      "type": "match",
+      "click_point": {
+        "xpos": 443,
+        "ypos": 50
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_partitions_erase_and_install"
+  ]
+}

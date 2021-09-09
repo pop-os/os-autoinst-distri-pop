@@ -33,7 +33,7 @@ sub run {
 
     # GDM and Desktop
  
-    assert_screen 'gdm';
+    assert_screen 'gdm',200;
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop';

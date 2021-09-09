@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 70,
+      "ypos": 92,
+      "width": 885,
+      "height": 586,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_no_encryption_screen"
+  ]
+}
