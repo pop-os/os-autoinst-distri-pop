@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "height": 673,
+      "ypos": 74,
+      "width": 197,
+      "xpos": 826,
+      "type": "match"
+    },
+    {
+      "height": 82,
+      "ypos": 126,
+      "width": 277,
+      "xpos": 6,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "confirm_upgrading_state"
+  ]
+}

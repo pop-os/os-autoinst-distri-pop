@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "click_point": {
+        "ypos": 120,
+        "xpos": 521.5
+      },
+      "type": "match",
+      "xpos": 229,
+      "width": 565,
+      "ypos": 348,
+      "height": 136,
+      "match": 90
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "gparted_create_new_PT_confirm"
+  ]
+}

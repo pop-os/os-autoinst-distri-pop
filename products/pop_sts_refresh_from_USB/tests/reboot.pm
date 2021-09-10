@@ -20,25 +20,18 @@ use lib '/var/lib/openqa/tests/pop/';
 use helpers::gnome_display;
 
 sub run {
-
-    # Start Pop Shop
-    send_key 'super';
-    type_string 'pop shop';
+    # wait for boot to finish
+    assert_and_click "system_menu";
+    assert_and_click "system_menu_power_off";
+    assert_and_click "system_menu_power_off_reboot";
+    assert_and_click "dialog_reboot";
+    assert_screen "system_down";
+    #eject_cd;
+    #power('off');
+    #assert_shutdown(200);
+    #power('reset');
+    assert_screen "boot_splash";
     send_key 'ret';
-    if (check_screen 'repo_failure') {
-    	fail();
-    }
-    assert_screen 'pop_shop_screen';
-    assert_and_click 'pop_shop_installed',6000;
-    assert_and_click 'pop_shop_upgrade';
-    if (check_screen 'confirm_upgrading_state',60 == undef) {
-        assert_and_click 'pop_shop_upgrade';	
-	}
-    
-	
-    check_screen 'confirm_upgrading_state',2000;
-    assert_screen 'upgrading_complete',5000;
-    assert_and_click 'close_pop_shop';
 
 }
 

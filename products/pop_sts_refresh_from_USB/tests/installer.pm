@@ -18,7 +18,6 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::gnome_display;
-use helpers::gpart;
 
 sub run {
     # wait for installer language select to apear
@@ -49,12 +48,12 @@ sub run {
 
     # wait for the installer install options to appear
     assert_screen 'installer_install_option';
-    assert_and_click 'installer_custom_option';
-    assert_and_click 'installer_custom_confirm';
     
-    # create partitions (this should be moved to a helper)
-    custom_partitions;
+    send_key 'ret';
 
+    # wait for the installer drive option to appear
+    assert_screen 'installer_drive_option';
+    assert_and_click 'installer_drive_select';
     assert_and_click 'installer_erase_and_install';    
     
     # wait for create user account screen to appear
@@ -70,13 +69,13 @@ sub run {
     assert_and_click 'installer_password_confirm';
 
     # wait for encryption screen
-#    assert_screen 'installer_encryption_screen';
- #   send_key 'ret';
- #   assert_and_click 'installer_encryption_confirm';
+    assert_screen 'installer_encryption_screen';
+    send_key 'ret';
+    assert_and_click 'installer_encryption_confirm';
 
     # wait for installation to finish
 
-    check_screen 'installer_partitioning';
+    assert_screen 'installer_partitioning';
     wait_screen_change {
         assert_screen 'installler_extracting_files';
     };

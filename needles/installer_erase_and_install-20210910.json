@@ -1,0 +1,40 @@
+{
+  "area": [
+    {
+      "height": 64,
+      "ypos": 159,
+      "xpos": 80,
+      "width": 871,
+      "type": "match"
+    },
+    {
+      "xpos": 73,
+      "width": 245,
+      "type": "match",
+      "height": 72,
+      "ypos": 604
+    },
+    {
+      "type": "match",
+      "click_point": {
+        "xpos": 258,
+        "ypos": 29
+      },
+      "width": 342,
+      "xpos": 598,
+      "ypos": 609,
+      "height": 59
+    },
+    {
+      "xpos": 76,
+      "ypos": 503,
+      "width": 866,
+      "height": 83,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_erase_and_install"
+  ]
+}

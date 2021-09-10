@@ -20,26 +20,19 @@ use lib '/var/lib/openqa/tests/pop/';
 use helpers::gnome_display;
 
 sub run {
+    # wait for boot to finish
+    assert_screen 'boot_finish';
 
-    # Start Pop Shop
-    send_key 'super';
-    type_string 'pop shop';
-    send_key 'ret';
-    if (check_screen 'repo_failure') {
-    	fail();
-    }
-    assert_screen 'pop_shop_screen';
-    assert_and_click 'pop_shop_installed',6000;
-    assert_and_click 'pop_shop_upgrade';
-    if (check_screen 'confirm_upgrading_state',60 == undef) {
-        assert_and_click 'pop_shop_upgrade';	
-	}
+    # press enter to boot right away
+    #send_key 'ret';
+
+    # wait for the desktop to appear
+    assert_screen 'desktop';
+
+    assert_screen 'installer_launched';    
     
-	
-    check_screen 'confirm_upgrading_state',2000;
-    assert_screen 'upgrading_complete',5000;
-    assert_and_click 'close_pop_shop';
-
+    # Disable screen lock
+    disable_screen_blanking '20.04';
 }
 
 1;
