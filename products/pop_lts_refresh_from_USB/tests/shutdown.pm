@@ -16,27 +16,18 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::gnome_display;
 
 sub run {
+    # wait for boot to finish
+    assert_and_click "system_menu";
+    assert_and_click "system_menu_power_off";
+    assert_and_click "system_menu_power_off_power_off";
+    assert_and_click "dialog_power_off";
+    assert_screen "system_down";
+    #eject_cd;
+    #power('off');
+    assert_shutdown(120);
     
-    assert_screen 'boot_splash';
-    eject_cd();
-    power("reset");
-    
-    # Decryption prompt
-
-    assert_screen 'decyrpt_prompt';
-    type_string "system76\n";
-
-
-    # GDM and Desktop
- 
-    assert_screen 'gdm',200;
-    send_key 'ret';
-    type_string "system76\n";
-    assert_screen 'desktop';  
 
 }
 

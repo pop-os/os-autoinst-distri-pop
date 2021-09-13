@@ -16,6 +16,8 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::avatar_tests;
 
 sub run {
     # wait for installer language select to apear
@@ -55,6 +57,9 @@ sub run {
     # wait for create user account screen to appear
     assert_screen 'installer_user_account_screen';
     type_string "System 76";
+    
+    avatar_selection_test;
+    
     assert_and_click 'installer_user_account_confirm';
 
     # wait for password screen 

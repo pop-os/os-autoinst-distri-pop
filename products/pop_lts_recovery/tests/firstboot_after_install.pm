@@ -16,6 +16,9 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::gnome_display;
+use helpers::online_accounts;
 
 sub run {
     eject_cd();

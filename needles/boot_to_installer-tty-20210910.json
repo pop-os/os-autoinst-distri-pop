@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "height": 132,
+      "ypos": 18,
+      "xpos": 2,
+      "width": 445,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Needed to get around Gnome's hard lockup"
+    }
+  ],
+  "tags": [
+    "tty"
+  ]
+}

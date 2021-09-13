@@ -27,8 +27,8 @@ sub run {
     
     # Decryption prompt
 
-#    assert_screen 'decyrpt_prompt';
-#    type_string "system76\n";
+    assert_screen 'decyrpt_prompt';
+    type_string "system76\n";
 
 
     # GDM and Desktop
@@ -37,57 +37,6 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop';
-
-    # Initial Setup
-
-    assert_screen 'initial_dialog';
-    send_key 'ret';
-
-
-    # Typing screen 
- 
-    assert_screen 'initial_dialog_typing';
-
-      # Need to add input tests.
-
-    send_key 'ret';
-
-    # Privacy
-
-    assert_screen 'initial_dialog_privacy';
-
-      # Need to add toggle test
-
-    send_key 'ret';
-
-    # Time Zone screen
-
-    check_screen 'system_timezone_updated';
-    
-    assert_screen 'initial_dialog_timezone';
-
-      # Need to add map click test
-
-    assert_and_click 'initial_dialog_timezone_select_search';
-    type_string "Denver\n";
-    assert_and_click 'initial_dialog_timezone_next';
-
-    # Online Accounts 
-
-    assert_screen 'initial_dialog_online_accounts';
-
-    online_accounts_quick_test;
-
-    assert_and_click 'initial_dialog_online_accounts_skip';
-
-   # finish Screen
-   
-   assert_screen 'finished';
-   send_key 'ret';
-
-   # Back to desktop
-
-   assert_screen 'desktop';    
 
 }
 

@@ -46,49 +46,29 @@ sub run {
     
     send_key 'ret';
 
-    # wait for the installer install options to appear
-    assert_screen 'installer_install_option';
+     # wait for the installer install options to appear
+    assert_screen 'installer_install_decrypt_option';
     
+    assert_and_click 'installer_decrypt_select';
+   
+    assert_screen 'installer_decrypt_drive_select';
+
     send_key 'ret';
+    
+    assert_screen 'installer_password_entry';
+    
+    type_string "system76";
+
+    assert_and_click 'installer_decrypt_unlock';
 
     # wait for the installer drive option to appear
-    assert_screen 'installer_drive_option';
-    assert_and_click 'installer_drive_select';
-    assert_and_click 'installer_erase_and_install';    
-    
-    # wait for create user account screen to appear
-    assert_screen 'installer_user_account_screen';
-    type_string "System 76";
-    assert_and_click 'installer_user_account_confirm';
-
-    # wait for password screen 
-    assert_screen 'installer_password_screen';
-    type_string "system76";
-    send_key 'tab';
-    type_string "system76";
-    assert_and_click 'installer_password_confirm';
-
-    # wait for encryption screen
-    assert_screen 'installer_encryption_screen';
-    send_key 'ret';
-    assert_and_click 'installer_encryption_confirm';
-
-    # wait for installation to finish
-
-    assert_screen 'installer_partitioning';
-    wait_screen_change {
-        assert_screen 'installler_extracting_files';
-    };
-    
-    if(check_screen 'installer_failed',80){
-       die;
-    }
-   
-    assert_screen 'installer_finished',400;
+    assert_screen 'installer_recovery_options';
+    assert_and_click 'installer_refesh_select';
+    assert_and_click 'installer_recovery_refresh';
+    assert_and_click 'installer_refresh_install';
+    assert_screen 'installer_refresh_start';
+    assert_screen 'installer_finished',600;
     assert_and_click 'installer_finished_reboot';
-
-    #assert_screen 'desktop',80;
-    #eject_cd();    
       
 }
 

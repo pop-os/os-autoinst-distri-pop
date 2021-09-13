@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 240,
+      "ypos": 325,
+      "width": 542,
+      "height": 64,
+      "type": "match",
+      "click_point": {
+        "xpos": 130,
+        "ypos": 32
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "online_accounts_microsoft"
+  ]
+}

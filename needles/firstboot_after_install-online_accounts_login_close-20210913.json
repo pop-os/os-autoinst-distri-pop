@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 720,
+      "ypos": 142,
+      "width": 41,
+      "height": 35,
+      "type": "match",
+      "click_point": {
+        "xpos": 20.5,
+        "ypos": 17.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "online_accounts_login_close"
+  ]
+}

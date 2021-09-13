@@ -16,9 +16,6 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::gnome_display;
-use helpers::avatar_tests;
 
 sub run {
     # wait for installer language select to apear
@@ -26,15 +23,13 @@ sub run {
 
     # press enter to advance 
     send_key 'ret';
-    
-   #disable_screen_blanking '21.04';
 
     # wait for the installer language region to appear
     assert_screen 'installer_language_region';
 
-    #assert_and_click 'installer_lauguage_region_select';
+    assert_and_click 'installer_lauguage_region_select';
 
-    send_key 'ret';
+    #send_key 'ret';
     
     # wait for the installer keyboard layout to appear
     assert_screen 'installer_keyboard_layout';
@@ -60,10 +55,6 @@ sub run {
     # wait for create user account screen to appear
     assert_screen 'installer_user_account_screen';
     type_string "System 76";
-    
-    avatar_selection_test;
-    
-    
     assert_and_click 'installer_user_account_confirm';
 
     # wait for password screen 
@@ -84,7 +75,6 @@ sub run {
     wait_screen_change {
         assert_screen 'installler_extracting_files';
     };
-    
     if(check_screen 'installer_failed',80){
        die;
     }
@@ -93,7 +83,7 @@ sub run {
     assert_and_click 'installer_finished_reboot';
 
     #assert_screen 'desktop',80;
-    #eject_cd();    
+    
       
 }
 

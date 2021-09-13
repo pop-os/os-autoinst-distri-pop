@@ -16,28 +16,34 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::gnome_display;
 
-sub run {
-    
-    assert_screen 'boot_splash';
-    eject_cd();
-    power("reset");
-    
-    # Decryption prompt
+sub avatar_selection_test {
+    my ($version) = @_;
 
-    assert_screen 'decyrpt_prompt';
-    type_string "system76\n";
+# Trigger after name entry
 
+assert_screen 'installer_user_account_confirm';
 
-    # GDM and Desktop
- 
-    assert_screen 'gdm',200;
-    send_key 'ret';
-    type_string "system76\n";
-    assert_screen 'desktop';  
+assert_and_click 'installer_user_account_avatar';
 
+assert_screen 'avatar_file_select_screen';
+
+for(my $i = 1; $i < 10; $i++) {
+	send_key 'down';
 }
 
+assert_and_click 'avatar_file_select_confirm';
+
+assert_screen 'installer_user_account_avatar_changed';
+
+assert_and_click 'installer_user_account_avatar_changeback';
+
+assert_screen 'avatar_file_select_screen';
+
+type_string 'penguin.jpg';
+
+assert_and_click 'avatar_file_select_confirm';
+
+
+}
 1;

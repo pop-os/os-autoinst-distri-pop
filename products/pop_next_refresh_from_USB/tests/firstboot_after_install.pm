@@ -18,18 +18,14 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::gnome_display;
-use helpers::online_accounts;
 
 sub run {
-    
-    assert_screen 'boot_splash';
-    eject_cd();
-    power("reset");
+
     
     # Decryption prompt
 
-#    assert_screen 'decyrpt_prompt';
-#    type_string "system76\n";
+    assert_screen 'decyrpt_prompt';
+    type_string "system76\n";
 
 
     # GDM and Desktop
@@ -38,17 +34,14 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop';
-    
-    
-    # Disable screen lock
-    
-    #disable_screen_blanking '21.04';
-    
+
     # Initial Setup
 
     assert_screen 'initial_dialog';
     send_key 'ret';
 
+	#disable_screen_blanking '21.04';
+	
 
     # Typing screen 
  
@@ -159,8 +152,8 @@ sub run {
 
     assert_screen 'initial_dialog_online_accounts';
 
-    online_accounts_quick_test;
-    
+      # We may want to add tests here for online account setup.
+
     assert_and_click 'initial_dialog_online_accounts_skip';
 
    # finish Screen

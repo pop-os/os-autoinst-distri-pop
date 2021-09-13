@@ -11,33 +11,14 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
-# with this program; if not, see <http://www.gnu.org/licenses/>.
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::gnome_display;
+use autotest;
 
-sub run {
-    
-    assert_screen 'boot_splash';
-    eject_cd();
-    power("reset");
-    
-    # Decryption prompt
-
-    assert_screen 'decyrpt_prompt';
-    type_string "system76\n";
-
-
-    # GDM and Desktop
- 
-    assert_screen 'gdm',200;
-    send_key 'ret';
-    type_string "system76\n";
-    assert_screen 'desktop';  
-
-}
-
+autotest::loadtest 'tests/boot_to_installer.pm';
+autotest::loadtest 'tests/installer.pm';
+autotest::loadtest 'tests/firstboot_after_install.pm';
 1;

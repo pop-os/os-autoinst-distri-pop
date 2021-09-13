@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 605,
+      "ypos": 186,
+      "width": 243,
+      "height": 167,
+      "type": "match",
+      "click_point": {
+        "xpos": 121.5,
+        "ypos": 83.5
+      }
+    },
+    {
+      "xpos": 77,
+      "ypos": 139,
+      "width": 389,
+      "height": 509,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_user_account_avatar_changeback"
+  ]
+}
