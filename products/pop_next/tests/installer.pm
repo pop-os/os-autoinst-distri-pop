@@ -16,10 +16,14 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::gnome_display;
 
 sub run {
     # wait for installer language select to apear
     assert_screen 'installer_language_select';
+
+    #disable_screen_blanking '21.04';
 
     # press enter to advance 
     send_key 'ret';

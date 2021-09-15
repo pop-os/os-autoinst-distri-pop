@@ -23,7 +23,7 @@ use helpers::gnome_display;
 sub run {
 
     # restart to get around installer issue
-    eject_cd; 
+    #eject_cd; 
     #power("reset");
     
     # Decryption prompt

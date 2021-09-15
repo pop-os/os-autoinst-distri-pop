@@ -31,7 +31,7 @@ sub run {
     assert_screen 'installer_language_select',100;
     
     # Disable screen lock
-    #disable_screen_blanking '21.04';
+    disable_screen_blanking '21.04';
     #restart_gdm 'install';
 }
 
