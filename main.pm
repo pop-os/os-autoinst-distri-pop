@@ -32,11 +32,15 @@ if (index($distri,'upgrade') != -1) {
    autotest::loadtest 'products/'.$distri.'/tests/system_upgrade.pm';
    autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_upgrade.pm';
    autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
+} elsif (index($distri,'refresh_from_OS') != -1) {
+   autotest::loadtest 'products/'.$distri.'/tests/boot_to_desktop.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/pop_shop_upgrade.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/system_recovery_refresh.pm';
+   #autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_upgrade.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
 } elsif (index($distri,'recovery') != -1) {
-  # autotest::loadtest 'products/'.$distri.'/tests/boot_to_recovery.pm';
    autotest::loadtest 'products/'.$distri.'/tests/firstboot_after_install.pm';
    autotest::loadtest 'products/'.$distri.'/tests/installer.pm';
-  # autotest::loadtest 'products/'.$distri.'/tests/shutdown.pm';
 } else {
    autotest::loadtest 'products/'.$distri.'/tests/boot_to_installer.pm';
    autotest::loadtest 'products/'.$distri.'/tests/installer.pm';
