@@ -32,7 +32,7 @@ sub run {
     
     # Disable screen lock
     #disable_screen_blanking '21.04';
-    restart_gdm 'install';
+    #restart_gdm 'install';
 }
 
 1;
