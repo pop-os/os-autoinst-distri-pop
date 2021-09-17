@@ -32,10 +32,10 @@
                         { key => "QEMUCPUS", value => 4 },
                         { key => "QEMURAM", value => 4096 },
                         { key => "QEMUTHREADS", value => 4 },
-                        { key => "QEMUVGA", value => "std" },
+                        { key => "QEMUVGA", value => "virtio" },
                         { key => "UEFI", value => 1 },
                         { key => "UEFI_PFLASH_CODE", value => "/usr/share/ovmf/OVMF.fd" },
-                        { key => "VGA", value => "std" },
+                        { key => "VGA", value => "virtio" },
                         { key => "VIRTIO_CONSOLE", value => 1 },
                         { key => "WORKER_CLASS", value => "qemu_x86_64" },
                       ],
@@ -243,21 +243,47 @@
                       ],
                     },
                     {
-                      description => "Base Pop STS Tests ",
-                      name => "pop_sts",
-                      settings => [
-                        { key => "Desktop", value => "gnome" },
-                        { key => "STORE_HDD_1", value => "pop_sts_image.qcow2" },
-                      ],
-                    },
-                    {
-                      description => "Upgrade from LTS to STS",
-                      name => "pop_upgrade_lts_to_sts",
+                      description => "Recovery Tests",
+                      name => "pop_lts_recovery",
                       settings => [
                         { key => "HDDVERSION", value => 20.04 },
                         { key => "HDD_1", value => "pop_lts_image.qcow2" },
                         { key => "LIVECD", value => 0 },
                         { key => "START_AFTER_TEST", value => "pop_lts" },
+                      ],
+                    },
+                    {
+                      name => "pop_lts_no_encryption",
+                      settings => [{ key => "Desktop", value => "gnome" }],
+                    },
+                    {
+                      name => "pop_lts_custom_parts1",
+                      settings => [{ key => "Desktop", value => "gnome" }],
+                    },
+                    {
+                      name => "pop_lts_refresh_from_USB",
+                      settings => [
+                        { key => "Desktop", value => "gnome" },
+                        { key => "HDDVERSION", value => 20.04 },
+                        { key => "HDD_1", value => "pop_lts_image.qcow2" },
+                        { key => "START_AFTER_TEST", value => "pop_lts_recovery_reinstall" },
+                      ],
+                    },
+                    {
+                      name => "pop_lts_recovery_reinstall",
+                      settings => [
+                        { key => "HDDVERSION", value => 20.04 },
+                        { key => "HDD_1", value => "pop_lts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_lts_recovery" },
+                      ],
+                    },
+                    {
+                      description => "Base Pop STS Tests ",
+                      name => "pop_sts",
+                      settings => [
+                        { key => "Desktop", value => "gnome" },
+                        { key => "STORE_HDD_1", value => "pop_sts_image.qcow2" },
                       ],
                     },
                     {
@@ -271,8 +297,42 @@
                       ],
                     },
                     {
-                      description => "Recovery Tests",
-                      name => "pop_lts_recovery",
+                      description => "Non_encrypted install",
+                      name => "pop_sts_no_encryption",
+                      settings => [
+                        { key => "Desktop", value => "gnome" },
+                        { key => "START_AFTER_TEST", value => "pop_sts" },
+                      ],
+                    },
+                    {
+                      description => "STS custom partitions 1",
+                      name => "pop_sts_custom_parts1",
+                      settings => [
+                        { key => "Desktop", value => "gnome" },
+                        { key => "START_AFTER_TEST", value => "pop_sts_no_encryption" },
+                      ],
+                    },
+                    {
+                      name => "pop_sts_refresh_from_USB",
+                      settings => [
+                        { key => "Desktop", value => "gnome" },
+                        { key => "HDDVERSION", value => 21.04 },
+                        { key => "HDD_1", value => "pop_sts_image.qcow2" },
+                        { key => "START_AFTER_TEST", value => "pop_sts" },
+                      ],
+                    },
+                    {
+                      name => "pop_sts_recovery_reinstall",
+                      settings => [
+                        { key => "HDDVERSION", value => 21.04 },
+                        { key => "HDD_1", value => "pop_sts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_sts" },
+                      ],
+                    },   
+                    {
+                      description => "Upgrade from LTS to STS",
+                      name => "pop_upgrade_lts_to_sts",
                       settings => [
                         { key => "HDDVERSION", value => 20.04 },
                         { key => "HDD_1", value => "pop_lts_image.qcow2" },
@@ -300,68 +360,18 @@
                     },
                     {
                       description => "Non_encrypted install",
-                      name => "pop_sts_no_encryption",
+                      name => "pop_next_no_encryption",
                       settings => [
                         { key => "Desktop", value => "gnome" },
-                        { key => "START_AFTER_TEST", value => "pop_sts" },
+                        { key => "START_AFTER_TEST", value => "pop_next" },
                       ],
                     },
                     {
-                      description => "STS custom partitions 1",
-                      name => "pop_sts_custom_parts1",
+                      description => "Next custom partitions 1",
+                      name => "pop_next_custom_parts1",
                       settings => [
                         { key => "Desktop", value => "gnome" },
-                        { key => "START_AFTER_TEST", value => "pop_sts_no_encryption" },
-                      ],
-                    },
-                    {
-                      name => "pop_lts_no_encryption",
-                      settings => [
-                        { key => "Desktop", value => "gnome" },
-                        { key => "PARALLEL_WITH", value => "pop_lts" },
-                      ],
-                    },
-                    {
-                      name => "pop_lts_custom_parts1",
-                      settings => [
-                        { key => "Desktop", value => "gnome" },
-                        { key => "PARALLEL_WITH", value => "pop_lts" },
-                      ],
-                    },
-                    {
-                      name => "pop_lts_refresh_from_USB",
-                      settings => [
-                        { key => "Desktop", value => "gnome" },
-                        { key => "HDDVERSION", value => 20.04 },
-                        { key => "HDD_1", value => "pop_lts_image.qcow2" },
-                        { key => "START_AFTER_TEST", value => "pop_lts_recovery_reinstall" },
-                      ],
-                    },
-                    {
-                      name => "pop_sts_refresh_from_USB",
-                      settings => [
-                        { key => "Desktop", value => "gnome" },
-                        { key => "HDDVERSION", value => 21.04 },
-                        { key => "HDD_1", value => "pop_sts_image.qcow2" },
-                        { key => "START_AFTER_TEST", value => "pop_sts" },
-                      ],
-                    },
-                    {
-                      name => "pop_lts_recovery_reinstall",
-                      settings => [
-                        { key => "HDDVERSION", value => 20.04 },
-                        { key => "HDD_1", value => "pop_lts_image.qcow2" },
-                        { key => "LIVECD", value => 0 },
-                        { key => "START_AFTER_TEST", value => "pop_lts_recovery" },
-                      ],
-                    },
-                    {
-                      name => "pop_sts_recovery_reinstall",
-                      settings => [
-                        { key => "HDDVERSION", value => 21.04 },
-                        { key => "HDD_1", value => "pop_sts_image.qcow2" },
-                        { key => "LIVECD", value => 0 },
-                        { key => "START_AFTER_TEST", value => "pop_sts" },
+                        { key => "START_AFTER_TEST", value => "pop_next_no_encryption" },
                       ],
                     },
                     {
@@ -371,7 +381,7 @@
                         { key => "HDDVERSION", value => 20.04 },
                         { key => "HDD_1", value => "pop_lts_image.qcow2" },
                         { key => "LIVECD", value => 0 },
-                        { key => "START_AFTER_TEST", value => "pop_lts_recovery_reinstall" },
+                        { key => "START_AFTER_TEST", value => "pop_lts" },
                       ],
                     },
                   ],

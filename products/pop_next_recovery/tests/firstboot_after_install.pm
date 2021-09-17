@@ -35,15 +35,15 @@ sub run {
 
     # changing boot option
     
-    hold_key 'super';
-    send_key 'a';
-    release_key 'super';
-    type_string 'terminal';
-    send_key 'ret';
+    #hold_key 'super';
+    #send_key 'a';
+    #release_key 'super';
+    #type_string 'terminal';
+    #send_key 'ret';
     #hold_key 'ctrl';
     #send_key '1';
     #release_key 'ctrl';
-    
+    send_key 'super-t';
     assert_screen 'terminal';
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   

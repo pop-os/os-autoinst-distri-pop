@@ -18,6 +18,7 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::gnome_display;
+use helpers::online_accounts;
 
 sub run {
         power("reset");
@@ -153,7 +154,7 @@ sub run {
 
     assert_screen 'initial_dialog_online_accounts';
 
-      # We may want to add tests here for online account setup.
+    online_accounts_quick_test;
 
     assert_and_click 'initial_dialog_online_accounts_skip';
 

@@ -1,0 +1,34 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "xpos": 82,
+      "height": 461,
+      "width": 446,
+      "ypos": 142
+    },
+    {
+      "height": 93,
+      "xpos": 601,
+      "width": 306,
+      "type": "match",
+      "ypos": 308,
+      "match": 75
+    },
+    {
+      "height": 75,
+      "xpos": 603,
+      "width": 352,
+      "type": "match",
+      "ypos": 610,
+      "click_point": {
+        "ypos": 43.5,
+        "xpos": 264
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_refresh_install"
+  ]
+}

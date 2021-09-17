@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "ypos": 216,
+      "type": "match",
+      "height": 110,
+      "xpos": 270,
+      "width": 484
+    },
+    {
+      "xpos": 0,
+      "ypos": 6,
+      "width": 225,
+      "height": 21,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_top_bar_applications_on_check"
+  ]
+}
