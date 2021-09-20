@@ -25,7 +25,7 @@ sub run {
     assert_and_click "system_menu_power_off";
     assert_and_click "system_menu_power_off_power_off";
     assert_and_click "dialog_power_off";
-    assert_screen "system_down";
+    check_screen "system_down",200;
     #eject_cd;
     #power('off');
     assert_shutdown(200);
