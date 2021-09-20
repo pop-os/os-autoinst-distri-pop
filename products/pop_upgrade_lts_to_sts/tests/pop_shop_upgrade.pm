@@ -34,7 +34,6 @@ sub run {
     if (check_screen 'confirm_upgrading_state',60 == undef) {
         assert_and_click 'pop_shop_upgrade';	
 	}
-    
 	
     check_screen 'confirm_upgrading_state',2000;
     assert_screen 'upgrading_complete',5000;

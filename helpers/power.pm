@@ -7,7 +7,7 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICselect_console('root-virtio-terminal');ULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
@@ -16,13 +16,17 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::power;
 
-sub run {
-   shutdown_system;
-    
+sub shutdown_system {
+    # wait for boot to finish
+    assert_and_click "system_menu";
+    assert_and_click "system_menu_power_off";
+    assert_and_click "system_menu_power_off_power_off";
+    assert_and_click "dialog_power_off";
+    check_screen "system_down",200;
+    #eject_cd;
+    #power('off');
+    assert_shutdown(120);
 
 }
-
 1;
