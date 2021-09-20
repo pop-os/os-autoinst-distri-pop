@@ -22,7 +22,7 @@ use helpers::avatar_tests;
 
 sub run {
     # wait for installer language select to apear
-    assert_screen 'installer_language_select';
+    assert_screen 'installer_language_select',200;
 
     # press enter to advance 
     send_key 'ret';
