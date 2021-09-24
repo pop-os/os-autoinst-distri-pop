@@ -28,7 +28,17 @@ testapi::set_var('NEEDLES_DIR','needles');
 
 if (index($distri,'shell') != -1) {
    autotest::loadtest 'products/'.$distri.'/tests/boot_to_desktop.pm';
-   autotest::loadtest 'products/'.$distri.'/tests/std_tests.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/pop_shop_upgrade.pm';
+   
+   my @tests = ("keyboard_movement","keyboard_resizing","keyboard_stacking");
+   foreach ( @tests ) {
+   		autotest::loadtest 'products/'.$distri.'/tests/tiling_tests/'.$_.".pm";
+   }
+   
+   autotest::loadtest 'products/'.$distri.'/tests/appmenu_tests.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/launcher_tests.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/gcc_tests.pm';
+   autotest::loadtest 'products/'.$distri.'/tests/workspace_tests.pm';
 } elsif (index($distri,'upgrade') != -1) {
    autotest::loadtest 'products/'.$distri.'/tests/boot_to_desktop.pm';
    autotest::loadtest 'products/'.$distri.'/tests/pop_shop_upgrade.pm';

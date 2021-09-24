@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "width": 1022,
+      "type": "match",
+      "ypos": 32,
+      "xpos": 2,
+      "height": 667
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_window_border_down"
+  ]
+}

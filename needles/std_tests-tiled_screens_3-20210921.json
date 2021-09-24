@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 4,
+      "type": "match",
+      "height": 663,
+      "ypos": 31,
+      "width": 1020
+    },
+    {
+      "width": 80,
+      "type": "match",
+      "xpos": 575,
+      "height": 64,
+      "ypos": 704
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "tiled_screens_3"
+  ]
+}

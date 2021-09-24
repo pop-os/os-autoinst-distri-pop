@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 4,
+      "ypos": 32,
+      "width": 1017,
+      "height": 665,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_window_resized_1"
+  ]
+}

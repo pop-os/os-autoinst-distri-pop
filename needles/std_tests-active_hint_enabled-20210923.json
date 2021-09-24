@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "ypos": 31,
+      "type": "match",
+      "width": 508,
+      "height": 665,
+      "xpos": 512
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "active_hint_enabled"
+  ]
+}

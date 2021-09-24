@@ -1,0 +1,38 @@
+{
+  "area": [
+    {
+      "xpos": 329,
+      "ypos": 36,
+      "width": 384,
+      "height": 59,
+      "type": "match"
+    },
+    {
+      "xpos": 426,
+      "ypos": 103,
+      "width": 177,
+      "height": 151,
+      "type": "match"
+    },
+    {
+      "xpos": 3,
+      "ypos": 261,
+      "width": 1008,
+      "height": 182,
+      "type": "match",
+      "match": 60
+    },
+    {
+      "xpos": 3,
+      "ypos": 452,
+      "width": 1008,
+      "height": 314,
+      "type": "match",
+      "match": 60
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_search_settings"
+  ]
+}

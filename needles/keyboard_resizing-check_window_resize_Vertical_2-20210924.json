@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 0,
+      "ypos": 29,
+      "width": 384,
+      "height": 655,
+      "type": "match"
+    },
+    {
+      "xpos": 385,
+      "ypos": 31,
+      "width": 631,
+      "height": 666,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_window_resize_Vertical_2"
+  ]
+}

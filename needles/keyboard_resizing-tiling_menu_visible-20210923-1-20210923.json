@@ -1,0 +1,24 @@
+{
+  "area": [
+    {
+      "xpos": 675,
+      "ypos": 50,
+      "type": "match",
+      "width": 331,
+      "height": 420,
+      "match": 90
+    },
+    {
+      "type": "match",
+      "height": 45,
+      "width": 70,
+      "ypos": 3,
+      "xpos": 853,
+      "match": 90
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "tiling_menu_visible"
+  ]
+}

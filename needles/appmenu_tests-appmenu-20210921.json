@@ -1,0 +1,31 @@
+{
+  "area": [
+    {
+      "xpos": 110,
+      "ypos": 2,
+      "width": 114,
+      "height": 25,
+      "type": "match"
+    },
+    {
+      "xpos": 68,
+      "ypos": 110,
+      "width": 908,
+      "height": 419,
+      "type": "match",
+      "match": 86
+    },
+    {
+      "xpos": 327,
+      "ypos": 37,
+      "width": 383,
+      "height": 61,
+      "type": "match",
+      "match": 90
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "appmenu"
+  ]
+}

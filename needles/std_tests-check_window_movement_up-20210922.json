@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "width": 1015,
+      "ypos": 32,
+      "type": "match",
+      "xpos": 4,
+      "height": 665
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_window_movement_up"
+  ]
+}

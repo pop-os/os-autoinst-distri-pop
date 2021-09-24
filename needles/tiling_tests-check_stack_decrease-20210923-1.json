@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 4,
+      "ypos": 30,
+      "width": 1017,
+      "height": 668,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Screen resolution is the most likely culprit, but the stack bar shouldn't overlap another window."
+    }
+  ],
+  "tags": [
+    "check_stack_decrease"
+  ]
+}

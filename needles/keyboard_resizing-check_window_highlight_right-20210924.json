@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 0,
+      "ypos": 30,
+      "width": 382,
+      "height": 668,
+      "type": "match"
+    },
+    {
+      "xpos": 386,
+      "ypos": 33,
+      "width": 632,
+      "height": 661,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_window_highlight_right"
+  ]
+}

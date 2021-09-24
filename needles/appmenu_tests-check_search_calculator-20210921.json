@@ -1,0 +1,30 @@
+{
+  "area": [
+    {
+      "xpos": 321,
+      "ypos": 40,
+      "width": 397,
+      "height": 52,
+      "type": "match"
+    },
+    {
+      "xpos": 416,
+      "ypos": 103,
+      "width": 191,
+      "height": 155,
+      "type": "match"
+    },
+    {
+      "xpos": 4,
+      "ypos": 265,
+      "width": 1016,
+      "height": 283,
+      "type": "match",
+      "match": 60
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_search_calculator"
+  ]
+}

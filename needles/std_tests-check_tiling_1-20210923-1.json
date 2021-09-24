@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 2,
+      "width": 1019,
+      "type": "match",
+      "height": 667,
+      "ypos": 29
+    },
+    {
+      "xpos": 576,
+      "width": 79,
+      "type": "match",
+      "height": 62,
+      "ypos": 706
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_tiling_1"
+  ]
+}

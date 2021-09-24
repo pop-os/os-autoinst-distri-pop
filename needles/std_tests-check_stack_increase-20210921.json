@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 2,
+      "ypos": 29,
+      "width": 1019,
+      "height": 668,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_stack_increase"
+  ]
+}
