@@ -83,7 +83,8 @@ sub run {
        die;
     }
    
-    assert_screen 'installer_finished',400;
+    assert_screen 'installer_finished',800;
+    
     assert_and_click 'installer_finished_reboot';
 
     #assert_screen 'desktop',80;

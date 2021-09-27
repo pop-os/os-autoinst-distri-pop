@@ -45,11 +45,12 @@ sub run {
     send_key 'ret';
     type_string 'system76';
     send_key 'ret';
-    #assert_screen 'check_terminal_command_complete',600;
-   # type_string 'exit';
-    #send_key 'ret';
     assert_screen 'desktop',600;
-
+    send_key 'super-t';
+    assert_screen 'terminal';
+    type_string 'apt show pop-shell';
+    send_key 'ret';
+    save_screenshot;
 }
 
 1;
