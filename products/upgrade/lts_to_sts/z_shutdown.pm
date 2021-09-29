@@ -16,16 +16,13 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::power;
 
 sub run {
-    # wait for boot to finish
-    assert_screen 'boot_finish';
+   shutdown_system;
+    
 
-    # press enter to boot right away
-    #send_key 'ret';
-
-    # wait for the desktop to appear
-    assert_screen 'desktop';
 }
 
 1;

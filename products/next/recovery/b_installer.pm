@@ -18,7 +18,7 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
-use helpers::avatar_tests;
+use helpers::installer::avatar_tests;
 
 sub run {
     # wait for installer language select to apear

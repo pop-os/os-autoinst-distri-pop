@@ -16,20 +16,29 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::displays;
 
 sub run {
-    hold_key('F2')
-    assert_screen 'boot_options'
-    release_key('F2')
-    
-    # wait for boot to finish
-    assert_screen 'boot_finish';
 
-    # press enter to boot right away
-    #send_key 'ret';
+    # Start Pop Shop
+    send_key 'super';
+    type_string 'pop shop';
+    send_key 'ret';
+    if (check_screen 'repo_failure') {
+    	fail();
+    }
+    assert_screen 'pop_shop_screen';
+    assert_and_click 'pop_shop_installed',6000;
+    assert_and_click 'pop_shop_upgrade';
+    if (check_screen 'confirm_upgrading_state',60 == undef) {
+        assert_and_click 'pop_shop_upgrade';	
+	}
+	
+    check_screen 'confirm_upgrading_state',2000;
+    assert_screen 'upgrading_complete',5000;
+    assert_and_click 'close_pop_shop';
 
-    # wait for the desktop to appear
-    assert_screen 'desktop';
 }
 
 1;

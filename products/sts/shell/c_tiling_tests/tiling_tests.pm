@@ -2,8 +2,13 @@ use base 'basetest';
 use strict;
 use testapi;
 
-sub run {
+sub tiling_tests {
 	## Standard Tiling tests
+	
+	type_string 'killall gnome-terminal-*';
+	send_key 'ret';
+	send_key 'super-y';
+	assert_screen 'desktop';
 	
 	send_key 'super-y';
     for (my $i = 1; $i < 4; $i++) {

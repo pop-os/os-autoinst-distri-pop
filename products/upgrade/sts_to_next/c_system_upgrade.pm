@@ -18,20 +18,29 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
-use helpers::workarounds;
-my $timeout = 400;
 
 sub run {
-    # wait for boot to finish
-    assert_screen 'boot_finish',$timeout;
 
-    # press enter to boot right away
-    #send_key 'ret';
+ # Pop Upgrade
+    send_key 'super';
+    type_string 'upgrade';
+    assert_screen 'upgrade_test';
+    assert_and_click 'os_upgrade';
+    assert_screen 'os_upgrade_screen';
+    assert_and_click 'os_upgrade_screen_download';
+    assert_screen 'os_upgrade_download_complete',1000;
+    assert_and_click 'os_upgrade_screen_upgrade';
+    assert_and_click 'os_upgrade_confirm_upgrade';
 
-    # wait for the desktop to appear
-    assert_screen 'desktop',$timeout;
+    assert_screen 'decyrpt_prompt';
+    type_string "system76\n";
+
+    assert_screen 'os_upgrade_upgrading',1000;
+
+    assert_screen 'decyrpt_prompt',10000;
+    #type_string "system76\n";
     
-    disable_screen_blanking '20.04';
+
 }
 
 1;

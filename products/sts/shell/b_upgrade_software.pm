@@ -51,6 +51,11 @@ sub run {
     type_string 'apt show pop-shell';
     send_key 'ret';
     save_screenshot;
+    
+    type_string 'killall gnome-terminal-*';
+	send_key 'ret';
+	send_key 'super-y';
+	assert_screen 'desktop';
 }
 
 1;

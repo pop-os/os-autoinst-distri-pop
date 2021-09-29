@@ -2,9 +2,9 @@ use base 'basetest';
 use strict;
 use testapi;
 
-sub run {
+sub keyboard_movement {
 	## Standard Tiling tests
-	
+	record_info('Keyboard Movement','');
 	send_key 'super-y';
     for (my $i = 1; $i < 4; $i++) {
     	send_key 'super-t';

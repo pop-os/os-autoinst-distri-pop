@@ -16,11 +16,14 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::displays;
+use helpers::workarounds;
 
 sub run {
-    hold_key('F2')
-    assert_screen 'boot_options'
-    release_key('F2')
+    #hold_key('F2')
+    #assert_screen 'boot_options'
+    #release_key('F2')
     
     # wait for boot to finish
     assert_screen 'boot_finish';
@@ -30,6 +33,8 @@ sub run {
 
     # wait for the desktop to appear
     assert_screen 'desktop';
+    
+    disable_screen_blanking '21.04';
 }
 
 1;

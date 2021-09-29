@@ -16,6 +16,9 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::displays;
+use helpers::workarounds;
 
 sub run {
     hold_key('F2')
@@ -30,6 +33,8 @@ sub run {
 
     # wait for the desktop to appear
     assert_screen 'desktop';
+    
+    disable_screen_blanking '21.04';
 }
 
 1;
