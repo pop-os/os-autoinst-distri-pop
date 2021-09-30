@@ -16,18 +16,31 @@
 use base 'basetest';
 use strict;
 use testapi;
+use lib '/var/lib/openqa/tests/pop/';
+#use helpers::gnome_display;
+use helpers::displays;
+
 
 sub run {
-    # wait for boot to finish
-    assert_and_click "system_menu";
-    assert_and_click "system_menu_power_off";
-    assert_and_click "system_menu_power_off_power_off";
-    assert_and_click "dialog_power_off";
-    assert_screen "system_down";
-    #eject_cd;
-    #power('off');
-    assert_shutdown(120);
+
+    # restart to get around installer issue
+    eject_cd; 
+    power("reset");
     
+    # Decryption prompt
+
+    assert_screen 'decyrpt_prompt';
+    type_string "system76\n";
+
+    # GDM and Desktop
+
+    assert_screen 'gdm';
+    send_key 'ret';
+    type_string "system76\n";
+    assert_screen 'desktop';
+
+    disable_screen_blanking '21.04';
+    #switch_resolution '1400x1050';
 
 }
 

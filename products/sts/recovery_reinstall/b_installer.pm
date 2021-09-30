@@ -21,6 +21,8 @@ use helpers::displays;
 use helpers::installer::avatar_tests;
 
 sub run {
+	assert_screen 'desktop';
+	disable_screen_blanking '21.04';
     # wait for installer language select to apear
     assert_screen 'installer_language_select',200;
 

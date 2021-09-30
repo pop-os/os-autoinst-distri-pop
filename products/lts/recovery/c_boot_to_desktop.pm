@@ -17,11 +17,30 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
-use helpers::power;
+#use helpers::gnome_display;
+use helpers::displays;
+
 
 sub run {
-   shutdown_system;
+
+    # restart to get around installer issue
+    eject_cd; 
+    power("reset");
     
+    # Decryption prompt
+
+    assert_screen 'decyrpt_prompt';
+    type_string "system76\n";
+
+    # GDM and Desktop
+
+    assert_screen 'gdm';
+    send_key 'ret';
+    type_string "system76\n";
+    assert_screen 'desktop';
+
+    disable_screen_blanking '21.04';
+    #switch_resolution '1400x1050';
 
 }
 
