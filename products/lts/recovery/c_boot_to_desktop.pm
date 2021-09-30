@@ -19,22 +19,22 @@ use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 #use helpers::gnome_display;
 use helpers::displays;
-
+my $timeout = 400;
 
 sub run {
-
+	
     # restart to get around installer issue
     eject_cd; 
     power("reset");
     
     # Decryption prompt
 
-    assert_screen 'decyrpt_prompt';
+    assert_screen 'decyrpt_prompt',$timeout;
     type_string "system76\n";
 
     # GDM and Desktop
 
-    assert_screen 'gdm';
+    assert_screen 'gdm',$timeout;
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop';

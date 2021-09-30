@@ -18,6 +18,7 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::power;
+my $timeout = 400;
 
 sub run {
    shutdown_system;

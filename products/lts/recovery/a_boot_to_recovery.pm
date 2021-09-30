@@ -19,22 +19,22 @@ use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
 use helpers::installer::online_accounts;
-
+my $timeout = 400;
 sub run {
     eject_cd();
-    assert_screen 'uefi';
+    assert_screen 'uefi',$timeout;
     # Decryption prompt
 
-    assert_screen 'decyrpt_prompt';
+    assert_screen 'decyrpt_prompt',$timeout;
     type_string "system76\n";
 
 
     # GDM and Desktop
  
-    assert_screen 'gdm';
+    assert_screen 'gdm',$timeout;
     send_key 'ret';
     type_string "system76\n";
-    assert_screen 'desktop';
+    assert_screen 'desktop',$timeout;
 
     # changing boot option
     
@@ -45,7 +45,7 @@ sub run {
     #send_key '1';
     #release_key 'ctrl';
     
-    assert_screen 'terminal';
+    assert_screen 'terminal',$timeout;
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
     type_string "killall totem\n";
