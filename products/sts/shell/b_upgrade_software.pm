@@ -45,17 +45,17 @@ sub run {
     send_key 'ret';
     type_string 'system76';
     send_key 'ret';
-    assert_screen 'desktop',600;
-    send_key 'super-t';
-    assert_screen 'terminal';
-    type_string 'apt show pop-shell';
-    send_key 'ret';
-    save_screenshot;
+   # assert_screen 'desktop',600;
+  #  send_key 'super-t';
+  #  assert_screen 'terminal';
+  #  type_string 'apt show pop-shell';
+  #  send_key 'ret';
+  #  save_screenshot;
     
-    type_string 'killall gnome-terminal-*';
-	send_key 'ret';
-	send_key 'super-y';
-	assert_screen 'desktop';
+  #  type_string 'killall gnome-terminal-*';
+	#send_key 'ret';
+	#send_key 'super-y';
+	assert_screen 'full-desktop',2000;
 }
 
 1;

@@ -2,7 +2,7 @@ use base 'basetest';
 use strict;
 use testapi;
 
-sub keyboard_resizing {
+sub run {
 
 	assert_screen 'desktop';
 

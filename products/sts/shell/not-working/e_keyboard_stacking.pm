@@ -2,7 +2,7 @@ use base 'basetest';
 use strict;
 use testapi;
 
-sub keyboard_stacking {
+sub run {
 	
 	## Disable Highlight
 	assert_screen 'desktop';

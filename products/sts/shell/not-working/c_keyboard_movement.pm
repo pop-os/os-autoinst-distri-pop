@@ -2,15 +2,12 @@ use base 'basetest';
 use strict;
 use testapi;
 
-sub tiling_tests {
+sub run {
 	## Standard Tiling tests
-	
-	type_string 'killall gnome-terminal-*';
-	send_key 'ret';
+	record_info('Keyboard Movement','');
+	wait_screen_change {
 	send_key 'super-y';
-	assert_screen 'desktop';
-	
-	send_key 'super-y';
+	};
     for (my $i = 1; $i < 4; $i++) {
     	send_key 'super-t';
     	assert_screen 'tiled_screens_'.$i;
@@ -99,40 +96,9 @@ sub tiling_tests {
 	assert_screen 'check_window_movement_up';
 	send_key 'ret';
 	
-	## Stacking tests
-	
-	record_info('Stacking','Stacking Tests');
-	
-	send_key 'super-s';
-	assert_screen 'check_stacking_init';
-	send_key 'super-down';
-	send_key 'super-ret';
-	send_key 'up';
-	assert_screen 'check_stack_increase';
+	type_string 'killall gnome-terminal-*';
 	send_key 'ret';
-	assert_screen 'check_stack_selection_clear';
-	send_key 'super-right';
-	send_key 'super-right';
-	assert_screen 'check_right_window_selection';
-	send_key 'super-ret';
-	send_key 'left';
-	send_key 'ret';
-	assert_screen 'check_stack_increase';
-	send_key 'ret';
-	send_key 'super-ret';
-	send_key 'right';
-	send_key 'ret';
-	assert_screen 'check_stack_decrease';
-	send_key 'super-left';
-	send_key 'super-ret';
-	send_key 'right';
-	send_key 'ret';
-	assert_screen 'check_stack_decrease';
-	send_key 'super-left';
-	send_key 'super-s';
-	assert_screen 'check_disabled_stack';
 	send_key 'super-y';
-	send_key 'super-y';
-	assert_and_click 'check_tiling_2';
+	assert_screen 'desktop';
 }
 1;

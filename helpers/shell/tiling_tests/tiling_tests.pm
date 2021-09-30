@@ -2,7 +2,7 @@ use base 'basetest';
 use strict;
 use testapi;
 
-sub run {
+sub tiling {
 	## Standard Tiling tests
 	
 	send_key 'super-y';

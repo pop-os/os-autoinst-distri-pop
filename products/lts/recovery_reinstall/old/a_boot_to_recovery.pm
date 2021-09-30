@@ -16,47 +16,45 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::displays;
-use helpers::installer::online_accounts;
 
 sub run {
+
     eject_cd();
+    #hold_key 'f12';
     assert_screen 'uefi';
-    # Decryption prompt
-
-    assert_screen 'decyrpt_prompt';
-    type_string "system76\n";
-
-
-    # GDM and Desktop
+    #send_key_until_needlematch('boot_options','f12',[1,30]);
  
-    assert_screen 'gdm';
-    send_key 'ret';
-    type_string "system76\n";
-    assert_screen 'desktop';
+    assert_screen 'boot_options';
 
-    # changing boot option
+	assert_screen 'decyrpt_prompt';
+    type_string "system76\n";
+
+    # wait for boot to finish
+    assert_screen 'boot_finish';
+	
+    # press enter to boot right away
+    #send_key 'ret';
+
+    # wait for the desktop to appear
+  #  assert_screen 'desktop';
+  #  
+    # Disable screen lock
+  #  send_key 'super';
+ #   type_string 'terminal';
+  #  hold_key 'ctrl';
+  #  send_key '1';
+  #  release_key 'ctrl';
     
-    send_key 'super';
-    type_string 'terminal';
-    send_key 'ret';
-    #hold_key 'ctrl';
-    #send_key '1';
-    #release_key 'ctrl';
+    send_key 'super-t';
+  #  type_string 'terminal';
+  #  hold_key 'ctrl';
+  #  send_key '1';
+  #  release_key 'ctrl';
     
     assert_screen 'terminal';
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "killall totem\n";
-    type_string "sudo su\n";
-    type_string "system76\n";
-    type_string "cd /boot/efi/loader\n";
-    type_string "mv loader.conf loader.conf-old\n";
-    type_string 'echo "default Pop_OS-Recovery" > loader.conf';  
-    type_string "\nreboot\n";
-
-
+    type_string "exit\n";
 }
 
 1;

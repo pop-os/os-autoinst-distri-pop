@@ -2,7 +2,7 @@
   JobGroups    => [
                     {
                       group_name => "POP",
-                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_sts:\n    distri: pop\n    flavor: DVD\n    version: '21.04'\n  pop_next:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts\n    - pop_lts_no_encryption\n    - pop_lts_custom_parts1\n    - pop_lts_refresh_from_USB\n    - pop_lts_recovery\n    - pop_lts_recovery_reinstall\n    - pop_upgrade_lts_to_sts\n    - pop_lts_shell\n    \n    pop_sts:\n    - pop_sts\n    - pop_sts_no_encryption\n    - pop_sts_custom_parts1\n    - pop_sts_refresh_from_USB\n    - pop_sts_recovery\n    - pop_sts_recovery_reinstall\n    - pop_sts_shell\n    \n    pop_next:\n    - pop_next\n    - pop_next_no_encryption\n    - pop_next_custom_parts1\n    #- pop_next_refresh_from_USB\n    #- pop_next_recovery_reinstall\n    - pop_next_recovery\n    - pop_next_shell\n",
+                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_sts:\n    distri: pop\n    flavor: DVD\n    version: '21.04'\n  pop_next:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts\n    - pop_lts_no_encryption\n    - pop_lts_custom_parts1\n    - pop_lts_refresh_from_USB\n    - pop_lts_recovery\n    - pop_lts_recovery_reinstall\n    - pop_upgrade_lts_to_sts\n    - pop_lts_shell\n    - pop_lts_install_de\n    - pop_lts_install_ru\n    \n    pop_sts:\n    - pop_sts\n    - pop_sts_no_encryption\n    - pop_sts_custom_parts1\n    - pop_sts_refresh_from_USB\n    - pop_sts_recovery\n    - pop_sts_recovery_reinstall\n    - pop_sts_shell\n    - pop_upgrade_sts_to_next\n    \n    pop_next:\n    - pop_next\n    - pop_next_no_encryption\n    - pop_next_custom_parts1\n    #- pop_next_refresh_from_USB\n    #- pop_next_recovery_reinstall\n    - pop_next_recovery\n    - pop_next_shell\n",
                     },
                     {
                       group_name => "POP_STS",
@@ -401,6 +401,25 @@
                         { key => "LIVECD", value => 0 },
                         { key => "START_AFTER_TEST", value => "pop_lts" },
                       ],
+                    },
+                    {
+                      name => "pop_upgrade_sts_to_next",
+                      settings => [
+                        { key => "HDDVERSION", value => 20.04 },
+                        { key => "HDD_1", value => "pop_sts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_sts" },
+                      ],
+                    },
+                    {
+                      description => "German install",
+                      name => "pop_lts_install_de",
+                      settings => [{ key => "Desktop", value => "gnome" }],
+                    },
+                    {
+                      description => "Russian install",
+                      name => "pop_lts_install_ru",
+                      settings => [{ key => "Desktop", value => "gnome" }],
                     },
                   ],
 }
