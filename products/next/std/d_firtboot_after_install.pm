@@ -43,7 +43,7 @@ sub run {
     assert_screen 'initial_dialog',$timeout;
     send_key 'ret';
 
-    disable_screen_blanking '21.04';
+    #disable_screen_blanking '21.04';
 	
 
     # Typing screen 

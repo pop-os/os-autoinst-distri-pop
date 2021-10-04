@@ -17,8 +17,6 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
-use helpers::displays;
-use helpers::installer::online_accounts;
 my $timeout = 400;
 sub run {
     eject_cd();
@@ -35,6 +33,9 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop',$timeout;
+    
+    # Disable screen lock
+   # disable_screen_blanking '20.04';
 
     # changing boot option
     
@@ -46,9 +47,9 @@ sub run {
     #release_key 'ctrl';
     
     assert_screen 'terminal',$timeout;
-    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
-    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "killall totem\n";
+    #type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
+    #type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
+    #type_string "killall totem\n";
     type_string "sudo su\n";
     type_string "system76\n";
     type_string "cd /boot/efi/loader\n";

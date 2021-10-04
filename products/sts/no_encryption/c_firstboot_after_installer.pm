@@ -22,17 +22,17 @@ use helpers::installer::online_accounts;
 
 sub run {
     
-    assert_screen 'boot_splash';
-    eject_cd();
-    power("reset");
+    #assert_screen 'boot_splash';
+    #eject_cd();
+    #power("reset");
     
 
     # GDM and Desktop
  
-    assert_screen 'gdm';
-    send_key 'ret';
-    type_string "system76\n";
-    assert_screen 'desktop';
+    #assert_screen 'gdm';
+    #send_key 'ret';
+    #type_string "system76\n";
+    #assert_screen 'desktop';
     
     
     # Disable screen lock

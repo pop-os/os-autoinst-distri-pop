@@ -41,6 +41,9 @@ sub disable_screen_blanking {
        send_key 'ret';
     
        assert_screen 'terminal';
+    } else {
+       send_key 'super-t';
+       assert_screen 'terminal';
     }
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n"; 

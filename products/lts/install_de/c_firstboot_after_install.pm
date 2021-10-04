@@ -17,7 +17,7 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
-use helpers::gnome_display;
+use helpers::displays;
 use helpers::installer::online_accounts;
 
 sub run {
@@ -44,6 +44,9 @@ sub run {
     send_key 'ret';
 
 
+	# Disable screen lock
+    disable_screen_blanking '20.04';
+    
     # Typing screen 
  
     assert_screen 'initial_dialog_typing';

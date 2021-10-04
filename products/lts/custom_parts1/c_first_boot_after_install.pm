@@ -43,7 +43,9 @@ sub run {
     assert_screen 'initial_dialog',$timeout;
     send_key 'ret';
 
-
+	# Disable screen lock
+    disable_screen_blanking '20.04';
+    
     # Typing screen 
  
     assert_screen 'initial_dialog_typing',$timeout;

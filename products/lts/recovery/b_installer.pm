@@ -16,12 +16,13 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
+#use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
 my $timeout = 400;
 sub run {
-	assert_screen 'desktop',$timeout;
-	disable_screen_blanking '20.04';
+    assert_screen 'desktop',$timeout;
+    disable_screen_blanking '20.04';
+
     # wait for installer language select to apear
     assert_screen 'installer_language_select',200;
 

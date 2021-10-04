@@ -17,7 +17,7 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
-use helpers::gnome_display;
+use helpers::displays;
 use helpers::installer::online_accounts;
 
 sub run {
@@ -38,6 +38,9 @@ sub run {
     type_string "system76\n";
     assert_screen 'desktop';
 
+	# Disable screen lock
+    disable_screen_blanking '20.04';
+    
     # Initial Setup
 
     assert_screen 'initial_dialog';

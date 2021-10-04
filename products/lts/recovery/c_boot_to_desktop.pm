@@ -16,9 +16,6 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-#use helpers::gnome_display;
-use helpers::displays;
 my $timeout = 400;
 
 sub run {
@@ -39,7 +36,7 @@ sub run {
     type_string "system76\n";
     assert_screen 'desktop';
 
-    disable_screen_blanking '21.04';
+    #disable_screen_blanking '20.04';
     #switch_resolution '1400x1050';
 
 }

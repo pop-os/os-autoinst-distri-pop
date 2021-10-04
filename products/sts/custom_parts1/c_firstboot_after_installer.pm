@@ -23,9 +23,9 @@ my $timeout = 400;
 
 sub run {
     
-    assert_screen 'boot_splash',$timeout;
-    eject_cd();
-    power("reset");
+   # assert_screen 'boot_splash',$timeout;
+   # eject_cd();
+   # power("reset");
     
     # Decryption prompt
 
@@ -35,10 +35,10 @@ sub run {
 
     # GDM and Desktop
  
-    assert_screen 'gdm',$timeout;
-    send_key 'ret';
-    type_string "system76\n";
-    assert_screen 'desktop',$timeout;
+    #assert_screen 'gdm',$timeout;
+    #send_key 'ret';
+    #type_string "system76\n";
+    #assert_screen 'desktop',$timeout;
     
     
     # Disable screen lock

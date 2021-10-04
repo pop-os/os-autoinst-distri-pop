@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "ypos": 99,
+      "type": "match",
+      "height": 128,
+      "width": 772,
+      "xpos": 123
+    },
+    {
+      "xpos": 103,
+      "width": 827,
+      "height": 419,
+      "type": "match",
+      "ypos": 230
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_timezone"
+  ]
+}

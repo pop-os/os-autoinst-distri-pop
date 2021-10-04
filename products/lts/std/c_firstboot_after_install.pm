@@ -17,7 +17,7 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
-use helpers::gnome_display;
+use helpers::displays;
 use helpers::installer::online_accounts;
 my $timeout = 400;
 
@@ -38,13 +38,14 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop';
+    
 
     # Initial Setup
 
     assert_screen 'initial_dialog',$timeout;
     send_key 'ret';
-
-
+	
+	disable_screen_blanking '20.04';
     # Typing screen 
  
     assert_screen 'initial_dialog_typing',$timeout;

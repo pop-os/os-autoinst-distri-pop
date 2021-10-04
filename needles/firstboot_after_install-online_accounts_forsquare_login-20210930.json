@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "ypos": 219,
+      "height": 393,
+      "width": 495,
+      "xpos": 263
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Broken"
+    }
+  ],
+  "tags": [
+    "online_accounts_forsquare_login"
+  ]
+}

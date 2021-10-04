@@ -16,8 +16,8 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::displays;
+#use lib '/var/lib/openqa/tests/pop/';
+#use helpers::displays;
 use helpers::workarounds;
 my $timeout = 400;
 
@@ -31,7 +31,7 @@ sub run {
     # wait for the desktop to appear
     assert_screen 'desktop',$timeout;
     
-    disable_screen_blanking '20.04';
+#    disable_screen_blanking '20.04';
 }
 
 1;

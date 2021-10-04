@@ -16,9 +16,9 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::displays;
-use helpers::installer::online_accounts;
+#use lib '/var/lib/openqa/tests/pop/';
+#use helpers::displays;
+#use helpers::installer::online_accounts;
 
 sub run {
     eject_cd();
@@ -35,6 +35,8 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop';
+    
+#    disable_screen_blanking '20.04';
 
     # changing boot option
     

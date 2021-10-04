@@ -22,7 +22,7 @@ use helpers::displays;
 
 sub run {
 	assert_screen 'desktop';
-	disable_screen_blanking '20.04';
+	#disable_screen_blanking '20.04';
     # wait for installer language select to apear
     assert_screen 'installer_language_select';
 

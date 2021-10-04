@@ -25,6 +25,9 @@ sub run {
 
     # press enter to advance 
     send_key 'ret';
+    
+    # Disable screen lock
+    disable_screen_blanking '20.04';
 
     # wait for the installer language region to appear
     assert_screen 'installer_language_region';

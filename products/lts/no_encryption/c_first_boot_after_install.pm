@@ -37,6 +37,9 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     assert_screen 'desktop',$timeout;
+    
+    # Disable screen lock
+    disable_screen_blanking '20.04';
 
     # Initial Setup
 

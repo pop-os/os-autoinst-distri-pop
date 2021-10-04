@@ -18,6 +18,7 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::installer::avatar_tests;
+use helpers::displays;
 
 sub run {
     # wait for installer language select to apear
@@ -25,6 +26,9 @@ sub run {
 
     # press enter to advance 
     send_key 'ret';
+    
+    # Disable screen lock
+    disable_screen_blanking '20.04';
 
     # wait for the installer language region to appear
     assert_screen 'installer_language_region';
