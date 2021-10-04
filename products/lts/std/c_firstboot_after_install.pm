@@ -17,27 +17,12 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
-use helpers::displays;
+#use helpers::displays;
 use helpers::installer::online_accounts;
 my $timeout = 400;
 
 sub run {
-    assert_screen 'uefi',$timeout;
-    power("reset");
-    eject_cd();
     
-    # Decryption prompt
-
-    assert_screen 'decyrpt_prompt',$timeout;
-    type_string "system76\n";
-
-
-    # GDM and Desktop
- 
-    assert_screen 'gdm',$timeout;
-    send_key 'ret';
-    type_string "system76\n";
-    assert_screen 'desktop';
     
 
     # Initial Setup
@@ -45,7 +30,7 @@ sub run {
     assert_screen 'initial_dialog',$timeout;
     send_key 'ret';
 	
-	disable_screen_blanking '20.04';
+	#disable_screen_blanking '20.04';
     # Typing screen 
  
     assert_screen 'initial_dialog_typing',$timeout;
