@@ -18,23 +18,23 @@ use strict;
 use testapi;
 
 sub run {
-	assert_screen 'uefi';
+	#assert_screen 'uefi';
 	
-	eject_cd();
-    power("reset");
+	#eject_cd();
+    #power("reset");
 	
 	  # Decryption prompt
 
-    assert_screen 'decyrpt_prompt';
-    type_string "system76\n";
+    #assert_screen 'decyrpt_prompt';
+    #type_string "system76\n";
 
 
     # GDM and Desktop
  
-    assert_screen 'gdm',200;
-    send_key 'ret';
-    type_string "system76\n";
-    assert_screen 'desktop';
+    #assert_screen 'gdm',200;
+    #send_key 'ret';
+    #type_string "system76\n";
+    #assert_screen 'desktop';
     #my ($version) = @_;
 
 # Disable screen lock

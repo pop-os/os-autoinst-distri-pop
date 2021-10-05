@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "xpos": 215,
+      "ypos": 104,
+      "width": 628,
+      "height": 459,
+      "type": "match"
+    },
+    {
+      "xpos": 461,
+      "ypos": 39,
+      "width": 110,
+      "height": 35,
+      "type": "match"
+    },
+    {
+      "xpos": 910,
+      "ypos": 37,
+      "width": 114,
+      "height": 40,
+      "type": "match",
+      "click_point": {
+        "xpos": 75,
+        "ypos": 20
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_appearance_next"
+  ]
+}

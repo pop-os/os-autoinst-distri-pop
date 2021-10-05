@@ -39,7 +39,7 @@ sub run {
     type_string "system76\n";
     assert_screen 'desktop';
 
-    disable_screen_blanking '21.04';
+#    disable_screen_blanking '21.04';
     #switch_resolution '1400x1050';
 
 }

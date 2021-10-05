@@ -1,0 +1,32 @@
+{
+  "area": [
+    {
+      "height": 27,
+      "ypos": 4,
+      "width": 229,
+      "type": "match",
+      "xpos": 1,
+      "match": 88
+    },
+    {
+      "xpos": 854,
+      "type": "match",
+      "width": 170,
+      "ypos": 4,
+      "height": 24,
+      "match": 88
+    },
+    {
+      "height": 50,
+      "ypos": 331,
+      "width": 522,
+      "type": "match",
+      "xpos": 257,
+      "match": 88
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_top_bar_datetime_center_check"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 3,
+      "height": 736,
+      "ypos": 30,
+      "width": 1020,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_right_window_selection"
+  ]
+}

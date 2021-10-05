@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "ypos": 29,
+      "height": 735,
+      "xpos": 1,
+      "width": 1019,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "check_stack_selection_clear"
+  ]
+}

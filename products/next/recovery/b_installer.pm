@@ -48,9 +48,9 @@ sub run {
 
 
     # wait for the installer keyboard region to appear
-    assert_screen 'installer_keyboard_region';
+    #assert_screen 'installer_keyboard_region';
     
-    send_key 'ret';
+    #send_key 'ret';
 
     # wait for the installer install options to appear
     assert_screen 'installer_install_decrypt_option';

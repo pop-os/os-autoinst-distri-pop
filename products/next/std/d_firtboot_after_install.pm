@@ -124,6 +124,13 @@ sub run {
     assert_screen 'initial_dialog_gestures_info',$timeout;
     send_key('ret');
 
+    # Appearance
+    
+    assert_screen 'initial_dialog_appearance',$timeout;
+    assert_and_click 'initial_dialog_appearance_light',$timeout;
+    assert_and_click 'initial_dialog_appearance_dark',$timeout;
+    assert_and_click 'initial_dialog_appearance_next',$timeout;
+
     # Privacy
 
     assert_screen 'initial_dialog_privacy',$timeout;
