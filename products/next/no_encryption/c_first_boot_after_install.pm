@@ -19,19 +19,19 @@ use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
 use helpers::installer::online_accounts;
-
+my $timeout = 400;
 sub run {
     
-    assert_screen 'boot_splash';
-    eject_cd();
-    power("reset");
+    #assert_screen 'boot_splash';
+    #eject_cd();
+    #power("reset");
     
 
     # GDM and Desktop
  
-    assert_screen 'gdm';
-    send_key 'ret';
-    type_string "system76\n";
+    #assert_screen 'gdm';
+    #send_key 'ret';
+    #type_string "system76\n";
     assert_screen 'desktop';
     
     
@@ -122,6 +122,13 @@ sub run {
    
     assert_screen 'initial_dialog_gestures_info';
     send_key('ret');
+    
+    # Appearance
+    
+    assert_screen 'initial_dialog_appearance',$timeout;
+    assert_and_click 'initial_dialog_appearance_light',$timeout;
+    assert_and_click 'initial_dialog_appearance_dark',$timeout;
+    assert_and_click 'initial_dialog_appearance_next',$timeout;
 
     # Privacy
 

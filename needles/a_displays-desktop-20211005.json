@@ -1,0 +1,34 @@
+{
+  "area": [
+    {
+      "ypos": 3,
+      "xpos": 4,
+      "type": "match",
+      "width": 259,
+      "height": 79
+    },
+    {
+      "xpos": 366,
+      "type": "match",
+      "width": 346,
+      "height": 48,
+      "ypos": 42
+    },
+    {
+      "xpos": 55,
+      "height": 61,
+      "width": 888,
+      "type": "match",
+      "ypos": 703
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Installer appeared before screenshot is taken."
+    }
+  ],
+  "tags": [
+    "desktop"
+  ]
+}

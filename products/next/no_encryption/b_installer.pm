@@ -90,9 +90,11 @@ sub run {
    
     assert_screen 'installer_finished',400;
     assert_and_click 'installer_finished_reboot';
-
+    
+    assert_screen 'boot_splash',400;
+    power("reset");
+    eject_cd();
     #assert_screen 'desktop',80;
-    #eject_cd();    
       
 }
 
