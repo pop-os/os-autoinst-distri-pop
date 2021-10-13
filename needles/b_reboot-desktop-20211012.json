@@ -1,0 +1,21 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "xpos": 53,
+      "width": 694,
+      "ypos": 214,
+      "height": 492,
+      "match": 70
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Desktop is taking longer than expected, but X is initialized"
+    }
+  ],
+  "tags": [
+    "desktop"
+  ]
+}

@@ -16,25 +16,17 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::displays;
-use helpers::installer::avatar_tests;
-my $timeout = 400;
+
 sub run {
+	assert_screen 'desktop';
+	disable_screen_blanking '21.04';
     # wait for installer language select to apear
     assert_screen 'installer_language_select',200;
-  
-    send_key 'ret';
-  
-    disable_screen_blanking '21.04';
 
     # press enter to advance 
     send_key 'ret';
-  
+
     # wait for the installer language region to appear
-    #if (check_screen 'installer_language_region' == nodef) {
-#	send_key 'ret';
-#	}
     assert_screen 'installer_language_region';
 
     #assert_and_click 'installer_lauguage_region_select';
@@ -48,9 +40,9 @@ sub run {
 
 
     # wait for the installer keyboard region to appear
-    #assert_screen 'installer_keyboard_region';
+    assert_screen 'installer_keyboard_region';
     
-    #send_key 'ret';
+    send_key 'ret';
 
     # wait for the installer install options to appear
     assert_screen 'installer_install_decrypt_option';

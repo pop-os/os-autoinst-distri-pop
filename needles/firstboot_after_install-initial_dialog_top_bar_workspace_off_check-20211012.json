@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "xpos": 1,
+      "width": 188,
+      "ypos": 5,
+      "height": 22
+    },
+    {
+      "width": 497,
+      "ypos": 216,
+      "height": 54,
+      "type": "match",
+      "xpos": 265
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_top_bar_workspace_off_check"
+  ]
+}

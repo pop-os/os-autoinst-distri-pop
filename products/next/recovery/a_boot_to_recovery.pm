@@ -16,7 +16,7 @@
 use base 'basetest';
 use strict;
 use testapi;
-
+my $timeout = 400;
 sub run {
     eject_cd();
     assert_screen 'uefi';

@@ -1,0 +1,23 @@
+{
+  "area": [
+    {
+      "height": 87,
+      "ypos": 553,
+      "width": 876,
+      "xpos": 71,
+      "type": "match",
+      "match": 70
+    },
+    {
+      "ypos": 135,
+      "width": 472,
+      "height": 383,
+      "type": "match",
+      "xpos": 268
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_partitioning"
+  ]
+}

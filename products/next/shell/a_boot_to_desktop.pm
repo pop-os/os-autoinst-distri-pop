@@ -19,7 +19,7 @@ use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 #use helpers::gnome_display;
 use helpers::displays;
-
+my $timeout = 400;
 
 sub run {
 
@@ -29,7 +29,7 @@ sub run {
     
     # Decryption prompt
 
-    assert_screen 'decyrpt_prompt';
+    assert_screen 'decyrpt_prompt',$timeout;
     type_string "system76\n";
 
     # GDM and Desktop
@@ -37,9 +37,9 @@ sub run {
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
-    assert_screen 'desktop';
+    assert_screen 'desktop',$timeout;
 
-    disable_screen_blanking '21.04';
+    #disable_screen_blanking '21.04';
     #switch_resolution '1400x1050';
 
 }

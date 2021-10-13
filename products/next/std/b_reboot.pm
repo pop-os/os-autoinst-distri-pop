@@ -6,11 +6,7 @@ use testapi;
 #use helpers::installer::online_accounts;
 my $timeout = 400;
 
-sub run {
-	assert_screen 'boot_splash',$timeout;
-    power("reset");
-    eject_cd();
-    
+sub run {    
     # Decryption prompt
 
     assert_screen 'decyrpt_prompt',$timeout;
@@ -22,7 +18,7 @@ sub run {
     assert_screen 'gdm',$timeout;
     send_key 'ret';
     type_string "system76\n";
-    assert_screen 'desktop';
+    assert_screen 'desktop',$timeout;
    
 }
 1;

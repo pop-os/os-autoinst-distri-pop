@@ -16,31 +16,45 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-#use helpers::gnome_display;
-use helpers::displays;
-my $timeout = 400;
 
 sub run {
-
-    # restart to get around installer issue
-    eject_cd; 
-    power("reset");
-    
+    eject_cd();
+    assert_screen 'uefi';
     # Decryption prompt
 
     assert_screen 'decyrpt_prompt';
     type_string "system76\n";
 
-    # GDM and Desktop
 
-    assert_screen 'gdm',$timeout;
+    # GDM and Desktop
+ 
+    assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
-    assert_screen 'desktop',$timeout;
+    assert_screen 'desktop';
 
-    disable_screen_blanking '21.04';
-    #switch_resolution '1400x1050';
+    # changing boot option
+    
+    hold_key 'super';
+    send_key 'a';
+    release_key 'super';
+    type_string 'terminal';
+    send_key 'ret';
+    #hold_key 'ctrl';
+    #send_key '1';
+    #release_key 'ctrl';
+    
+    assert_screen 'terminal';
+    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
+    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
+    type_string "killall totem\n";
+    type_string "sudo su\n";
+    type_string "system76\n";
+    type_string "cd /boot/efi/loader\n";
+    type_string "mv loader.conf loader.conf-old\n";
+    type_string 'echo "default Pop_OS-Recovery" > loader.conf';  
+    type_string "\nreboot\n";
+
 
 }
 
