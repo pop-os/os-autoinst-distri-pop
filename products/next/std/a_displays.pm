@@ -31,4 +31,4 @@ sub run {
     type_string "exit\n";
 
 }
-
+1;
