@@ -18,50 +18,14 @@ use strict;
 use testapi;
 
 sub run {
-assert_screen 'uefi';
-	
-	eject_cd();
-    power("reset");
-	
-	  # Decryption prompt
 
-    assert_screen 'decyrpt_prompt';
-    type_string "system76\n";
-
-
-    # GDM and Desktop
- 
-    assert_screen 'gdm',200;
-    send_key 'ret';
-    type_string "system76\n";
     assert_screen 'desktop';
-    #my ($version) = @_;
-
+   
 # Disable screen lock
  
- #   if ($version == '21.04') {
-       #send_key 'super';
-       #hold_key 'super';
-       #send_key 'a';
-       #release_key 'super';
-       #type_string 'terminal';
-       #send_key 'ret';
-       #hold_key 'ctrl';
-       #send_key '1';
-       #release_key 'ctrl';
+ 
      send_key 'super-t';
      assert_screen 'terminal';
-#    } elsif ($version == '20.04') {
-
-#       send_key 'super';
-#       type_string 'terminal';
-#       send_key 'ret';
-    
-#       assert_screen 'terminal';
-#    } else {
-#       send_key 'super-t';
-#       assert_screen 'terminal';
-#    }
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n"; 
     type_string "gsettings set org.gnome.desktop.session idle-delay 0\n";
@@ -70,14 +34,4 @@ assert_screen 'uefi';
 
 }
 
-#sub switch_resolution {
-#	my ($resolution) = @_;
-	
-#	send_key('super-t');
-	
-#	assert_screen 'terminal';
-#	type_string "xrandr -s ".$resolution."\n";
-#	type_string "exit\n";
-#	assert_screen 'desktop_'.$resolution;
-#}
 1;

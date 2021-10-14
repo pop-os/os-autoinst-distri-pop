@@ -19,10 +19,10 @@ use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
 use helpers::installer::avatar_tests;
-
+my $timeout = 400;
 sub run {
-	assert_screen 'desktop';
-	disable_screen_blanking '21.04';
+	#assert_screen 'desktop';
+	#disable_screen_blanking '21.04';
     # wait for installer language select to apear
     assert_screen 'installer_language_select',200;
 
@@ -91,9 +91,10 @@ sub run {
        die;
     }
    
-    assert_screen 'installer_finished',400;
+    assert_screen 'installer_finished',1400;
     assert_and_click 'installer_finished_reboot';
-
+    power("reset");
+    eject_cd();
     #assert_screen 'desktop',80;
     #eject_cd();    
       

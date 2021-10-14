@@ -22,7 +22,7 @@ use helpers::installer::avatar_tests;
 my $timeout = 400;
 sub run {
     # wait for installer language select to apear
-    assert_screen 'installer_language_select',200;
+    assert_screen 'installer_language_select',$timeout;
   
     send_key 'ret';
   
@@ -35,14 +35,14 @@ sub run {
     #if (check_screen 'installer_language_region' == nodef) {
 #	send_key 'ret';
 #	}
-    assert_screen 'installer_language_region';
+    assert_screen 'installer_language_region',$timeout;
 
     #assert_and_click 'installer_lauguage_region_select';
 
     send_key 'ret';
     
     # wait for the installer keyboard layout to appear
-    assert_screen 'installer_keyboard_layout';
+    assert_screen 'installer_keyboard_layout',$timeout;
 
     send_key 'ret';
 
@@ -53,60 +53,30 @@ sub run {
     #send_key 'ret';
 
     # wait for the installer install options to appear
-    assert_screen 'installer_install_decrypt_option';
+    assert_screen 'installer_install_decrypt_option',$timeout;
     
-    assert_and_click 'installer_decrypt_select';
+    assert_and_click 'installer_decrypt_select',$timeout;
    
-    assert_screen 'installer_decrypt_drive_select';
+    assert_screen 'installer_decrypt_drive_select',$timeout;
 
     send_key 'ret';
     
-    assert_screen 'installer_password_entry';
+    assert_screen 'installer_password_entry',$timeout;
     
     type_string "system76";
 
-    assert_and_click 'installer_decrypt_unlock';
+    assert_and_click 'installer_decrypt_unlock',$timeout;
     
 
     # wait for the installer drive option to appear
-    assert_screen 'installer_recovery_options';
-    assert_and_click 'installer_refesh_select';
-    assert_and_click 'installer_recovery_refresh';
-    assert_and_click 'installer_refresh_install';
-    assert_screen 'installer_refresh_start';
+    assert_screen 'installer_recovery_options',$timeout;
+    assert_and_click 'installer_refesh_select',$timeout;
+    assert_and_click 'installer_recovery_refresh',$timeout;
+    assert_and_click 'installer_refresh_install',$timeout;
+    assert_screen 'installer_refresh_start',$timeout;
     assert_screen 'installer_finished',600;
-    assert_and_click 'installer_finished_reboot';
+    assert_and_click 'installer_finished_reboot',$timeout;
     
-    # wait for create user account screen to appear
-  #  assert_screen 'installer_user_account_screen';
-  #  type_string "System 76";
-  #  assert_and_click 'installer_user_account_confirm';
-
-    # wait for password screen 
-  #  assert_screen 'installer_password_screen';
-  #  type_string "system76";
-  #  send_key 'tab';
-  #  type_string "system76";1
-  #  assert_and_click 'installer_password_confirm';
-
-    # wait for encryption screen
-  #  assert_screen 'installer_encryption_screen';
-  #  send_key 'ret';
-  #  assert_and_click 'installer_encryption_confirm';
-
-    # wait for installation to finish
-
-  # assert_screen 'installer_partitioning';
-  # assert_screen 'installler_extracting_files';
-
-  #  if(check_screen 'installer_failed',80){
-  #     die;
-  #  }
- 
-  #  assert_screen 'installer_finished',600;
-  #  assert_and_click 'installer_finished_reboot';
-
-    #assert_screen 'desktop',80;
     
       
 }

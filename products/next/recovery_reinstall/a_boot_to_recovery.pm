@@ -16,7 +16,7 @@
 use base 'basetest';
 use strict;
 use testapi;
-
+my $timeout = 400;
 sub run {
     eject_cd();
     assert_screen 'uefi';
@@ -34,20 +34,12 @@ sub run {
     assert_screen 'desktop';
 
     # changing boot option
-    
-    hold_key 'super';
-    send_key 'a';
-    release_key 'super';
-    type_string 'terminal';
-    send_key 'ret';
-    #hold_key 'ctrl';
-    #send_key '1';
-    #release_key 'ctrl';
+    wait_screen_change(sub {
+    	send_key 'super-t';
+    },$timeout);
     
     assert_screen 'terminal';
-    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
-    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "killall totem\n";
+
     type_string "sudo su\n";
     type_string "system76\n";
     type_string "cd /boot/efi/loader\n";

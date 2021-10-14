@@ -28,10 +28,10 @@ sub run {
 
     # GDM and Desktop
  
-    assert_screen 'gdm';
+    assert_screen 'gdm',$timeout;
     send_key 'ret';
     type_string "system76\n";
-    assert_screen 'desktop';
+    assert_screen 'desktop',$timeout;
 
     # changing boot option
     
@@ -43,11 +43,11 @@ sub run {
     #hold_key 'ctrl';
     #send_key '1';
     #release_key 'ctrl';
+    wait_screen_change (sub {
     send_key 'super-t';
-    assert_screen 'terminal';
-    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
-    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "killall totem\n";
+    },$timeout);
+    
+    assert_screen 'terminal',$timeout;
     type_string "sudo su\n";
     type_string "system76\n";
     type_string "cd /boot/efi/loader\n";

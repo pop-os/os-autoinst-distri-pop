@@ -16,14 +16,14 @@
 use base 'basetest';
 use strict;
 use testapi;
-
+my $timeout = 400;
 sub run {
     # wait for boot to finish
-    assert_and_click "system_menu";
-    assert_and_click "system_menu_power_off";
-    assert_and_click "system_menu_power_off_power_off";
-    assert_and_click "dialog_power_off";
-    assert_screen "system_down";
+    assert_and_click "system_menu",$timeout;
+    assert_and_click "system_menu_power_off",$timeout;
+    assert_and_click "system_menu_power_off_power_off",$timeout;
+    assert_and_click "dialog_power_off",$timeout;
+    assert_screen "system_down",$timeout;
     #eject_cd;
     #power('off');
     assert_shutdown(120);

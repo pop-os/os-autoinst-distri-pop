@@ -16,10 +16,10 @@
 use base 'basetest';
 use strict;
 use testapi;
-
+my $timeout = 400;
 sub run {
 
-	assert_screen 'desktop';
+	assert_screen 'desktop',$timeout;
     #my ($version) = @_;
 
 # Disable screen lock
@@ -35,7 +35,7 @@ sub run {
        #send_key '1';
        #release_key 'ctrl';
      send_key 'super-t';
-     assert_screen 'terminal';
+     assert_screen 'terminal',$timeout;
 #    } elsif ($version == '20.04') {
 
 #       send_key 'super';

@@ -32,7 +32,7 @@ sub run {
     assert_screen 'installer_launched';    
     
     # Disable screen lock
-    disable_screen_blanking '21.04';
+    #disable_screen_blanking '21.04';
 }
 
 1;

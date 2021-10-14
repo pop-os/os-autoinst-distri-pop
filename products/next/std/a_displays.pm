@@ -7,7 +7,7 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICselect_console('root-virtio-terminal');ULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
@@ -16,23 +16,19 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::displays;
-my $timeout = 400;
+
 sub run {
-    # wait for boot to finish
-    assert_screen 'boot_finish',$timeout;
 
-    # press enter to boot right away
-    #send_key 'ret';
+	assert_screen 'desktop';
 
-    # wait for the desktop to appear
-    assert_screen 'desktop',$timeout;
+     send_key 'super-t';
+     assert_screen 'terminal';
 
-    assert_screen 'installer_launched',$timeout;    
-    
-    ## Disable screen lock
-    #disable_screen_blanking '21.04';
+    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
+    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n"; 
+    type_string "gsettings set org.gnome.desktop.session idle-delay 0\n";
+    type_string "gsettings set org.gnome.settings-daemon.plugins.power idle-dim false\n";  
+    type_string "exit\n";
+
 }
 
-1;
