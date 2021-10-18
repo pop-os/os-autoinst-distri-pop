@@ -37,80 +37,80 @@ sub run {
 
     # Initial Setup
 
-    assert_screen 'initial_dialog',400;
-    send_key 'ret';
+    #assert_screen 'initial_dialog',400;
+   # send_key 'ret';
     
     #disable_screen_blanking '21.04';
 
     # Cosmic Dock options
 
-    assert_screen 'initial_dialog_cosmic_dock';
+  #  assert_screen 'initial_dialog_cosmic_dock';
 
-    assert_and_click 'initial_dialog_cosmic_dock_no_dock';
-    assert_screen 'initial_dialog_cosmic_dock_no_dock_check';
+  #  assert_and_click 'initial_dialog_cosmic_dock_no_dock';
+  #  assert_screen 'initial_dialog_cosmic_dock_no_dock_check';
     
-    assert_and_click 'initial_dialog_cosmic_dock_extend_dock';
-    assert_screen 'initial_dialog_cosmic_dock_extend_check';
+  #  assert_and_click 'initial_dialog_cosmic_dock_extend_dock';
+  #  assert_screen 'initial_dialog_cosmic_dock_extend_check';
 
-    assert_and_click 'initial_dialog_cosmic_dock_no_extend_dock';
-    assert_screen 'initial_dialog_cosmic_dock_no_extend_check';
+  #  assert_and_click 'initial_dialog_cosmic_dock_no_extend_dock';
+  #  assert_screen 'initial_dialog_cosmic_dock_no_extend_check';
 
-    assert_and_click 'initial_dialog_cosmic_dock_extend_dock';
-    assert_screen 'initial_dialog_cosmic_dock_extend_check';
+  #  assert_and_click 'initial_dialog_cosmic_dock_extend_dock';
+  #  assert_screen 'initial_dialog_cosmic_dock_extend_check';
     
 
-    assert_and_click 'initial_dialog_cosmic_dock_click';
+  #  assert_and_click 'initial_dialog_cosmic_dock_click';
     
     # Cosmic Top Bar
 
-    assert_screen 'inital_dialog_top_bar';
+  #  assert_screen 'inital_dialog_top_bar';
 
-    assert_and_click 'initial_dialog_top_bar_workspace_off';
-    assert_screen 'initial_dialog_top_bar_workspace_off_check';
+  #  assert_and_click 'initial_dialog_top_bar_workspace_off';
+  #  assert_screen 'initial_dialog_top_bar_workspace_off_check';
 
-    assert_and_click 'initial_dialog_top_bar_applications_off';
-    assert_screen 'initial_dialog_top_bar_applications_off_check';
+  #  assert_and_click 'initial_dialog_top_bar_applications_off';
+  #  assert_screen 'initial_dialog_top_bar_applications_off_check';
 
-    assert_and_click 'initial_dialog_top_bar_workspace_on';
-    assert_screen 'initial_dialog_top_bar_workspace_on_check';
+   # assert_and_click 'initial_dialog_top_bar_workspace_on';
+   # assert_screen 'initial_dialog_top_bar_workspace_on_check';
 
-    assert_and_click 'initial_dialog_top_bar_applications_on';
-    assert_screen 'initial_dialog_top_bar_applications_on_check';
+   # assert_and_click 'initial_dialog_top_bar_applications_on';
+   # assert_screen 'initial_dialog_top_bar_applications_on_check';
 
-    assert_and_click 'initial_dialog_top_bar_datetime_list';
-    assert_screen 'initial_dialog_top_bar_datetime_list_check';
+   # assert_and_click 'initial_dialog_top_bar_datetime_list';
+   # assert_screen 'initial_dialog_top_bar_datetime_list_check';
 
-    assert_and_click 'initial_dialog_top_bar_datetime_left';
-    assert_screen 'initial_dialog_top_bar_datetime_left_check';
+   # assert_and_click 'initial_dialog_top_bar_datetime_left';
+   # assert_screen 'initial_dialog_top_bar_datetime_left_check';
     
-    send_key('ret');
-    send_key('down');
-    send_key('ret');
+   # send_key('ret');
+   # send_key('down');
+   # send_key('ret');
 
-    assert_screen 'initial_dialog_top_bar_datetime_right_check';
+   # assert_screen 'initial_dialog_top_bar_datetime_right_check';
     
-    send_key('ret');
-    send_key('up');
-    send_key('up');
-    send_key('ret');
+   # send_key('ret');
+   # send_key('up');
+   # send_key('up');
+   # send_key('ret');
     
-    assert_screen 'initial_dialog_top_bar_datetime_center_check';
+   # assert_screen 'initial_dialog_top_bar_datetime_center_check';
 
-    assert_and_click 'initial_dialog_cosmic_dock_click';
+   # assert_and_click 'initial_dialog_cosmic_dock_click';
     #send_key('ret');
 
     # Launcher info
    
-    assert_screen 'initial_dialog_launcher_info';
+   # assert_screen 'initial_dialog_launcher_info';
 
     #assert_and_click 'initial_dialog_cosmic_dock_click';
-    send_key('ret');
+   # send_key('ret');
 
 
     # Gestures
    
-    assert_screen 'initial_dialog_gestures_info';
-    send_key('ret');
+   # assert_screen 'initial_dialog_gestures_info';
+   # send_key('ret');
 
     # Privacy
 
@@ -149,12 +149,12 @@ sub run {
 
    # finish Screen
    
-   assert_screen 'finished';
-   send_key 'ret';
+  # assert_screen 'finished';
+  # send_key 'ret';
 
    # Back to desktop
 
-   assert_screen 'desktop';    
+  # assert_screen 'desktop';    
 
 }
 

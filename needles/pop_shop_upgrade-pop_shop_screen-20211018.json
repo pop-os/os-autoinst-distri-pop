@@ -1,0 +1,36 @@
+{
+  "area": [
+    {
+      "height": 47,
+      "xpos": 90,
+      "ypos": 377,
+      "width": 611,
+      "type": "match"
+    },
+    {
+      "type": "match",
+      "ypos": 109,
+      "width": 1015,
+      "xpos": 4,
+      "height": 263
+    },
+    {
+      "type": "match",
+      "xpos": 10,
+      "height": 25,
+      "width": 97,
+      "ypos": 388
+    },
+    {
+      "type": "match",
+      "width": 226,
+      "ypos": 32,
+      "height": 37,
+      "xpos": 755
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_shop_screen"
+  ]
+}

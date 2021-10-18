@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 102,
+      "ypos": 561,
+      "width": 828,
+      "height": 49,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "os_upgrade_terminal_download_complete"
+  ]
+}

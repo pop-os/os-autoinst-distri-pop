@@ -21,16 +21,26 @@ use helpers::displays;
 
 sub run {
 
- # Pop Upgrade
-    send_key 'super';
-    type_string 'upgrade';
-    assert_screen 'upgrade_test';
-    assert_and_click 'os_upgrade';
-    assert_screen 'os_upgrade_screen';
-    assert_and_click 'os_upgrade_screen_download';
-    assert_screen 'os_upgrade_download_complete',1000;
-    assert_and_click 'os_upgrade_screen_upgrade';
-    assert_and_click 'os_upgrade_confirm_upgrade';
+   send_key 'super-t';
+   assert_screen 'terminal';
+   type_string "sudo pop-upgrade release upgrade -f\n";
+   type_string "system76\n";
+   assert_screen 'os_upgrade_terminal_download_complete',15000;
+   type_string 'sudo reboot';
+   send_key 'ret';
+   type_string "system76\n";
+ 
+
+ # Pop Upgrade Uncomment after beta is live
+    #send_key 'super';
+    #type_string 'upgrade';
+    #assert_screen 'upgrade_test';
+    #assert_and_click 'os_upgrade';
+    #assert_screen 'os_upgrade_screen';
+    #assert_and_click 'os_upgrade_screen_download';
+    #assert_screen 'os_upgrade_download_complete',1000;
+    #assert_and_click 'os_upgrade_screen_upgrade';
+    #assert_and_click 'os_upgrade_confirm_upgrade';
 
     assert_screen 'decyrpt_prompt';
     type_string "system76\n";

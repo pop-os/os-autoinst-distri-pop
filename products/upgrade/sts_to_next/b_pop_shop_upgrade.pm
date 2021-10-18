@@ -29,15 +29,27 @@ sub run {
     	fail();
     }
     assert_screen 'pop_shop_screen';
-    assert_and_click 'pop_shop_installed',6000;
-    assert_and_click 'pop_shop_upgrade';
-    if (check_screen 'confirm_upgrading_state',60 == undef) {
-        assert_and_click 'pop_shop_upgrade';	
+    ## Sometimes the buttons don't register the click, so we wait till they do.
+    wait_screen_change (sub {
+    	assert_and_click 'pop_shop_installed';
+    },6000);
+    
+    wait_screen_change(sub {
+    	assert_and_click 'pop_shop_upgrade';
+    },6000);
+    
+   if (check_screen 'confirm_upgrading_state',60 == undef) {
+         wait_screen_change(sub {
+    		assert_and_click 'pop_shop_upgrade';
+    	},6000);	
 	}
 	
-    check_screen 'confirm_upgrading_state',2000;
+   # check_screen 'confirm_upgrading_state',2000;
     assert_screen 'upgrading_complete',5000;
-    assert_and_click 'close_pop_shop';
+    
+    wait_screen_change(sub {
+    	assert_and_click 'close_pop_shop';
+    },6000);
 
 }
 
