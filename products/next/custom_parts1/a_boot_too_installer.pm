@@ -27,7 +27,7 @@ sub run {
     #send_key 'ret';
 
     # wait for the desktop to appear
-    assert_screen 'desktop';
+    check_screen 'desktop',100;
 
     assert_screen 'installer_launched';    
     

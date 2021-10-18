@@ -7,7 +7,7 @@ use testapi;
 my $timeout = 400;
 
 sub run {
-	#assert_screen 'boot_splash',$timeout;
+	assert_screen 'boot_splash',$timeout;
     power("reset");
     eject_cd();
     

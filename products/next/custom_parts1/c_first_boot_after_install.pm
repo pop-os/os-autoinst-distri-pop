@@ -38,7 +38,7 @@ sub run {
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
-    assert_screen 'desktop';
+    check_screen 'desktop',100;
     
     
     # Disable screen lock
