@@ -28,8 +28,10 @@ sub run {
     eject_cd();
     
     # Decryption prompt
-
-    assert_screen 'decyrpt_prompt',$timeout;
+	wait_screen_change( sub {
+    	assert_screen 'decyrpt_prompt',$timeout;
+    },$timeout);
+    
     type_string "system76\n";
 
 
