@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 506,
+      "ypos": 86,
+      "width": 452,
+      "height": 520,
+      "type": "match"
+    },
+    {
+      "xpos": 86,
+      "ypos": 123,
+      "width": 406,
+      "height": 454,
+      "type": "match"
+    },
+    {
+      "xpos": 834,
+      "ypos": 621,
+      "width": 123,
+      "height": 55,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_language_russian_select"
+  ]
+}

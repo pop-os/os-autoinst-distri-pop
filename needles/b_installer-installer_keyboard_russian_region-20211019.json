@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 110,
+      "ypos": 93,
+      "width": 357,
+      "height": 517,
+      "type": "match"
+    },
+    {
+      "xpos": 506,
+      "ypos": 96,
+      "width": 451,
+      "height": 469,
+      "type": "match"
+    },
+    {
+      "xpos": 765,
+      "ypos": 622,
+      "width": 184,
+      "height": 51,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_keyboard_russian_region"
+  ]
+}

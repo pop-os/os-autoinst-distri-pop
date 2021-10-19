@@ -44,7 +44,7 @@ sub run {
     #send_key '1';
     #release_key 'ctrl';
     wait_screen_change (sub {
-    send_key 'super-t';
+    	send_key 'super-t';
     },$timeout);
     
     assert_screen 'terminal',$timeout;

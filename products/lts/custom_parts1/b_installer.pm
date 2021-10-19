@@ -29,7 +29,7 @@ sub run {
     send_key 'ret';
     
     # Disable screen lock
-    disable_screen_blanking '20.04';
+    #disable_screen_blanking '20.04';
 
 
     # wait for the installer language region to appear
@@ -83,9 +83,9 @@ sub run {
     # wait for installation to finish
 
     check_screen 'installer_partitioning';
-    wait_screen_change {
+    wait_screen_change ( sub {
         assert_screen 'installler_extracting_files',$timeout;
-    };
+    }),400;
     
     if(check_screen 'installer_failed',80){
        die;

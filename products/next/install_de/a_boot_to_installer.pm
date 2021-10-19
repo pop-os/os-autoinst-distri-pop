@@ -17,39 +17,21 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
+use helpers::displays;
+use helpers::workarounds;
 my $timeout = 400;
+
 sub run {
-    eject_cd();
-    assert_screen 'uefi',$timeout;
-    # Decryption prompt
+    # wait for boot to finish
+    assert_screen 'boot_finish',$timeout;
 
-    assert_screen 'decyrpt_prompt',$timeout;
-    type_string "system76\n";
+    # press enter to boot right away
+    #send_key 'ret';
 
-
-    # GDM and Desktop
- 
-    assert_screen 'gdm',$timeout;
-    send_key 'ret';
-    type_string "system76\n";
+    # wait for the desktop to appear
     assert_screen 'desktop',$timeout;
     
-    # changing boot option
-    
-    wait_screen_change( sub {
-    	send_key 'super-t';
-    	assert_screen 'terminal';
-    },600);
-    
-    
-    type_string "sudo su\n";
-    type_string "system76\n";
-    type_string "cd /boot/efi/loader\n";
-    type_string "mv loader.conf loader.conf-old\n";
-    type_string 'echo "default Pop_OS-Recovery" > loader.conf';  
-    type_string "\nreboot\n";
-
-
+    #disable_screen_blanking '20.04';
 }
 
 1;

@@ -40,13 +40,19 @@ sub run {
 
     # changing boot option
     
-    send_key 'super';
-    type_string 'terminal';
-    send_key 'ret';
+    #send_key 'super-t';
+    #type_string 'terminal';
+    #send_key 'ret';
     #hold_key 'ctrl';
     #send_key '1';
     #release_key 'ctrl';
-    
+     wait_screen_change( sub {
+    	send_key 'super-t';
+    	#type_string 'terminal';
+    	#send_key 'ret';
+    	
+    },6000);
+    #assert_screen 'terminal',$timeout;
     assert_screen 'terminal';
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
