@@ -22,12 +22,6 @@
       "ypos": 703
     }
   ],
-  "properties": [
-    {
-      "name": "workaround",
-      "value": "Installer appeared before screenshot is taken."
-    }
-  ],
   "tags": [
     "desktop"
   ]

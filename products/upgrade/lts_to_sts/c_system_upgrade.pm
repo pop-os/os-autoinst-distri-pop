@@ -28,16 +28,16 @@ sub run {
     assert_and_click 'os_upgrade';
     assert_screen 'os_upgrade_screen';
     assert_and_click 'os_upgrade_screen_download';
-    assert_screen 'os_upgrade_download_complete',1000;
+    assert_screen 'os_upgrade_download_complete',2000;
     assert_and_click 'os_upgrade_screen_upgrade';
     assert_and_click 'os_upgrade_confirm_upgrade';
 
     assert_screen 'decyrpt_prompt';
     type_string "system76\n";
 
-    assert_screen 'os_upgrade_upgrading',1000;
+    assert_screen 'os_upgrade_upgrading',2000;
 
-    assert_screen 'decyrpt_prompt',10000;
+    assert_screen 'decyrpt_prompt',20000;
     #type_string "system76\n";
     
 

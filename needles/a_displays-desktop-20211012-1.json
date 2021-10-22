@@ -15,12 +15,6 @@
       "type": "match"
     }
   ],
-  "properties": [
-    {
-      "name": "workaround",
-      "value": "Installer appeared before screenshot is taken."
-    }
-  ],
   "tags": [
     "desktop"
   ]
