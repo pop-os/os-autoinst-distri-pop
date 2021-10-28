@@ -1,0 +1,16 @@
+{
+  "area": [
+    {
+      "xpos": 108,
+      "ypos": 125,
+      "width": 785,
+      "height": 451,
+      "type": "match",
+      "match": 80
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "steam_uninstalled_terminal"
+  ]
+}

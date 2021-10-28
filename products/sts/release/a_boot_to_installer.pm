@@ -28,12 +28,11 @@ sub run {
     #send_key 'ret';
 
     # wait for the desktop to appear
+    sleep(10);
     assert_screen 'desktop',$timeout;
 
     assert_screen 'installer_launched',$timeout;    
     
-    # Disable screen lock
-    disable_screen_blanking '21.04';
 }
 
 1;

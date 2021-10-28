@@ -29,6 +29,7 @@ sub run {
     #send_key 'ret';
 
     # wait for the desktop to appear
+    sleep(10);
     assert_screen 'desktop',$timeout;
     
 #    disable_screen_blanking '20.04';

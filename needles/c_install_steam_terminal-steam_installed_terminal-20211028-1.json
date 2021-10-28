@@ -1,0 +1,16 @@
+{
+  "area": [
+    {
+      "xpos": 105,
+      "ypos": 123,
+      "width": 795,
+      "height": 445,
+      "type": "match",
+      "match": 50
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "steam_installed_terminal"
+  ]
+}

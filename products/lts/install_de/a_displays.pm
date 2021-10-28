@@ -7,7 +7,7 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICselect_console('root-virtio-terminal');ULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
@@ -16,24 +16,22 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-#use helpers::displays;
-
-
+#use lib '/var/lib/openqa/tests/pop/';
 sub run {
+	sleep(15);
+	assert_screen 'desktop';
+   	wait_screen_change(sub {
+     	send_key 'super-t';
+    },30);
+     
+    assert_screen 'terminal';
 
- send_key 'super';
- type_string 'pop shop';
- send_key 'ret';
- assert_screen 'pop_shop_screen';
- assert_and_click 'pop_pick_steam_install';
- assert_and_click 'install_steam';
- assert_screen 'password_dialog';
- type_string "system76\n";
- assert_screen 'pop_pick_steam_installed',400;
- assert_and_click 'close_pop_shop';
- 
- assert_screen "desktop";
+    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
+    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n"; 
+    type_string "gsettings set org.gnome.desktop.session idle-delay 0\n";
+    type_string "gsettings set org.gnome.settings-daemon.plugins.power idle-dim false\n";  
+    type_string "exit\n";
+
 }
 
 1;

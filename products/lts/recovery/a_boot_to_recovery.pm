@@ -32,15 +32,16 @@ sub run {
     assert_screen 'gdm',$timeout;
     send_key 'ret';
     type_string "system76\n";
+    sleep(10);
     assert_screen 'desktop',$timeout;
     
     # changing boot option
     
     wait_screen_change( sub {
     	send_key 'super-t';
-    	assert_screen 'terminal';
+    	
     },600);
-    
+    assert_screen 'terminal';
     
     type_string "sudo su\n";
     type_string "system76\n";

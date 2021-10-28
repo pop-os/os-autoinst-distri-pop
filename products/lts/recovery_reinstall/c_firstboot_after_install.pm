@@ -23,23 +23,23 @@ my $timeout = 400;
 
 sub run {
 
-    assert_screen 'uefi',$timeout;
-    power("reset");
-    eject_cd();
+    #assert_screen 'uefi',$timeout;
+   # power("reset");
+   # eject_cd();
     
     # Decryption prompt
-	wait_screen_change( sub {
-    	assert_screen 'decyrpt_prompt',$timeout;
-    },$timeout);
+	#wait_screen_change( sub {
+    #	assert_screen 'decyrpt_prompt',$timeout;
+    #},$timeout);
     
-    type_string "system76\n";
+    #type_string "system76\n";
 
 
     # GDM and Desktop
  
-    assert_screen 'gdm',$timeout;
-    send_key 'ret';
-    type_string "system76\n";
+    #assert_screen 'gdm',$timeout;
+    #send_key 'ret';
+    #type_string "system76\n";
     sleep(10);
     assert_screen 'desktop';
     
