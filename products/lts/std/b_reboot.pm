@@ -22,6 +22,7 @@ sub run {
     assert_screen 'gdm',$timeout;
     send_key 'ret';
     type_string "system76\n";
+    sleep(15);
     assert_screen 'desktop';
    
 }

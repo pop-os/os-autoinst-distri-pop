@@ -25,13 +25,9 @@ sub run {
     # wait for boot to finish
     assert_screen 'boot_finish',$timeout;
 
-    # press enter to boot right away
-    #send_key 'ret';
-
-    # wait for the desktop to appear
+	sleep(15);
     assert_screen 'desktop',$timeout;
     
-#    disable_screen_blanking '20.04';
 }
 
 1;

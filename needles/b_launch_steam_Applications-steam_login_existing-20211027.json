@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 302,
+      "ypos": 184,
+      "width": 418,
+      "height": 307,
+      "type": "match"
+    },
+    {
+      "xpos": 310,
+      "ypos": 494,
+      "width": 409,
+      "height": 104,
+      "type": "match",
+      "click_point": {
+        "xpos": 203.5,
+        "ypos": 18
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "steam_login_existing"
+  ]
+}

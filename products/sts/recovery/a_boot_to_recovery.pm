@@ -31,6 +31,7 @@ sub run {
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
+    sleep(15);
     assert_screen 'desktop';
 
     # changing boot option

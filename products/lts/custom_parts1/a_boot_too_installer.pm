@@ -32,7 +32,7 @@ sub run {
     assert_screen 'installer_launched',$timeout;    
     
     # Disable screen lock
-    disable_screen_blanking '20.04';
+   # disable_screen_blanking '20.04';
 }
 
 1;

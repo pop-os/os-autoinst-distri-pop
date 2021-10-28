@@ -31,7 +31,7 @@ sub run {
     # wait for the desktop to appear
     assert_screen 'desktop',$timeout;
     
-    disable_screen_blanking '20.04';
+    #disable_screen_blanking '20.04';
 }
 
 1;

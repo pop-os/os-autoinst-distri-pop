@@ -27,50 +27,50 @@ sub run {
 
     # Initial Setup
 
-    assert_screen 'initial_dialog',$timeout;
-    send_key 'ret';
+   # assert_screen 'initial_dialog',$timeout;
+   # send_key 'ret';
 	
 	#disable_screen_blanking '20.04';
     # Typing screen 
  
-    assert_screen 'initial_dialog_typing',$timeout;
+   # assert_screen 'initial_dialog_typing',$timeout;
 
       # Need to add input tests.
 
-    send_key 'ret';
+   # send_key 'ret';
 
     # Privacy
 
-    assert_screen 'initial_dialog_privacy',$timeout;
+   # assert_screen 'initial_dialog_privacy',$timeout;
 
       # Need to add toggle test
 
-    send_key 'ret';
+   # send_key 'ret';
 
     # Time Zone screen
 
-    check_screen 'system_timezone_updated',$timeout;
+   # check_screen 'system_timezone_updated',$timeout;
     
-    assert_screen 'initial_dialog_timezone',$timeout;
+   # assert_screen 'initial_dialog_timezone',$timeout;
 
       # Need to add map click test
 
-    assert_and_click 'initial_dialog_timezone_select_search',$timeout;
-    type_string "Denver\n";
-    assert_and_click 'initial_dialog_timezone_next',$timeout;
+   # assert_and_click 'initial_dialog_timezone_select_search',$timeout;
+   # type_string "Denver\n";
+   # assert_and_click 'initial_dialog_timezone_next',$timeout;
 
     # Online Accounts 
 
-    assert_screen 'initial_dialog_online_accounts',$timeout;
+   # assert_screen 'initial_dialog_online_accounts',$timeout;
 
-    online_accounts_quick_test;
+   # online_accounts_quick_test;
 
-    assert_and_click 'initial_dialog_online_accounts_skip',$timeout;
+   # assert_and_click 'initial_dialog_online_accounts_skip',$timeout;
 
    # finish Screen
    
-   assert_screen 'finished',$timeout;
-   send_key 'ret';
+   #assert_screen 'finished',$timeout;
+   #send_key 'ret';
 
    # Back to desktop
 

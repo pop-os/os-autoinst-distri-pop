@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "xpos": 111,
+      "ypos": 108,
+      "width": 164,
+      "height": 142,
+      "type": "match"
+    },
+    {
+      "xpos": 278,
+      "ypos": 113,
+      "width": 153,
+      "height": 65,
+      "type": "match"
+    },
+    {
+      "xpos": 496,
+      "ypos": 120,
+      "width": 282,
+      "height": 62,
+      "type": "match",
+      "click_point": {
+        "xpos": 220,
+        "ypos": 32
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "install_steam"
+  ]
+}
