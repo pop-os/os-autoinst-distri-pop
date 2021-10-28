@@ -37,9 +37,10 @@ sub run {
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
+    sleep(10);
     assert_screen 'desktop';
 
-    disable_screen_blanking '21.04';
+   # disable_screen_blanking '21.04';
     #switch_resolution '1400x1050';
 
 }

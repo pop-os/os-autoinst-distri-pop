@@ -34,18 +34,10 @@ sub run {
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
+    sleep(10);
     assert_screen 'desktop';
     
-#    disable_screen_blanking '20.04';
 
-    # changing boot option
-    
-    #send_key 'super-t';
-    #type_string 'terminal';
-    #send_key 'ret';
-    #hold_key 'ctrl';
-    #send_key '1';
-    #release_key 'ctrl';
      wait_screen_change( sub {
     	send_key 'super-t';
     	#type_string 'terminal';

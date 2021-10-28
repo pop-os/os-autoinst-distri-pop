@@ -20,8 +20,9 @@ use testapi;
 use helpers::displays;
 my $timeout = 400;
 sub run {
+    sleep(10);
     assert_screen 'desktop',$timeout;
-    disable_screen_blanking '21.04';
+    #disable_screen_blanking '21.04';
 
     # wait for installer language select to apear
     assert_screen 'installer_language_select',200;

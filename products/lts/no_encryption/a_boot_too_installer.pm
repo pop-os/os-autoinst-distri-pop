@@ -27,6 +27,7 @@ sub run {
     #send_key 'ret';
 
     # wait for the desktop to appear
+    sleep(10);
     assert_screen 'desktop',$timeout;
 
     assert_screen 'installer_launched',$timeout;    

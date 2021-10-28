@@ -36,6 +36,7 @@ sub run {
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
+    sleep(10);
     assert_screen 'desktop';
 
     # Initial Setup
@@ -43,9 +44,6 @@ sub run {
     assert_screen 'initial_dialog';
     send_key 'ret';
 
-
-	# Disable screen lock
-    disable_screen_blanking '20.04';
     
     # Typing screen 
  

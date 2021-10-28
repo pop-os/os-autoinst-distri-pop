@@ -36,10 +36,11 @@ sub run {
     assert_screen 'gdm',$timeout;
     send_key 'ret';
     type_string "system76\n";
+    sleep(10);
     assert_screen 'desktop',$timeout;
     
     # Disable screen lock
-    disable_screen_blanking '20.04';
+    #disable_screen_blanking '20.04';
 
     # Initial Setup
 
