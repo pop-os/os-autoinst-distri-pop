@@ -1,17 +1,50 @@
-# Example distro for openQA ![isotovideo](https://github.com/os-autoinst/os-autoinst-distri-example/workflows/isotovideo/badge.svg)
+# openQA tests for Pop!_OS
 
-example distro for openQA. Just runs one simple test where you need to create
-the needles for.
+Tests are run on both released and debug isos. 
 
-To use this repository with openQA, clone this repo to
-/var/lib/openqa/tests/<yourdistro>.
+### LTS 
 
-To use it standalone with isotovideo any other local path is fine.
+| Test         | Status     | Depends on |
+|--------------|-----------|------------|
+| Install | Working*     | NA        |
+| Custom Partitions | Working* | NA |
+| No Encryption | Working* | NA |
+| Refresh from  OS   | Working  | Install |
+| Refresh from USB | Working | Install |
+| Update from LTS to STS | Working | Install |
 
-When running tests based on the state in this repo the test is expected to
-fail as no needles are present. Creating the needles is by intention left to
-new users as a learning exercise by running the test distribution within
-openQA and using the openQA internal needle editor to create a new needle.
+### STS 
+
+| Test         | Status     | Depends on |
+|--------------|-----------|------------|
+| Install | Working*     | NA        |
+| Custom Partitions | Working* | NA |
+| No Encryption | Working* | NA |
+| Refresh from  OS   | Working  | Install |
+| Refresh from USB | Working | Install |
+| Update from STS to Beta | Working | Install |
+
+### Beta 
+
+| Test         | Status     | Depends on |
+|--------------|-----------|------------|
+| Install | Working*     | NA |
+| Custom Partitions | Working* | NA |
+| No Encryption | Working* | NA |
+| Refresh from  OS   | Working  | Install |
+| Refresh from USB | Working | Install |
+
+\* Minor soft failures 
+
+### Software 
+
+| Package         | Status     | Release tested |
+|--------------|-----------|------------|
+| Steam | Working     | LTS,STS |
+
+
+---
+# Original Readme
 
 ## Communication
 
