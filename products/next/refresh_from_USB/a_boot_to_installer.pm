@@ -25,7 +25,7 @@ sub run {
 
     # press enter to boot right away
     #send_key 'ret';
-
+    sleep(10);
     # wait for the desktop to appear
     assert_screen 'desktop';
 
