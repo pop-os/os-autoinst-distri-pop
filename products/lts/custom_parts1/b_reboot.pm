@@ -11,10 +11,10 @@ sub run {
     power("reset");
     eject_cd();
     
-    # Decryption prompt
+    # Decryption prompt not available in custom installs
 
-    assert_screen 'decyrpt_prompt',$timeout;
-    type_string "system76\n";
+    #assert_screen 'decyrpt_prompt',$timeout;
+    #type_string "system76\n";
 
 
     # GDM and Desktop

@@ -7,14 +7,14 @@ use testapi;
 my $timeout = 400;
 
 sub run {
-	assert_screen 'boot_splash',$timeout;
+    assert_screen 'boot_splash',$timeout;
     power("reset");
     eject_cd();
     
     # Decryption prompt
 
-    assert_screen 'decyrpt_prompt',$timeout;
-    type_string "system76\n";
+    #assert_screen 'decyrpt_prompt',$timeout;
+    #type_string "system76\n";
 
 
     # GDM and Desktop

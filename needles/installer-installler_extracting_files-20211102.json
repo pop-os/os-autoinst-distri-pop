@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "height": 402,
+      "xpos": 316,
+      "ypos": 149,
+      "type": "match",
+      "width": 397
+    },
+    {
+      "type": "match",
+      "ypos": 583,
+      "height": 88,
+      "xpos": 75,
+      "width": 873
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installler_extracting_files"
+  ]
+}
