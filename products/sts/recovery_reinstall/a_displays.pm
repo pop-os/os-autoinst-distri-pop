@@ -18,9 +18,9 @@ use strict;
 use testapi;
 
 sub run {
-    assert_screen 'uefi';
+    #assert_screen 'uefi';
 	
-	eject_cd();
+    eject_cd();
     power("reset");
 
     sleep(20);
