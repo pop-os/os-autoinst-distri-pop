@@ -21,7 +21,7 @@ use helpers::displays;
 use helpers::installer::online_accounts;
 my $timeout = 400;
 sub run {
-    assert_screen 'uefi',$timeout;
+    #assert_screen 'uefi',$timeout;
     power("reset");
     eject_cd();
     

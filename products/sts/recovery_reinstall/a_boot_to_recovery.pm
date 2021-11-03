@@ -19,7 +19,7 @@ use testapi;
 
 sub run {
     eject_cd();
-    assert_screen 'uefi';
+    #assert_screen 'uefi';
     # Decryption prompt
 
     assert_screen 'decyrpt_prompt';
@@ -31,6 +31,7 @@ sub run {
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
+    sleep(10);
     assert_screen 'desktop';
 
     # changing boot option

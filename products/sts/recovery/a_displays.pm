@@ -18,7 +18,7 @@ use strict;
 use testapi;
 
 sub run {
-	sleep(15);
+	sleep(20);
 	assert_screen "desktop";
 
 # Disable screen lock
