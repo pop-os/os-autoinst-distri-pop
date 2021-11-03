@@ -2,19 +2,23 @@
   JobGroups    => [
                     {
                       group_name => "POP",
-                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_sts:\n    distri: pop\n    flavor: DVD\n    version: '21.04'\n  pop_next:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts\n    - pop_lts_no_encryption\n    - pop_lts_custom_parts1\n    - pop_lts_refresh_from_USB\n    - pop_lts_recovery\n    - pop_lts_recovery_reinstall\n    - pop_upgrade_lts_to_sts\n    - pop_lts_shell\n    - pop_lts_install_de\n    - pop_lts_install_ru\n\n    pop_sts:\n    - pop_sts\n    - pop_sts_no_encryption\n    - pop_sts_custom_parts1\n    - pop_sts_refresh_from_USB\n    - pop_sts_recovery\n    - pop_sts_recovery_reinstall\n    - pop_sts_shell\n    - pop_upgrade_sts_to_next\n    \n    pop_next:\n    - pop_next\n    - pop_next_no_encryption\n    - pop_next_custom_parts1\n    - pop_next_refresh_from_USB\n    - pop_next_recovery_reinstall\n    - pop_next_recovery\n    - pop_next_shell\n    - pop_next_install_de\n    - pop_next_install_ru\n",
-                    },
-                    {
-                      group_name => "POP_STS",
-                      template   => "products: {}\nscenarios: {}\n",
+                      template   => "defaults: {}\n \nproducts: {}\n  \nscenarios: {}\n",
                     },
                     {
                       group_name => "PoP_LTS",
-                      template   => "products: {}\nscenarios: {}\n",
+                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\n    \n  x86_64_bios:\n    machine: 64bit-bios\n    priority: 50\n  \nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_lts_bios:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n    \nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts_release\n    - pop_lts\n    - pop_lts_no_encryption\n    - pop_lts_custom_parts1\n    - pop_lts_refresh_from_USB\n    - pop_lts_recovery\n    - pop_lts_recovery_reinstall\n    - pop_upgrade_lts_to_sts\n    - pop_lts_install_de\n    - pop_lts_install_ru\n    \n  x86_64_bios:\n    pop_lts_bios:\n    - pop_lts_release_no_save\n    - pop_lts_no_save\n",
+                    },
+                    {
+                      group_name => "PoP_Next",
+                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_next:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_next:\n    - pop_next\n    - pop_next_no_encryption\n    - pop_next_custom_parts1\n    - pop_next_refresh_from_USB\n    - pop_next_recovery_reinstall\n    - pop_next_recovery\n    - pop_next_install_de\n    - pop_next_install_ru\n",
+                    },
+                    {
+                      group_name => "PoP_STS",
+                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_sts:\n    distri: pop\n    flavor: DVD\n    version: '21.04'\nscenarios:\n  x86_64:\n    pop_sts:\n    - pop_sts_release\n    - pop_sts\n    - pop_sts_no_encryption\n    - pop_sts_custom_parts1\n    - pop_sts_refresh_from_USB\n    - pop_sts_recovery\n    - pop_sts_recovery_reinstall\n    - pop_upgrade_sts_to_next\n",
                     },
                     {
                       group_name => "Software",
-                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_sts:\n    distri: pop\n    flavor: DVD\n    version: '21.04'\n  pop_next:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts_release\n    - pop_software_steam_lts\n    pop_sts:\n    - pop_sts_release\n    - pop_software_steam_sts\n    \n    #pop_next:\n    #- pop_next_release\n    #- pop_software_steam_next\n",
+                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_sts:\n    distri: pop\n    flavor: DVD\n    version: '21.04'\n  pop_next:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_software_steam_lts\n    - pop_software_steam_lts_debug\n    - pop_software_shell_lts\n    pop_sts:\n    - pop_software_steam_sts\n    - pop_software_steam_sts_debug\n    - pop_software_shell_sts\n    pop_next:\n    - pop_software_steam_next\n    - pop_software_shell_next\n",
                     },
                   ],
   JobTemplates => [],
@@ -236,6 +240,36 @@
                                   ],
                       version  => "21.10",
                     },
+                    {
+                      arch     => "x86_64_bios",
+                      distri   => "pop",
+                      flavor   => "DVD",
+                      settings => [
+                                    { key => "ISO_MAXSIZE", value => 999999999 },
+                                    { key => "LIVECD", value => 1 },
+                                  ],
+                      version  => 20.04,
+                    },
+                    {
+                      arch     => "x86_64_bios",
+                      distri   => "pop",
+                      flavor   => "DVD",
+                      settings => [
+                                    { key => "ISO_MAXSIZE", value => 999999999 },
+                                    { key => "LIVECD", value => 1 },
+                                  ],
+                      version  => 21.04,
+                    },
+                    {
+                      arch     => "x86_64_bios",
+                      distri   => "pop",
+                      flavor   => "DVD",
+                      settings => [
+                                    { key => "ISO_MAXSIZE", value => 999999999 },
+                                    { key => "LIVECD", value => 1 },
+                                  ],
+                      version  => "21.10",
+                    },
                   ],
   TestSuites   => [
                     {
@@ -320,16 +354,6 @@
                       ],
                     },
                     {
-                      description => "Pop_Shell tests",
-                      name => "pop_lts_shell",
-                      settings => [
-                        { key => "HDDVERSION", value => 20.04 },
-                        { key => "HDD_1", value => "pop_lts_image.qcow2" },
-                        { key => "LIVECD", value => 0 },
-                        { key => "START_AFTER_TEST", value => "pop_lts" },
-                      ],
-                    },
-                    {
                       name => "pop_lts_no_encryption",
                       settings => [{ key => "Desktop", value => "gnome" }],
                     },
@@ -368,24 +392,6 @@
                       name => "pop_next_custom_parts1",
                       settings => [
                         { key => "Desktop", value => "gnome" },
-                        { key => "START_AFTER_TEST", value => "pop_next" },
-                      ],
-                    },
-                    {
-                      name => "pop_sts_shell",
-                      settings => [
-                        { key => "HDDVERSION", value => 21.04 },
-                        { key => "HDD_1", value => "pop_sts_image.qcow2" },
-                        { key => "LIVECD", value => 0 },
-                        { key => "START_AFTER_TEST", value => "pop_sts" },
-                      ],
-                    },
-                    {
-                      name => "pop_next_shell",
-                      settings => [
-                        { key => "HDDVERSION", value => "21.10" },
-                        { key => "HDD_1", value => "pop_next_image.qcow2" },
-                        { key => "LIVECD", value => 0 },
                         { key => "START_AFTER_TEST", value => "pop_next" },
                       ],
                     },
@@ -455,33 +461,6 @@
                       settings => [{ key => "Desktop", value => "gnome" }],
                     },
                     {
-                      name => "pop_software_steam_lts",
-                      settings => [
-                        { key => "HDDVERSION", value => 20.04 },
-                        { key => "HDD_1", value => "pop_lts_release_image.qcow2" },
-                        { key => "LIVECD", value => 0 },
-                        { key => "START_AFTER_TEST", value => "pop_lts_release" },
-                      ],
-                    },
-                    {
-                      name => "pop_software_steam_sts",
-                      settings => [
-                        { key => "HDDVERSION", value => 21.04 },
-                        { key => "HDD_1", value => "pop_sts_release_image.qcow2" },
-                        { key => "LIVECD", value => 0 },
-                        { key => "START_AFTER_TEST", value => "pop_sts_release" },
-                      ],
-                    },
-                    {
-                      name => "pop_software_steam_next",
-                      settings => [
-                        { key => "HDDVERSION", value => "21.10" },
-                        { key => "HDD_1", value => "pop_next_image.qcow2" },
-                        { key => "LIVECD", value => 0 },
-                        { key => "START_AFTER_TEST", value => "pop_next" },
-                      ],
-                    },
-                    {
                       description => "Base Pop LTS Tests",
                       name => "pop_lts_release",
                       settings => [
@@ -495,6 +474,97 @@
                       settings => [
                         { key => "Desktop", value => "gnome" },
                         { key => "STORE_HDD_1", value => "pop_sts_release_image.qcow2" },
+                      ],
+                    },
+                    {
+                      description => "Test for newest debug iso",
+                      name => "pop_software_steam_sts_debug",
+                      settings => [
+                        { key => "HDDVERSION", value => 21.04 },
+                        { key => "HDD_1", value => "pop_sts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_sts" },
+                      ],
+                    },
+                    {
+                      description => "Test for current released iso",
+                      name => "pop_software_steam_sts",
+                      settings => [
+                        { key => "HDDVERSION", value => 21.04 },
+                        { key => "HDD_1", value => "pop_sts_release_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_sts_release" },
+                      ],
+                    },
+                    {
+                      description => "Test for current released iso",
+                      name => "pop_software_steam_next",
+                      settings => [
+                        { key => "HDDVERSION", value => "21.10" },
+                        { key => "HDD_1", value => "pop_next_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_next" },
+                      ],
+                    },
+                    {
+                      description => "Test for current released iso",
+                      name => "pop_software_steam_lts",
+                      settings => [
+                        { key => "HDDVERSION", value => 20.04 },
+                        { key => "HDD_1", value => "pop_lts_release_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_lts_release" },
+                      ],
+                    },
+                    {
+                      name => "pop_software_steam_lts_debug",
+                      settings => [
+                        { key => "HDDVERSION", value => 20.04 },
+                        { key => "HDD_1", value => "pop_lts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_lts" },
+                      ],
+                    },
+                    {
+                      description => "Base Pop LTS Tests",
+                      name => "pop_lts_no_save",
+                      settings => [{ key => "Desktop", value => "gnome" }],
+                    },
+                    {
+                      description => "Base Pop STS Tests",
+                      name => "pop_sts_no_save",
+                      settings => [{ key => "Desktop", value => "gnome" }],
+                    },
+                    {
+                      name => "pop_lts_release_no_save",
+                      settings => [{ key => "Desktop", value => "gnome" }],
+                    },
+                    {
+                      description => "Pop_Shell tests",
+                      name => "pop_software_shell_lts",
+                      settings => [
+                        { key => "HDDVERSION", value => 20.04 },
+                        { key => "HDD_1", value => "pop_lts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_lts" },
+                      ],
+                    },
+                    {
+                      name => "pop_software_shell_sts",
+                      settings => [
+                        { key => "HDDVERSION", value => 21.04 },
+                        { key => "HDD_1", value => "pop_sts_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_sts" },
+                      ],
+                    },
+                    {
+                      name => "pop_software_shell_next",
+                      settings => [
+                        { key => "HDDVERSION", value => "21.10" },
+                        { key => "HDD_1", value => "pop_next_image.qcow2" },
+                        { key => "LIVECD", value => 0 },
+                        { key => "START_AFTER_TEST", value => "pop_next" },
                       ],
                     },
                   ],
