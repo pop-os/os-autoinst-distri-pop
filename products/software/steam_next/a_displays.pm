@@ -20,33 +20,10 @@ use testapi;
 sub run {
 	sleep(15);
 	assert_screen 'desktop';
-    #my ($version) = @_;
 
-# Disable screen lock
- 
- #   if ($version == '21.04') {
-       #send_key 'super';
-       #hold_key 'super';
-       #send_key 'a';
-       #release_key 'super';
-       #type_string 'terminal';
-       #send_key 'ret';
-       #hold_key 'ctrl';
-       #send_key '1';
-       #release_key 'ctrl';
      send_key 'super-t';
      assert_screen 'terminal';
-#    } elsif ($version == '20.04') {
 
-#       send_key 'super';
-#       type_string 'terminal';
-#       send_key 'ret';
-    
-#       assert_screen 'terminal';
-#    } else {
-#       send_key 'super-t';
-#       assert_screen 'terminal';
-#    }
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n"; 
     type_string "gsettings set org.gnome.desktop.session idle-delay 0\n";
@@ -55,14 +32,4 @@ sub run {
 
 }
 
-#sub switch_resolution {
-#	my ($resolution) = @_;
-	
-#	send_key('super-t');
-	
-#	assert_screen 'terminal';
-#	type_string "xrandr -s ".$resolution."\n";
-#	type_string "exit\n";
-#	assert_screen 'desktop_'.$resolution;
-#}
 1;

@@ -24,9 +24,10 @@ sub run {
     power("reset");
 
     sleep(20);
-    assert_screen 'desktop';
-
+    assert_screen 'desktop',400;
+	wait_screen_change( sub {
      send_key 'super-t';
+    },400);
      assert_screen 'terminal';
 
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";

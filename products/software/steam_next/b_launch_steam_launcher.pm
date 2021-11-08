@@ -21,7 +21,26 @@ use testapi;
 
 
 sub run {
-record_info("No Launcher in 20.04");
+send_key 'super-a';
+type_string 'steam';
+wait_screen_change(sub {
+	send_key 'ret';
+},400);
+
+assert_screen 'steam_login_account';
+#type_string "system76QA";
+#send_key 'tab';
+type_string "System76 9202269269";
+send_key 'tab';
+
+assert_and_click "steam_login_logon";
+assert_screen "steam";
+sleep(5);
+send_key 'super-t';
+assert_screen 'terminal';
+type_string "killall -9 steam\n";
+type_string "exit\n";
+assert_screen 'desktop';
 
 }
 

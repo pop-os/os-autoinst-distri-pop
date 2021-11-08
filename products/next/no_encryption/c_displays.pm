@@ -18,8 +18,8 @@ use strict;
 use testapi;
 
 sub run {
-
-	assert_screen 'desktop';
+        sleep(10);
+	assert_screen 'desktop',400;
 
 # Disable screen lock
  

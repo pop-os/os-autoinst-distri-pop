@@ -26,7 +26,7 @@ sub run {
   
     send_key 'ret';
   
-    disable_screen_blanking '21.04';
+    #disable_screen_blanking '21.04';
 
     # press enter to advance 
     send_key 'ret';
@@ -74,7 +74,7 @@ sub run {
     assert_and_click 'installer_recovery_refresh',$timeout;
     assert_and_click 'installer_refresh_install',$timeout;
     assert_screen 'installer_refresh_start',$timeout;
-    assert_screen 'installer_finished',600;
+    assert_screen 'installer_finished',1600;
     assert_and_click 'installer_finished_reboot',$timeout;
     
     

@@ -31,7 +31,8 @@ sub run {
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
-    assert_screen 'desktop';
+    sleep(10);
+    assert_screen 'desktop',400;
 
     # changing boot option
     wait_screen_change(sub {

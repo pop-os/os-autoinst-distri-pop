@@ -22,7 +22,7 @@ use lib '/var/lib/openqa/tests/pop/';
 
 sub run {
 
-send_key 'super';
+send_key 'super-a';
 type_string 'steam';
 send_key 'ret';
 assert_screen 'steam_create_account',400;
