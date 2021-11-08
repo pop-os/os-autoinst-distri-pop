@@ -6,11 +6,11 @@
                     },
                     {
                       group_name => "PoP_LTS",
-                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\n    \n  x86_64_bios:\n    machine: 64bit-bios\n    priority: 50\n  \nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_lts_bios:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n    \nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts_release\n    - pop_lts\n    - pop_lts_no_encryption\n    - pop_lts_custom_parts1\n    - pop_lts_refresh_from_USB\n    - pop_lts_recovery\n    - pop_lts_recovery_reinstall\n    - pop_upgrade_lts_to_sts\n    - pop_lts_install_de\n    - pop_lts_install_ru\n    \n  x86_64_bios:\n    pop_lts_bios:\n    - pop_lts_release_no_save\n    - pop_lts_no_save\n",
+                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\n    \n  x86_64_bios:\n    machine: 64bit-bios\n    priority: 50\n  \nproducts:\n  pop_lts:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n  pop_lts_bios:\n    distri: pop\n    flavor: DVD\n    version: '20.04'\n    \nscenarios:\n  x86_64:\n    pop_lts:\n    - pop_lts_release\n    - pop_lts\n    - pop_lts_no_encryption\n    - pop_lts_custom_parts1\n    - pop_lts_refresh_from_USB\n    - pop_lts_recovery\n    - pop_lts_recovery_reinstall\n    - pop_upgrade_lts_to_sts\n   # - pop_lts_install_de\n   # - pop_lts_install_ru\n    \n  x86_64_bios:\n    pop_lts_bios:\n    - pop_lts_release_no_save\n    - pop_lts_no_save\n",
                     },
                     {
                       group_name => "PoP_Next",
-                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_next:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_next:\n    - pop_next\n    - pop_next_no_encryption\n    - pop_next_custom_parts1\n    - pop_next_refresh_from_USB\n    - pop_next_recovery_reinstall\n    - pop_next_recovery\n    - pop_next_install_de\n    - pop_next_install_ru\n",
+                      template   => "defaults:\n  x86_64:\n    machine: 64bit\n    priority: 50\nproducts:\n  pop_next:\n    distri: pop\n    flavor: DVD\n    version: '21.10'\nscenarios:\n  x86_64:\n    pop_next:\n    - pop_next\n    - pop_next_no_encryption\n    - pop_next_custom_parts1\n    - pop_next_refresh_from_USB\n    - pop_next_recovery_reinstall\n    - pop_next_recovery\n    #- pop_next_install_de\n    #- pop_next_install_ru\n",
                     },
                     {
                       group_name => "PoP_STS",
@@ -37,9 +37,9 @@
                       settings => [
                         { key => "HDDSIZEGB", value => 30 },
                         { key => "QEMUCPU", value => "qemu64" },
-                        { key => "QEMUCPUS", value => 4 },
+                        { key => "QEMUCPUS", value => 2 },
                         { key => "QEMURAM", value => 4096 },
-                        { key => "QEMUTHREADS", value => 4 },
+                        { key => "QEMUTHREADS", value => 2 },
                         { key => "QEMUVGA", value => "virtio" },
                         { key => "UEFI", value => 1 },
                         { key => "UEFI_PFLASH_CODE", value => "/usr/share/ovmf/OVMF.fd" },
@@ -200,9 +200,9 @@
                       settings => [
                         { key => "HDDSIZEGB", value => 30 },
                         { key => "QEMUCPU", value => "qemu64" },
-                        { key => "QEMUCPUS", value => 3 },
+                        { key => "QEMUCPUS", value => 2 },
                         { key => "QEMURAM", value => 4096 },
-                        { key => "QEMUTHREADS", value => 3 },
+                        { key => "QEMUTHREADS", value => 2 },
                         { key => "QEMUVGA", value => "std" },
                         { key => "VGA", value => "std" },
                         { key => "WORKER_CLASS", value => "qemu_x86_64" },
