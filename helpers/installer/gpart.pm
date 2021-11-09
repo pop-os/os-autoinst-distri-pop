@@ -17,57 +17,58 @@ use base 'basetest';
 use strict;
 use testapi;
 
+my $timeout = 400;
 sub custom_partitions {
     my ($version) = @_;
 
-    assert_screen 'installer_partitions_screen';
-    assert_and_click 'installer_partitions_Modify';
-    assert_screen 'gparted';
-    assert_and_click 'gparted_device';
-    assert_and_click 'gparted_create_new_PT';
-    assert_and_click 'gparted_new_PT_format';
-    assert_and_click 'gparted_new_PT_format_gpt';
-    assert_and_click 'gparted_create_new_PT_confirm';
+    assert_screen 'installer_partitions_screen',$timeout;
+    assert_and_click 'installer_partitions_Modify',$timeout;
+    assert_screen 'gparted',$timeout;
+    assert_and_click 'gparted_device',$timeout;
+    assert_and_click 'gparted_create_new_PT',$timeout;
+    assert_and_click 'gparted_new_PT_format',$timeout;
+    assert_and_click 'gparted_new_PT_format_gpt',$timeout;
+    assert_and_click 'gparted_create_new_PT_confirm',$timeout;
 
     my @a = (500,4096);
     for my $i (@a) { 
-    	assert_and_click 'gparted_create_new_partition';
-    	assert_screen 'gparted_new_partition';
+    	assert_and_click 'gparted_create_new_partition',$timeout;
+    	assert_screen 'gparted_new_partition',$timeout;
     	send_key '0';
     	send_key 'tab';
     	type_string $i;
-    	assert_and_click 'gparted_partition_type';
-    	assert_and_click 'gparted_fat32';
-    	assert_and_click 'gparted_add';
+    	assert_and_click 'gparted_partition_type',$timeout;
+    	assert_and_click 'gparted_fat32',$timeout;
+    	assert_and_click 'gparted_add',$timeout;
     }
     
-        assert_and_click 'gparted_create_new_partition';
-        assert_screen 'gparted_new_partition';
+        assert_and_click 'gparted_create_new_partition',$timeout;
+        assert_screen 'gparted_new_partition',$timeout;
         send_key '0';
         send_key 'tab';
-        assert_and_click 'gparted_partition_type';
-        assert_and_click 'gparted_ext4';
-        assert_and_click 'gparted_add';
+        assert_and_click 'gparted_partition_type',$timeout;
+        assert_and_click 'gparted_ext4',$timeout;
+        assert_and_click 'gparted_add',$timeout;
 
-    assert_and_click 'gparted_apply';
-    assert_and_click 'gparted_confirm';
-    assert_and_click 'gparted_close';
-    assert_and_click 'gparted_close_window';
+    assert_and_click 'gparted_apply',$timeout;
+    assert_and_click 'gparted_confirm',$timeout;
+    assert_and_click 'gparted_close',$timeout;
+    assert_and_click 'gparted_close_window',$timeout;
 
-    assert_and_click 'installer_partitions_select_boot';
-    assert_and_click 'installer_partitions_use_boot';
-    assert_and_click 'installer_partitions_format_boot';
-    assert_and_click 'installer_partitions_confirm_boot';
+    assert_and_click 'installer_partitions_select_boot',$timeout;
+    assert_and_click 'installer_partitions_use_boot',$timeout;
+    assert_and_click 'installer_partitions_format_boot',$timeout;
+    assert_and_click 'installer_partitions_confirm_boot',$timeout;
 
-    assert_and_click 'installer_partitions_select_recovery';
-    assert_and_click 'installer_partitions_use_recovery';
-    assert_and_click 'installer_partitions_use_as';
+    assert_and_click 'installer_partitions_select_recovery',$timeout;
+    assert_and_click 'installer_partitions_use_recovery',$timeout;
+    assert_and_click 'installer_partitions_use_as',$timeout;
     type_string "/recovery";
-    assert_and_click 'installer_partitions_confirm_recovery';
+    assert_and_click 'installer_partitions_confirm_recovery',$timeout;
 
-    assert_and_click 'installer_partitions_select_root';
-    assert_and_click 'installer_partitions_use_root';
-    assert_and_click 'installer_partitions_confirm_root';
+    assert_and_click 'installer_partitions_select_root',$timeout;
+    assert_and_click 'installer_partitions_use_root',$timeout;
+    assert_and_click 'installer_partitions_confirm_root',$timeout;
 
 }
 1;
