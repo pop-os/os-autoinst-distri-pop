@@ -5,6 +5,7 @@
       "ypos": 0,
       "width": 91,
       "height": 27,
+      "match": 90,
       "type": "match"
     },
     {
@@ -12,6 +13,7 @@
       "ypos": 5,
       "width": 203,
       "height": 44,
+      "match": 90,
       "type": "match"
     },
     {
@@ -26,6 +28,7 @@
       "ypos": 716,
       "width": 953,
       "height": 45,
+      "match": 90,
       "type": "match"
     },
     {
@@ -33,6 +36,7 @@
       "ypos": 56,
       "width": 46,
       "height": 652,
+      "match": 90,
       "type": "match"
     }
   ],

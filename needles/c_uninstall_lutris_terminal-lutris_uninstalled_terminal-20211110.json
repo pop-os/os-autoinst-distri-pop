@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 104,
+      "ypos": 378,
+      "width": 406,
+      "height": 35,
+      "type": "match"
+    },
+    {
+      "xpos": 103,
+      "ypos": 596,
+      "width": 227,
+      "height": 24,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "lutris_uninstalled_terminal"
+  ]
+}

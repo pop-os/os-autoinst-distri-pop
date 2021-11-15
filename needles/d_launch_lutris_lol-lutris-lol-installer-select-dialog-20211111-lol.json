@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "xpos": 173,
+      "ypos": 279,
+      "width": 674,
+      "height": 75,
+      "type": "match"
+    },
+    {
+      "xpos": 174,
+      "ypos": 359,
+      "width": 672,
+      "height": 158,
+      "type": "match",
+      "click_point": {
+        "xpos": 612,
+        "ypos": 28
+      }
+    },
+    {
+      "xpos": 176,
+      "ypos": 532,
+      "width": 668,
+      "height": 62,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "lutris-lol-installer-select-dialog"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "area": [
+    {
+      "width": 352,
+      "height": 47,
+      "ypos": 26,
+      "type": "match",
+      "xpos": 276,
+      "match": 80
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "lutris-search-focus"
+  ]
+}

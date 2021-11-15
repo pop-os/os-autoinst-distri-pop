@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 54,
+      "ypos": 283,
+      "width": 195,
+      "height": 37,
+      "type": "match",
+      "click_point": {
+        "xpos": 37.5,
+        "ypos": 18.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "lutris-sources-lutris"
+  ]
+}

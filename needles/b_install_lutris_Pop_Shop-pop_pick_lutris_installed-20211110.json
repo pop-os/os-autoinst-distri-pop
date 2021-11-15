@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 146,
+      "ypos": 104,
+      "width": 211,
+      "height": 151,
+      "type": "match"
+    },
+    {
+      "xpos": 509,
+      "ypos": 124,
+      "width": 268,
+      "height": 99,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_pick_lutris_installed"
+  ]
+}

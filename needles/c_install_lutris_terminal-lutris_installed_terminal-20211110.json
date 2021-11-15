@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 52,
+      "ypos": 546,
+      "width": 418,
+      "height": 25,
+      "type": "match"
+    },
+    {
+      "xpos": 347,
+      "ypos": 87,
+      "width": 205,
+      "height": 27,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "lutris_installed_terminal"
+  ]
+}
