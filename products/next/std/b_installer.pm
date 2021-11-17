@@ -83,7 +83,7 @@ sub run {
        die;
     }
    
-    assert_screen 'installer_finished',2000;
+    assert_screen 'installer_finished',$timeout*20;
     
     assert_and_click 'installer_finished_reboot',$timeout;
 	assert_screen 'boot_splash',$timeout;

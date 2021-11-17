@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "xpos": 130,
+      "ypos": 102,
+      "width": 142,
+      "height": 161,
+      "type": "match"
+    },
+    {
+      "xpos": 275,
+      "ypos": 127,
+      "width": 122,
+      "height": 56,
+      "type": "match"
+    },
+    {
+      "xpos": 501,
+      "ypos": 117,
+      "width": 253,
+      "height": 70,
+      "type": "match",
+      "click_point": {
+        "xpos": 195.5,
+        "ypos": 37
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "install_pick_lutris"
+  ]
+}

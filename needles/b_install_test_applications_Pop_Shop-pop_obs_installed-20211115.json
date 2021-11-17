@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 531,
+      "ypos": 123,
+      "width": 303,
+      "height": 113,
+      "type": "match"
+    },
+    {
+      "xpos": 128,
+      "ypos": 108,
+      "width": 148,
+      "height": 141,
+      "type": "match"
+    },
+    {
+      "xpos": 281,
+      "ypos": 108,
+      "width": 137,
+      "height": 100,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_obs_installed"
+  ]
+}

@@ -18,7 +18,7 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
-
+my $timeout = 400;
 sub run {
 	sleep(15);
 	assert_screen 'desktop';
@@ -69,7 +69,7 @@ sub run {
     assert_and_click 'installer_recovery_refresh';
     assert_and_click 'installer_refresh_install';
     assert_screen 'installer_refresh_start';
-    assert_screen 'installer_finished',600;
+    assert_screen 'installer_finished',$timeout*20;
     assert_and_click 'installer_finished_reboot';
 
     

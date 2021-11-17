@@ -1,0 +1,36 @@
+{
+  "area": [
+    {
+      "xpos": 513,
+      "ypos": 116,
+      "width": 298,
+      "height": 124,
+      "type": "match"
+    },
+    {
+      "xpos": 134,
+      "ypos": 121,
+      "width": 138,
+      "height": 136,
+      "type": "match"
+    },
+    {
+      "xpos": 278,
+      "ypos": 112,
+      "width": 102,
+      "height": 40,
+      "type": "match"
+    },
+    {
+      "xpos": 277,
+      "ypos": 163,
+      "width": 151,
+      "height": 39,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_blender_installed"
+  ]
+}

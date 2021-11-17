@@ -16,7 +16,7 @@
 use base 'basetest';
 use strict;
 use testapi;
-
+my $timeout = 400;
 sub run {
     # wait for installer language select to apear
     assert_screen 'installer_language_select',200;
@@ -64,7 +64,7 @@ sub run {
     assert_and_click 'installer_recovery_refresh';
     assert_and_click 'installer_refresh_install';
     assert_screen 'installer_refresh_start';
-    assert_screen 'installer_finished',600;
+    assert_screen 'installer_finished',$timeout*20;
     assert_and_click 'installer_finished_reboot';
     
     # wait for create user account screen to appear

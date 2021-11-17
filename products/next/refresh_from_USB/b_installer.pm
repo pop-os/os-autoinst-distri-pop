@@ -67,7 +67,7 @@ sub run {
     assert_and_click 'installer_recovery_refresh',$timeout;
     assert_and_click 'installer_refresh_install',$timeout;
     assert_screen 'installer_refresh_start',$timeout;
-    assert_screen 'installer_finished',1600;
+    assert_screen 'installer_finished',$timeout*20;
     assert_and_click 'installer_finished_reboot',$timeout;
     assert_screen 'boot_splash',$timeout;
     power("reset");

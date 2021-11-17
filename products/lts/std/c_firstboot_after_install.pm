@@ -57,8 +57,9 @@ sub run {
 
     assert_and_click 'initial_dialog_timezone_select_search',$timeout;
     type_string "Denver\n";
+    wait_screen_change( sub {
     assert_and_click 'initial_dialog_timezone_next',$timeout;
-
+	},400);
     # Online Accounts 
 
     assert_screen 'initial_dialog_online_accounts',$timeout;

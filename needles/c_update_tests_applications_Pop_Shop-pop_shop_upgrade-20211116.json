@@ -1,0 +1,27 @@
+{
+  "area": [
+    {
+      "xpos": 852,
+      "ypos": 95,
+      "width": 164,
+      "height": 565,
+      "type": "match"
+    },
+    {
+      "xpos": 403,
+      "ypos": 31,
+      "width": 202,
+      "height": 48,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "No updates available."
+    }
+  ],
+  "tags": [
+    "pop_shop_upgrade"
+  ]
+}

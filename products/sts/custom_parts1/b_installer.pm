@@ -89,7 +89,7 @@ sub run {
        die;
     }
    
-    assert_screen 'installer_finished',$timeout;
+    assert_screen 'installer_finished',$timeout*20;
     assert_and_click 'installer_finished_reboot';
 
     #assert_screen 'desktop',80;

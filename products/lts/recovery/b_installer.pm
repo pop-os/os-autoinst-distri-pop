@@ -70,7 +70,7 @@ sub run {
     assert_and_click 'installer_recovery_refresh',$timeout;
     assert_and_click 'installer_refresh_install',$timeout;
     assert_screen 'installer_refresh_start';
-    assert_screen 'installer_finished',600;
+    assert_screen 'installer_finished',20*$timeout;
     assert_and_click 'installer_finished_reboot',$timeout;
     
     # wait for create user account screen to appear

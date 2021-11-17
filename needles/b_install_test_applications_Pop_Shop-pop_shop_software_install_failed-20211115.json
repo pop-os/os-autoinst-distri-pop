@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 388,
+      "ypos": 310,
+      "width": 98,
+      "height": 21,
+      "type": "match"
+    },
+    {
+      "xpos": 384,
+      "ypos": 333,
+      "width": 325,
+      "height": 152,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_shop_software_install_failed"
+  ]
+}

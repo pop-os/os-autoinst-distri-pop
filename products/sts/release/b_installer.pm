@@ -19,7 +19,7 @@ use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
 use helpers::installer::avatar_tests;
-
+my $timeout = 400;
 sub run {
     # wait for installer language select to apear
     assert_screen 'installer_language_select';
@@ -89,7 +89,7 @@ sub run {
        die;
     }
    
-    assert_screen 'installer_finished',400;
+    assert_screen 'installer_finished',$timeout*20;
     assert_and_click 'installer_finished_reboot';
 
     #assert_screen 'desktop',80;

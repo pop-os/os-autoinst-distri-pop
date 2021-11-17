@@ -91,7 +91,7 @@ sub run {
        die;
     }
    
-    assert_screen 'installer_finished',1400;
+    assert_screen 'installer_finished',20*$timeout;
     assert_and_click 'installer_finished_reboot';
     power("reset");
     eject_cd();
