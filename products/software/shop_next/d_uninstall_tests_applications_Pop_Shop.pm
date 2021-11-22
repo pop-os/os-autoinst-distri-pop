@@ -18,20 +18,30 @@ use strict;
 use testapi;
 #use lib '/var/lib/openqa/tests/pop/';
 #use helpers::displays;
-
+my @apps = ("pick_steam","pick_lutris","gimp","blender","obs");
 
 sub run {
-
- send_key 'super';
- type_string 'pop shop';
- send_key 'ret';
- assert_screen 'pop_shop_screen';
- assert_and_click 'pop_pick_steam_install';
- assert_and_click 'uninstall_steam';
- assert_screen 'password_dialog';
- type_string "system76\n";
- assert_screen 'install_steam',400;
- assert_and_click 'close_pop_shop';
+ my $length = @apps;
+ for (my $i = 0;$i < $length;$i++) {
+ 	send_key 'super-a';
+ 	type_string 'pop shop';
+ 	send_key 'ret';
+ 	assert_screen 'pop_shop_screen';
+ 	#if ($apps[$i] =~ /pick_/) {
+ 	#	assert_and_click "pop_".$apps[$i]."_install";
+ 	#} else {
+ 	assert_and_click 'pop_shop_search';
+ 	type_string $apps[$i]."\n";
+ 	assert_and_click "pop_shop_search_".$apps[$i];
+ 	#}
+ 	assert_and_click "uninstall_".$apps[$i];
+	 assert_screen 'password_dialog';
+	 type_string "system76\n";
+ 	assert_screen 'install_steam',400;
+ 	assert_and_click 'close_pop_shop';
+ 	sleep(5);
+ 	assert_screen 'desktop';
+ 	}
  
 }
 

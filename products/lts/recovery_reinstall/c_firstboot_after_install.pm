@@ -81,7 +81,7 @@ sub run {
 
     # Time Zone screen
 
-    check_screen 'system_timezone_updated',$timeout;
+    check_screen 'system_timezone_updated',10;
     
     assert_screen 'initial_dialog_timezone',$timeout;
 

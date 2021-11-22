@@ -18,8 +18,8 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
-
-
+my $journalctl = '';
+my $script = "echo THIS IS A SCRIPT";
 sub run {
 
     # restart to get around installer issue
@@ -40,7 +40,12 @@ sub run {
     assert_screen 'desktop',400;
 
    # disable_screen_blanking '20.04';
-
+  
+   #script_run($script,20,1,1,1);
+    enter_cmd "systemctl status > /var/log/systemctl_status";
+    enter_cmd "echo UPLOADFINISH >/dev/$serialdev";
+    wait_serial("UPLOADFINISH", 200);
+    save_screenshot;
 }
 
 1;

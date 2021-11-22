@@ -26,7 +26,7 @@ sub run {
  	record_info($apps[$i],"Install test for".$apps[$i]);
  	send_key 'super';
  	type_string 'pop shop';
- 	send_key 'ret';
+ 	send_key_until_needlematch('pop_shop_screen','ret');
  	assert_screen 'pop_shop_screen',400;
  	if ($apps[$i] =~ /pick_/) {
  		assert_and_click "pop_".$apps[$i]."_install";
@@ -37,16 +37,16 @@ sub run {
  	}
  	assert_and_click "install_".$apps[$i];
  	
- 	if (check_screen 'password_dialog',40 != undef) {
- 		save_screenshot();
- 		wait_screen_change(sub {
+ 	wait_screen_change(sub {
+ 		if (check_screen 'password_dialog',40 != undef) {
+ 			save_screenshot();
  			type_string "system76";
  			send_key 'ret';
- 			},400);
- 	}
+ 		}
+ 	},400);
  	
-
  	assert_screen "pop_".$apps[$i]."_installed",1800;
+ 	force_soft_failure(["install may have malfunctioned"]);
  	assert_and_click 'close_pop_shop';
  	sleep(5);
  	assert_screen 'desktop';
