@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 45,
+      "ypos": 70,
+      "width": 957,
+      "height": 609,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Initial Setup crashed"
+    }
+  ],
+  "tags": [
+    "finished"
+  ]
+}

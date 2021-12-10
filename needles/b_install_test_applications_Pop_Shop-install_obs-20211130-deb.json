@@ -1,0 +1,38 @@
+{
+  "area": [
+    {
+      "xpos": 519,
+      "type": "match",
+      "click_point": {
+        "ypos": 38,
+        "xpos": 217
+      },
+      "height": 86,
+      "width": 276,
+      "ypos": 113
+    },
+    {
+      "width": 153,
+      "type": "match",
+      "height": 144,
+      "xpos": 122,
+      "ypos": 99
+    },
+    {
+      "height": 74,
+      "xpos": 281,
+      "width": 164,
+      "type": "match",
+      "ypos": 110
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Installed Debian after installing flatpak"
+    }
+  ],
+  "tags": [
+    "install_obs"
+  ]
+}

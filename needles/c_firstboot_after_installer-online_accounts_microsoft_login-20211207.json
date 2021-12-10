@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 19,
+      "ypos": 81,
+      "width": 999,
+      "height": 604,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Initial Setup crashed"
+    }
+  ],
+  "tags": [
+    "online_accounts_microsoft_login"
+  ]
+}

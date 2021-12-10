@@ -1,0 +1,38 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "xpos": 139,
+      "height": 148,
+      "ypos": 111,
+      "width": 135
+    },
+    {
+      "type": "match",
+      "width": 148,
+      "height": 78,
+      "ypos": 113,
+      "xpos": 279
+    },
+    {
+      "type": "match",
+      "click_point": {
+        "ypos": 41.5,
+        "xpos": 192.5
+      },
+      "height": 77,
+      "width": 265,
+      "ypos": 115,
+      "xpos": 520
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Broken Icon"
+    }
+  ],
+  "tags": [
+    "install_blender"
+  ]
+}

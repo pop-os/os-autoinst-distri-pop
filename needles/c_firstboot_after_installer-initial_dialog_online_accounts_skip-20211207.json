@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 27,
+      "ypos": 83,
+      "width": 971,
+      "height": 586,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Initial Setup crashed"
+    }
+  ],
+  "tags": [
+    "initial_dialog_online_accounts_skip"
+  ]
+}

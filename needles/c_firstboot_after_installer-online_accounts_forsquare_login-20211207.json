@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 30,
+      "ypos": 52,
+      "width": 974,
+      "height": 630,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Initial Setup crashed"
+    }
+  ],
+  "tags": [
+    "online_accounts_forsquare_login"
+  ]
+}

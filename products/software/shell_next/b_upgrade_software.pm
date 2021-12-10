@@ -55,7 +55,7 @@ sub run {
   #  type_string 'killall gnome-terminal-*';
 	#send_key 'ret';
 	#send_key 'super-y';
-	assert_screen 'full-desktop',2000;
+	assert_screen 'full-desktop',20000;
 }
 
 1;

@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "xpos": 129,
+      "ypos": 112,
+      "width": 145,
+      "height": 133,
+      "type": "match"
+    },
+    {
+      "xpos": 280,
+      "ypos": 113,
+      "width": 133,
+      "height": 92,
+      "type": "match"
+    },
+    {
+      "xpos": 505,
+      "ypos": 114,
+      "width": 305,
+      "height": 119,
+      "type": "match",
+      "click_point": {
+        "xpos": 207.5,
+        "ypos": 82.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "uninstall_blender"
+  ]
+}

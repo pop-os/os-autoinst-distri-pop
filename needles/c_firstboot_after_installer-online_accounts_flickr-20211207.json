@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 10,
+      "ypos": 64,
+      "width": 1005,
+      "height": 623,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Initial Setup crashed"
+    }
+  ],
+  "tags": [
+    "online_accounts_flickr"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "click_point": {
+        "ypos": 20.5,
+        "xpos": 121
+      },
+      "type": "match",
+      "height": 41,
+      "ypos": 30,
+      "xpos": 696,
+      "width": 242
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_shop_search"
+  ]
+}

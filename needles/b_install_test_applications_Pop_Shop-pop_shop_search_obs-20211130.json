@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "ypos": 73,
+      "height": 91,
+      "xpos": 8,
+      "width": 443
+    },
+    {
+      "xpos": 727,
+      "width": 297,
+      "ypos": 72,
+      "height": 77,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_shop_search_obs"
+  ]
+}

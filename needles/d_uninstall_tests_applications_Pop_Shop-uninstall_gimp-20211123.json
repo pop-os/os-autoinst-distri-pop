@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "height": 92,
+      "xpos": 122,
+      "type": "match",
+      "ypos": 243,
+      "width": 306,
+      "click_point": {
+        "xpos": 228,
+        "ypos": 67
+      }
+    },
+    {
+      "ypos": 117,
+      "xpos": 130,
+      "height": 116,
+      "type": "match",
+      "width": 147
+    },
+    {
+      "ypos": 119,
+      "height": 78,
+      "xpos": 282,
+      "type": "match",
+      "width": 423
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "uninstall_gimp"
+  ]
+}

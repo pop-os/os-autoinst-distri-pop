@@ -17,7 +17,6 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
-#use helpers::gnome_display;
 use helpers::displays;
 
 
@@ -25,7 +24,7 @@ sub run {
 
     # restart to get around installer issue
     eject_cd; 
-    power("reset");
+    #power("reset");
     
     # Decryption prompt
 
@@ -37,11 +36,10 @@ sub run {
     assert_screen 'gdm';
     send_key 'ret';
     type_string "system76\n";
-    sleep(10);
-    assert_screen 'desktop';
+    sleep(15);
+    assert_screen 'desktop',400;
 
-   # disable_screen_blanking '21.04';
-    #switch_resolution '1400x1050';
+   # disable_screen_blanking '20.04';
 
 }
 

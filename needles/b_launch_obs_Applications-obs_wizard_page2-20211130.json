@@ -1,0 +1,21 @@
+{
+  "area": [
+    {
+      "xpos": 286,
+      "ypos": 146,
+      "width": 534,
+      "height": 367,
+      "type": "match",
+      "click_point": {
+        "xpos": 402,
+        "ypos": 347.5
+      },
+      "margin": 50,
+      "match": 80
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "obs_wizard_page2"
+  ]
+}

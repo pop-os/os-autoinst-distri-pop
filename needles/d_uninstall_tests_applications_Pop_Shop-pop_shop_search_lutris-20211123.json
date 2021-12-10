@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "xpos": 8,
+      "height": 86,
+      "click_point": {
+        "xpos": 41.5,
+        "ypos": 46
+      },
+      "ypos": 89,
+      "width": 361
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_shop_search_lutris"
+  ]
+}
