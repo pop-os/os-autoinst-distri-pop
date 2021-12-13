@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "xpos": 93,
+      "height": 455,
+      "ypos": 123,
+      "width": 399
+    },
+    {
+      "height": 279,
+      "ypos": 217,
+      "xpos": 516,
+      "type": "match",
+      "width": 417
+    },
+    {
+      "xpos": 539,
+      "height": 69,
+      "ypos": 609,
+      "type": "match",
+      "width": 412
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_encryption_screen"
+  ]
+}
