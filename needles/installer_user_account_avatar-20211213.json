@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "width": 380,
+      "height": 512,
+      "xpos": 93,
+      "ypos": 125
+    },
+    {
+      "ypos": 345,
+      "xpos": 499,
+      "type": "match",
+      "width": 458,
+      "height": 199
+    },
+    {
+      "height": 147,
+      "type": "match",
+      "width": 171,
+      "ypos": 194,
+      "xpos": 648,
+      "click_point": {
+        "xpos": 85.5,
+        "ypos": 73.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_user_account_avatar"
+  ]
+}

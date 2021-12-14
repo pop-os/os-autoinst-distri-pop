@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "xpos": 122,
+      "ypos": 129,
+      "height": 484,
+      "type": "match",
+      "width": 368
+    },
+    {
+      "ypos": 83,
+      "xpos": 496,
+      "height": 532,
+      "type": "match",
+      "width": 461
+    },
+    {
+      "click_point": {
+        "ypos": 31.5,
+        "xpos": 178
+      },
+      "ypos": 618,
+      "xpos": 727,
+      "width": 228,
+      "type": "match",
+      "height": 59
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_language_region"
+  ]
+}

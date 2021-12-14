@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "click_point": {
+        "xpos": 822.5,
+        "ypos": 28.5
+      },
+      "ypos": 623,
+      "xpos": 71,
+      "type": "match",
+      "width": 887,
+      "height": 49
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_decrypt_select"
+  ]
+}

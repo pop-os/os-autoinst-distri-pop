@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "height": 487,
+      "type": "match",
+      "width": 882,
+      "ypos": 92,
+      "xpos": 68
+    },
+    {
+      "ypos": 613,
+      "xpos": 529,
+      "click_point": {
+        "xpos": 76.5,
+        "ypos": 32.5
+      },
+      "height": 63,
+      "width": 423,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_no_encryption_confirm"
+  ]
+}

@@ -25,6 +25,7 @@ sub run {
     assert_screen 'installer_language_select',$timeout;
 
     # press enter to advance 
+    send_key 'tab';
     send_key 'ret';
     
    #disable_screen_blanking '21.04';

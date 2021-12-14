@@ -23,7 +23,7 @@ my $timeout = 400;
 sub run {
     # wait for installer language select to apear
     assert_screen 'installer_language_select',$timeout;
-  
+    send_key 'tab';
     send_key 'ret';
   
     #disable_screen_blanking '21.04';
@@ -51,15 +51,17 @@ sub run {
     #assert_screen 'installer_keyboard_region';
     
     #send_key 'ret';
-
+    assert_screen 'installer_recovery_options',$timeout;
+    assert_and_click 'installer_refesh_select',$timeout;
+    assert_and_click 'installer_recovery_refresh',$timeout;
     # wait for the installer install options to appear
     assert_screen 'installer_install_decrypt_option',$timeout;
     
     assert_and_click 'installer_decrypt_select',$timeout;
    
-    assert_screen 'installer_decrypt_drive_select',$timeout;
+  #  assert_screen 'installer_decrypt_drive_select',$timeout;
 
-    send_key 'ret';
+   # send_key 'ret';
     
     assert_screen 'installer_password_entry',$timeout;
     
@@ -69,9 +71,7 @@ sub run {
     
 
     # wait for the installer drive option to appear
-    assert_screen 'installer_recovery_options',$timeout;
-    assert_and_click 'installer_refesh_select',$timeout;
-    assert_and_click 'installer_recovery_refresh',$timeout;
+   
     assert_and_click 'installer_refresh_install',$timeout;
     assert_screen 'installer_refresh_start',$timeout;
     assert_screen 'installer_finished',1600;

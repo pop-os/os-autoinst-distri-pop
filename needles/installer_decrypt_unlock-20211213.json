@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "height": 49,
+      "width": 234,
+      "type": "match",
+      "xpos": 718,
+      "ypos": 623,
+      "click_point": {
+        "ypos": 25.5,
+        "xpos": 178
+      }
+    },
+    {
+      "type": "match",
+      "width": 417,
+      "height": 192,
+      "xpos": 521,
+      "ypos": 260
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_decrypt_unlock"
+  ]
+}

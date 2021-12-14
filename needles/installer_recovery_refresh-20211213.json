@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "height": 314,
+      "width": 422,
+      "type": "match",
+      "xpos": 526,
+      "ypos": 175
+    },
+    {
+      "width": 288,
+      "type": "match",
+      "height": 59,
+      "click_point": {
+        "xpos": 216,
+        "ypos": 31.5
+      },
+      "xpos": 667,
+      "ypos": 616
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_recovery_refresh"
+  ]
+}

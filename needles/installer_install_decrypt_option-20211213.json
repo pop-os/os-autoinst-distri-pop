@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 508,
+      "ypos": 241,
+      "width": 429,
+      "type": "match",
+      "height": 211
+    },
+    {
+      "height": 436,
+      "width": 437,
+      "type": "match",
+      "xpos": 69,
+      "ypos": 146
+    },
+    {
+      "height": 49,
+      "width": 213,
+      "type": "match",
+      "ypos": 623,
+      "xpos": 738
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_install_decrypt_option"
+  ]
+}
