@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "ypos": 386,
+      "height": 94,
+      "type": "match",
+      "xpos": 509,
+      "width": 417
+    },
+    {
+      "type": "match",
+      "height": 87,
+      "width": 401,
+      "click_point": {
+        "ypos": 43.5,
+        "xpos": 200.5
+      },
+      "xpos": 514,
+      "ypos": 297
+    },
+    {
+      "width": 383,
+      "xpos": 572,
+      "type": "match",
+      "height": 93,
+      "ypos": 612
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_refesh_select"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 174,
+      "ypos": 247,
+      "width": 677,
+      "height": 439,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "wine failed"
+    }
+  ],
+  "tags": [
+    "lol-riot-launcher"
+  ]
+}

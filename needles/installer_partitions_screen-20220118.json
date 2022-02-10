@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "height": 179,
+      "xpos": 66,
+      "width": 886,
+      "ypos": 88
+    },
+    {
+      "xpos": 72,
+      "ypos": 511,
+      "width": 877,
+      "type": "match",
+      "height": 161
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_partitions_screen"
+  ]
+}

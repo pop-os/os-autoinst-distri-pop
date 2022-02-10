@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 183,
+      "ypos": 242,
+      "width": 663,
+      "height": 444,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Known error"
+    }
+  ],
+  "tags": [
+    "lol-installer"
+  ]
+}

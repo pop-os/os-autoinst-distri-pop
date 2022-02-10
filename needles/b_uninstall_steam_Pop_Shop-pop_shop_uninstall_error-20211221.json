@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 311,
+      "ypos": 320,
+      "width": 400,
+      "height": 157,
+      "type": "match",
+      "click_point": {
+        "xpos": 353,
+        "ypos": 138.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_shop_uninstall_error"
+  ]
+}

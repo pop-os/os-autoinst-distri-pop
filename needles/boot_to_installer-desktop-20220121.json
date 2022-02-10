@@ -1,0 +1,43 @@
+{
+  "area": [
+    {
+      "ypos": 0,
+      "width": 91,
+      "xpos": 0,
+      "type": "match",
+      "height": 27
+    },
+    {
+      "type": "match",
+      "height": 44,
+      "xpos": 818,
+      "width": 203,
+      "ypos": 5
+    },
+    {
+      "height": 718,
+      "type": "match",
+      "ypos": 47,
+      "width": 53,
+      "xpos": 3
+    },
+    {
+      "type": "match",
+      "height": 45,
+      "xpos": 65,
+      "width": 953,
+      "ypos": 716
+    },
+    {
+      "width": 46,
+      "ypos": 56,
+      "xpos": 972,
+      "height": 652,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "desktop"
+  ]
+}

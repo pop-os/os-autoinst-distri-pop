@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "ypos": 82,
+      "width": 412,
+      "xpos": 8,
+      "height": 81,
+      "click_point": {
+        "xpos": 206,
+        "ypos": 40.5
+      },
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_shop_search_steam"
+  ]
+}

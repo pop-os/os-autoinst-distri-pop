@@ -1,0 +1,43 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "xpos": 1,
+      "height": 32,
+      "ypos": 39,
+      "width": 111
+    },
+    {
+      "type": "match",
+      "xpos": 945,
+      "width": 77,
+      "ypos": 36,
+      "height": 38
+    },
+    {
+      "ypos": 117,
+      "height": 49,
+      "width": 303,
+      "xpos": 363,
+      "type": "match"
+    },
+    {
+      "type": "match",
+      "xpos": 250,
+      "width": 526,
+      "height": 205,
+      "ypos": 193
+    },
+    {
+      "width": 499,
+      "height": 22,
+      "ypos": 625,
+      "type": "match",
+      "xpos": 265
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "inital_dialog_top_bar"
+  ]
+}

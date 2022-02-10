@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 178,
+      "ypos": 249,
+      "width": 670,
+      "height": 432,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "wine failed"
+    }
+  ],
+  "tags": [
+    "lutris-install-option-menu-icon-select"
+  ]
+}

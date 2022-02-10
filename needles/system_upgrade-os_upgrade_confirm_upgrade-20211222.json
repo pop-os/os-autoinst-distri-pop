@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "click_point": {
+        "ypos": 41.5,
+        "xpos": 647
+      },
+      "type": "match",
+      "width": 754,
+      "xpos": 269,
+      "height": 543,
+      "ypos": 204
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "os_upgrade_confirm_upgrade"
+  ]
+}

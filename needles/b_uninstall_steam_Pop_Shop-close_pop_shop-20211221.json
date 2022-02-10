@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 313,
+      "ypos": 313,
+      "width": 401,
+      "height": 168,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Pop! Shop uninstall error."
+    }
+  ],
+  "tags": [
+    "close_pop_shop_error"
+  ]
+}

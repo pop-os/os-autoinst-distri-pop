@@ -1,0 +1,50 @@
+{
+  "area": [
+    {
+      "xpos": 404,
+      "type": "match",
+      "height": 36,
+      "ypos": 331,
+      "width": 217
+    },
+    {
+      "type": "match",
+      "xpos": 0,
+      "width": 573,
+      "ypos": 694,
+      "height": 74
+    },
+    {
+      "type": "match",
+      "xpos": 405,
+      "ypos": 376,
+      "height": 116,
+      "width": 208
+    },
+    {
+      "width": 617,
+      "height": 49,
+      "ypos": 605,
+      "type": "match",
+      "xpos": 202
+    },
+    {
+      "type": "match",
+      "xpos": 380,
+      "height": 40,
+      "ypos": 125,
+      "width": 269
+    },
+    {
+      "width": 409,
+      "height": 40,
+      "ypos": 174,
+      "type": "match",
+      "xpos": 314
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_cosmic_dock_extend_check"
+  ]
+}
