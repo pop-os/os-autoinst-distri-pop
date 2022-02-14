@@ -18,102 +18,90 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
-use helpers::installer::online_accounts;
-my $timeout = 400;
 
 sub run {
-    #power("reset");
-	#eject_cd;
+
     
     # Decryption prompt
 
-    #assert_screen 'decyrpt_prompt',$timeout;
-    #type_string "system76\n";
+#    assert_screen 'decyrpt_prompt';
+#   type_string "system76\n";
 
 
     # GDM and Desktop
  
-    #assert_screen 'gdm',$timeout;
-    #send_key 'ret';
-    #type_string "system76\n";
-    #assert_screen 'desktop',$timeout;
+    assert_screen 'gdm';
+    send_key 'ret';
+    type_string "system76\n";
+    assert_screen 'desktop',400;
 
     # Initial Setup
 
-    assert_screen 'initial_dialog',$timeout;
+    assert_screen 'initial_dialog',400;
     send_key 'ret';
-
+    
     #disable_screen_blanking '21.04';
-	
-
-    # Typing screen 
- 
-    #assert_screen 'initial_dialog_typing',$timeout;
-
-      # Need to add input tests.
-
-  #  send_key 'ret';
 
     # Cosmic Dock options
 
-    assert_screen 'initial_dialog_cosmic_dock',$timeout;
+    assert_screen 'initial_dialog_cosmic_dock';
 
-    assert_and_click 'initial_dialog_cosmic_dock_no_dock',$timeout;
-    assert_screen 'initial_dialog_cosmic_dock_no_dock_check',$timeout;
+    assert_and_click 'initial_dialog_cosmic_dock_no_dock';
+    assert_screen 'initial_dialog_cosmic_dock_no_dock_check';
     
-    assert_and_click 'initial_dialog_cosmic_dock_extend_dock',$timeout;
-    assert_screen 'initial_dialog_cosmic_dock_extend_check',$timeout;
+    assert_and_click 'initial_dialog_cosmic_dock_extend_dock';
+    assert_screen 'initial_dialog_cosmic_dock_extend_check';
 
-    assert_and_click 'initial_dialog_cosmic_dock_no_extend_dock',$timeout;
-    assert_screen 'initial_dialog_cosmic_dock_no_extend_check',$timeout;
+    assert_and_click 'initial_dialog_cosmic_dock_no_extend_dock';
+    assert_screen 'initial_dialog_cosmic_dock_no_extend_check';
 
-    assert_and_click 'initial_dialog_cosmic_dock_extend_dock',$timeout;
-    assert_screen 'initial_dialog_cosmic_dock_extend_check',$timeout;
+    assert_and_click 'initial_dialog_cosmic_dock_extend_dock';
+    assert_screen 'initial_dialog_cosmic_dock_extend_check';
     
 
-    assert_and_click 'initial_dialog_cosmic_dock_click',$timeout;
+    assert_and_click 'initial_dialog_cosmic_dock_click';
     
     # Cosmic Top Bar
 
-    assert_screen 'inital_dialog_top_bar',$timeout;
+    assert_screen 'inital_dialog_top_bar';
 
-    assert_and_click 'initial_dialog_top_bar_workspace_off',$timeout;
-    assert_screen 'initial_dialog_top_bar_workspace_off_check',$timeout;
+    assert_and_click 'initial_dialog_top_bar_workspace_off';
+    assert_screen 'initial_dialog_top_bar_workspace_off_check';
 
-    assert_and_click 'initial_dialog_top_bar_applications_off',$timeout;
-    assert_screen 'initial_dialog_top_bar_applications_off_check',$timeout;
+    assert_and_click 'initial_dialog_top_bar_applications_off';
+    assert_screen 'initial_dialog_top_bar_applications_off_check';
 
-    assert_and_click 'initial_dialog_top_bar_workspace_on',$timeout;
-    assert_screen 'initial_dialog_top_bar_workspace_on_check',$timeout;
+    assert_and_click 'initial_dialog_top_bar_workspace_on';
+    assert_screen 'initial_dialog_top_bar_workspace_on_check';
 
-    assert_and_click 'initial_dialog_top_bar_applications_on',$timeout;
-    assert_screen 'initial_dialog_top_bar_applications_on_check',$timeout;
+    assert_and_click 'initial_dialog_top_bar_applications_on';
+    assert_screen 'initial_dialog_top_bar_applications_on_check';
 
-    assert_and_click 'initial_dialog_top_bar_datetime_list',$timeout;
-    assert_screen 'initial_dialog_top_bar_datetime_list_check',$timeout;
+    assert_and_click 'initial_dialog_top_bar_datetime_list';
+    assert_screen 'initial_dialog_top_bar_datetime_list_check';
 
-    assert_and_click 'initial_dialog_top_bar_datetime_left',$timeout;
-    assert_screen 'initial_dialog_top_bar_datetime_left_check',$timeout;
+    assert_and_click 'initial_dialog_top_bar_datetime_left';
+    assert_screen 'initial_dialog_top_bar_datetime_left_check';
     
     send_key('ret');
     send_key('down');
     send_key('ret');
 
-    assert_screen 'initial_dialog_top_bar_datetime_right_check',$timeout;
+    assert_screen 'initial_dialog_top_bar_datetime_right_check';
     
     send_key('ret');
     send_key('up');
     send_key('up');
     send_key('ret');
     
-    assert_screen 'initial_dialog_top_bar_datetime_center_check',$timeout;
+    assert_screen 'initial_dialog_top_bar_datetime_center_check';
 
-    assert_and_click 'initial_dialog_cosmic_dock_click',$timeout;
+    assert_and_click 'initial_dialog_cosmic_dock_click';
     #send_key('ret');
 
     # Launcher info
    
-    assert_screen 'initial_dialog_launcher_info',$timeout;
+    assert_screen 'initial_dialog_launcher_info';
 
     #assert_and_click 'initial_dialog_cosmic_dock_click';
     send_key('ret');
@@ -121,24 +109,52 @@ sub run {
 
     # Gestures
    
-    assert_screen 'initial_dialog_gestures_info',$timeout;
+    assert_screen 'initial_dialog_gestures_info';
     send_key('ret');
 
-    # Appearance
+    # Privacy
+
+    #assert_screen 'initial_dialog_privacy';
+
+      # Need to add toggle test
+
+   # send_key 'ret';
+
+    # Time Zone screen
+
+    #check_screen 'system_timezone_updated';
     
-    assert_screen 'initial_dialog_appearance',$timeout;
-    assert_and_click 'initial_dialog_appearance_light',$timeout;
-    assert_and_click 'initial_dialog_appearance_dark',$timeout;
-    assert_and_click 'initial_dialog_appearance_next',$timeout;
+    #assert_screen 'initial_dialog_timezone';
+
+      # Need to add map click test
+
+    #assert_and_click 'initial_dialog_timezone_select_search';
+    #type_string "Denver";
+    #send_key('ret');
+    #assert_and_click 'initial_dialog_timezone_select_mt';
+
+    #assert_screen 'initial_dialog_timezone_mt_selected';
+
+
+    #assert_and_click 'initial_dialog_timezone_next';
+    #assert_and_click 'initial_dialog_timezone_next';
+
+    # Online Accounts 
+
+    #assert_screen 'initial_dialog_online_accounts';
+
+      # We may want to add tests here for online account setup.
+
+    #assert_and_click 'initial_dialog_online_accounts_skip';
 
    # finish Screen
    
-   assert_screen 'finished',$timeout;
+   assert_screen 'finished';
    send_key 'ret';
 
    # Back to desktop
 
-   assert_screen 'desktop',$timeout;    
+   assert_screen 'desktop';    
 
 }
 

@@ -26,7 +26,7 @@ sub run {
     assert_screen 'installer_language_select';
 
     # press enter to advance 
-    send_key 'tab';
+#    send_key 'tab';
     send_key 'ret';
     
    #disable_screen_blanking '21.04';
@@ -92,8 +92,9 @@ sub run {
     assert_screen 'installer_finished',20*$timeout;
     assert_and_click 'installer_finished_reboot';
 
-    #assert_screen 'desktop',80;
-    #eject_cd();    
+    assert_screen 'boot_splash',$timeout;
+    power("reset");
+    eject_cd();  
       
 }
 

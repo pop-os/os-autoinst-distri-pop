@@ -30,8 +30,11 @@ sub run {
  assert_and_click 'install_steam';
  assert_screen 'password_dialog';
  type_string "system76\n";
- assert_screen 'pop_pick_steam_installed',400;
+ assert_screen 'pop_pick_steam_installed',1400;
  assert_and_click 'close_pop_shop';
+ if (check_screen 'pop_shop_screen') {
+ 	assert_and_click 'close_pop_shop';
+ 	}
 }
 
 1;

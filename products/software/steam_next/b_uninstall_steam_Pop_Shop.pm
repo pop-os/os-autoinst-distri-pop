@@ -41,10 +41,15 @@ wait_screen_change(sub {
  		    assert_screen('password_dialog',40);
  			save_screenshot();
  			type_string "system76";
- 			send_key 'ret';
+ 			send_key 'ret',"uninstall_steam";
 # 		}
 #},400);
+ check_screen "pop_shop_uninstall_error";
+ assert_and_click "pop_shop_uninstall_error";
+ 	
+ 	
  assert_screen "install_steam",400;
+
  assert_and_click 'close_pop_shop';
  sleep(5);
  

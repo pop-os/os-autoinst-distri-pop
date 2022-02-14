@@ -72,7 +72,7 @@ sub run {
     # wait for encryption screen
     assert_screen 'installer_encryption_screen',$timeout;
     send_key 'ret';
-    assert_and_click 'installer_encryption_confirm',$timeout;
+#    assert_and_click 'installer_encryption_confirm',$timeout;
 
     # wait for installation to finish
 

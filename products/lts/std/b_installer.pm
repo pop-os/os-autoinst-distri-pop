@@ -67,12 +67,12 @@ sub run {
     type_string "system76";
     send_key 'tab';
     type_string "system76";
-    assert_and_click 'installer_password_confirm',$timeout;
+   assert_and_click 'installer_password_confirm',$timeout;
 
     # wait for encryption screen
     assert_screen 'installer_encryption_screen',$timeout;
     send_key 'ret';
-    assert_and_click 'installer_encryption_confirm',$timeout;
+   # assert_and_click 'installer_encryption_confirm',$timeout;
 
     # wait for installation to finish
 

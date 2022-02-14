@@ -23,9 +23,10 @@ use lib '/var/lib/openqa/tests/pop/';
 sub run {
 
 send_key 'super-a';
-enter_cmd 'steam';
-#send_key 'ret';
-assert_screen 'steam_create_account',400;
+type_string 'steam';
+assert_screen 'app_library_steam_selected';
+send_key 'ret';
+assert_screen 'steam_create_account',1400;
 assert_and_click 'steam_login_existing';
 assert_screen 'steam_login',400;
 type_string "system76QA";

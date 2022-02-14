@@ -40,19 +40,19 @@ sub run {
 
     # Initial Setup
 
-    assert_screen 'initial_dialog',$timeout;
-    send_key 'ret';
+#    assert_screen 'initial_dialog',$timeout;
+#    send_key 'ret';
 
     #disable_screen_blanking '21.04';
 	
 
     # Typing screen 
  
-    assert_screen 'initial_dialog_typing',$timeout;
+#    assert_screen 'initial_dialog_typing',$timeout;
 
       # Need to add input tests.
 
-    send_key 'ret';
+#    send_key 'ret';
 
     # Cosmic Dock options
 
@@ -141,7 +141,7 @@ sub run {
 
     # Time Zone screen
 
-    check_screen 'system_timezone_updated',$timeout;
+    check_screen 'system_timezone_updated';
     
     assert_screen 'initial_dialog_timezone',$timeout;
 

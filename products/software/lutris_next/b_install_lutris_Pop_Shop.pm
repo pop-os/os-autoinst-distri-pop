@@ -28,11 +28,11 @@ sub run {
  assert_screen 'pop_shop_screen';
  wait_screen_change(sub {
  	assert_and_click 'pop_pick_lutris_install';
- }, 400);
+ }, 1400);
  assert_and_click 'install_lutris';
  assert_screen 'password_dialog';
  type_string "system76\n";
- assert_screen 'pop_pick_lutris_installed',1400;
+ assert_screen 'pop_pick_lutris_installed',2400;
  assert_and_click 'close_pop_shop';
 }
 

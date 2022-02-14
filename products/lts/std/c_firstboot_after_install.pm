@@ -56,7 +56,8 @@ sub run {
       # Need to add map click test
 
     assert_and_click 'initial_dialog_timezone_select_search',$timeout;
-    type_string "Denver\n";
+    type_string "Denver";
+    send_key 'ret';
     wait_screen_change( sub {
     assert_and_click 'initial_dialog_timezone_next',$timeout;
 	},400);

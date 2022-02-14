@@ -48,14 +48,22 @@ sub run {
     
     send_key 'ret';
 
-    # wait for the installer install options to appear
+
+    
+
+    # wait for the installer drive option to appear
+    assert_screen 'installer_recovery_options',$timeout;
+    assert_and_click 'installer_refesh_select',$timeout;
+    assert_and_click 'installer_recovery_refresh',$timeout;
+    
+        # wait for the installer install options to appear
     assert_screen 'installer_install_decrypt_option',$timeout;
     
     assert_and_click 'installer_decrypt_select',$timeout;
    
-    assert_screen 'installer_decrypt_drive_select',$timeout;
+   # assert_screen 'installer_decrypt_drive_select',$timeout;
 
-    send_key 'ret';
+   # send_key 'ret';
     
     assert_screen 'installer_password_entry',$timeout;
     
@@ -63,11 +71,7 @@ sub run {
 
     assert_and_click 'installer_decrypt_unlock',$timeout;
     
-
-    # wait for the installer drive option to appear
-    assert_screen 'installer_recovery_options',$timeout;
-    assert_and_click 'installer_refesh_select',$timeout;
-    assert_and_click 'installer_recovery_refresh',$timeout;
+    
     assert_and_click 'installer_refresh_install',$timeout;
     assert_screen 'installer_refresh_start';
     assert_screen 'installer_finished',20*$timeout;

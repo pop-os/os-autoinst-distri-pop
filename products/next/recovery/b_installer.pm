@@ -23,7 +23,7 @@ my $timeout = 400;
 sub run {
     # wait for installer language select to apear
     assert_screen 'installer_language_select',$timeout;
-    send_key 'tab';
+#    send_key 'tab';
     send_key 'ret';
   
     #disable_screen_blanking '21.04';

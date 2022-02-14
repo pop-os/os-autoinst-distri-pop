@@ -37,7 +37,7 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     sleep(5);
-    assert_screen 'desktop',400;
+    assert_screen 'desktop',40;
 
    # disable_screen_blanking '20.04';
   
