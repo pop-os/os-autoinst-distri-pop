@@ -18,60 +18,65 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
+use helpers::installer::avatar_tests;
 my $timeout = 400;
 sub run {
-	sleep(15);
-	assert_screen 'desktop';
-	#disable_screen_blanking '21.04';
     # wait for installer language select to apear
-    assert_screen 'installer_language_select',200;
+    assert_screen 'installer_language_select',$timeout;
+#    send_key 'tab';
+    send_key 'ret';
+  
+    #disable_screen_blanking '21.04';
 
     # press enter to advance 
     send_key 'ret';
-
+  
     # wait for the installer language region to appear
-    assert_screen 'installer_language_region';
+    #if (check_screen 'installer_language_region' == nodef) {
+#	send_key 'ret';
+#	}
+    assert_screen 'installer_language_region',$timeout;
 
     #assert_and_click 'installer_lauguage_region_select';
 
     send_key 'ret';
     
     # wait for the installer keyboard layout to appear
-    assert_screen 'installer_keyboard_layout';
+    assert_screen 'installer_keyboard_layout',$timeout;
 
     send_key 'ret';
 
 
     # wait for the installer keyboard region to appear
-    assert_screen 'installer_keyboard_region';
+    #assert_screen 'installer_keyboard_region';
     
-    send_key 'ret';
-
+    #send_key 'ret';
+    assert_screen 'installer_recovery_options',$timeout;
+    assert_and_click 'installer_refesh_select',$timeout;
+    assert_and_click 'installer_recovery_refresh',$timeout;
     # wait for the installer install options to appear
-    assert_screen 'installer_install_decrypt_option';
+    assert_screen 'installer_install_decrypt_option',$timeout;
     
-    assert_and_click 'installer_decrypt_select';
+    assert_and_click 'installer_decrypt_select',$timeout;
    
-    assert_screen 'installer_decrypt_drive_select';
+  #  assert_screen 'installer_decrypt_drive_select',$timeout;
 
-    send_key 'ret';
+   # send_key 'ret';
     
-    assert_screen 'installer_password_entry';
+    assert_screen 'installer_password_entry',$timeout;
     
     type_string "system76";
 
-    assert_and_click 'installer_decrypt_unlock';
+    assert_and_click 'installer_decrypt_unlock',$timeout;
     
 
     # wait for the installer drive option to appear
-    assert_screen 'installer_recovery_options';
-    assert_and_click 'installer_refesh_select';
-    assert_and_click 'installer_recovery_refresh';
-    assert_and_click 'installer_refresh_install';
-    assert_screen 'installer_refresh_start';
-    assert_screen 'installer_finished',$timeout*20;
-    assert_and_click 'installer_finished_reboot';
-
+   
+    assert_and_click 'installer_refresh_install',$timeout;
+    assert_screen 'installer_refresh_start',$timeout;
+    assert_screen 'installer_finished',1600;
+    assert_and_click 'installer_finished_reboot',$timeout;
+    
     
       
 }

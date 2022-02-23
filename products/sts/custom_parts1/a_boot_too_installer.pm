@@ -19,23 +19,20 @@ use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
 
-my $timeout = 400;
-
 sub run {
     # wait for boot to finish
-    assert_screen 'boot_finish',$timeout;
+    assert_screen 'boot_finish';
 
     # press enter to boot right away
     #send_key 'ret';
 
     # wait for the desktop to appear
-    sleep(15);
-    assert_screen 'desktop',$timeout;
+    check_screen 'desktop',100;
 
-    assert_screen 'installer_launched',$timeout;    
+    assert_screen 'installer_launched';    
     
     # Disable screen lock
-    #disable_screen_blanking '21.04';
+    disable_screen_blanking '21.04';
 }
 
 1;

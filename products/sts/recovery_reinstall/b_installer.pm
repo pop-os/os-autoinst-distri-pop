@@ -21,13 +21,13 @@ use helpers::displays;
 use helpers::installer::avatar_tests;
 my $timeout = 400;
 sub run {
-        sleep(20);
-	assert_screen 'desktop';
+	#assert_screen 'desktop';
 	#disable_screen_blanking '21.04';
     # wait for installer language select to apear
     assert_screen 'installer_language_select',200;
 
     # press enter to advance 
+#    send_key 'tab';
     send_key 'ret';
     
    #disable_screen_blanking '21.04';
@@ -53,7 +53,12 @@ sub run {
     # wait for the installer install options to appear
     assert_screen 'installer_install_option';
     
-    send_key 'ret';
+    #send_key 'ret';
+    
+    assert_and_click 'installer_reinstall_option';
+    assert_and_click 'installer_reinstall_next';
+    assert_and_click 'installer_clean_install';
+    assert_and_click 'installer_clean_install_next';
 
     # wait for the installer drive option to appear
     assert_screen 'installer_drive_option';
@@ -79,7 +84,7 @@ sub run {
     # wait for encryption screen
     assert_screen 'installer_encryption_screen';
     send_key 'ret';
-    assert_and_click 'installer_encryption_confirm';
+   # assert_and_click 'installer_encryption_confirm';
 
     # wait for installation to finish
 
@@ -92,9 +97,10 @@ sub run {
        die;
     }
    
-    assert_screen 'installer_finished',$timeout*20;
+    assert_screen 'installer_finished',20*$timeout;
     assert_and_click 'installer_finished_reboot';
-
+    power("reset");
+    eject_cd();
     #assert_screen 'desktop',80;
     #eject_cd();    
       

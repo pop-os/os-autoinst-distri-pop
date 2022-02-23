@@ -17,10 +17,18 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
-use helpers::power;
+use helpers::displays;
 
 sub run {
-   shutdown_system;
+    # wait for boot to finish
+    assert_and_click "system_menu";
+    assert_and_click "system_menu_power_off";
+    assert_and_click "system_menu_power_off_power_off";
+    assert_and_click "dialog_power_off";
+    assert_screen "system_down";
+    #eject_cd;
+    #power('off');
+    assert_shutdown(200);
     
 
 }

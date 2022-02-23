@@ -18,23 +18,8 @@ use strict;
 use testapi;
 
 sub run {
-	#assert_screen 'uefi';
-	
-	#eject_cd();
-    #power("reset");
-	
-	  # Decryption prompt
 
-    #assert_screen 'decyrpt_prompt';
-    #type_string "system76\n";
-
-
-    # GDM and Desktop
- 
-    #assert_screen 'gdm',200;
-    #send_key 'ret';
-    #type_string "system76\n";
-    #assert_screen 'desktop';
+	assert_screen 'desktop';
     #my ($version) = @_;
 
 # Disable screen lock
@@ -49,10 +34,8 @@ sub run {
        #hold_key 'ctrl';
        #send_key '1';
        #release_key 'ctrl';
-     wait_screen_change (sub {
-     	send_key 'super-t';
-     	assert_screen 'terminal';
-     },30);
+     send_key 'super-t';
+     assert_screen 'terminal';
 #    } elsif ($version == '20.04') {
 
 #       send_key 'super';
