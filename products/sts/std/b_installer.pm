@@ -47,9 +47,9 @@ sub run {
     send_key 'ret';
 
     # wait for the installer install options to appear
-    assert_screen 'installer_install_option',$timeout;
-    
-    send_key 'ret';
+    assert_and_click 'installer_install_option',$timeout;
+    assert_and_click 'installer_install_option_next',$timeout;
+    #send_key 'ret';
 
     # wait for the installer drive option to appear
     assert_screen 'installer_drive_option',$timeout;
