@@ -19,12 +19,13 @@ use testapi;
 
 sub run {
 
-    sleep(20);
     assert_screen 'desktop';
-
+   
+# Disable screen lock
+ 
+ 
      send_key 'super-t';
      assert_screen 'terminal';
-
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n"; 
     type_string "gsettings set org.gnome.desktop.session idle-delay 0\n";

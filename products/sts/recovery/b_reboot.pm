@@ -7,9 +7,9 @@ use testapi;
 my $timeout = 400;
 
 sub run {
-	#assert_screen 'boot_splash',$timeout;
-    power("reset");
-    eject_cd();
+    #assert_screen 'boot_splash',$timeout;
+    #power("reset");
+    #eject_cd();
     
     # Decryption prompt
 
@@ -22,8 +22,7 @@ sub run {
     assert_screen 'gdm',$timeout;
     send_key 'ret';
     type_string "system76\n";
-    sleep(15);
-    assert_screen 'desktop';
+    assert_screen 'desktop',$timeout;
    
 }
 1;
