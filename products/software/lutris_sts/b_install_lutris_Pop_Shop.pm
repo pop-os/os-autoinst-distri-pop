@@ -29,7 +29,9 @@ sub run {
  wait_screen_change(sub {
  	assert_and_click 'pop_pick_lutris_install';
  }, 400);
+ wait_screen_change(sub {
  assert_and_click 'install_lutris';
+ }, 400);
  assert_screen 'password_dialog';
  type_string "system76\n";
  assert_screen 'pop_pick_lutris_installed',1400;

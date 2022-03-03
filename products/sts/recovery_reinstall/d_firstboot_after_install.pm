@@ -156,7 +156,7 @@ sub run {
 
 
     assert_and_click 'initial_dialog_timezone_next',$timeout;
-    assert_and_click 'initial_dialog_timezone_next',$timeout;
+    
 
     # Online Accounts 
 

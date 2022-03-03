@@ -38,11 +38,11 @@ sub run {
     	assert_and_click 'pop_shop_upgrade';
     },6000);
     
-   if (check_screen 'confirm_upgrading_state',60 == undef) {
-         wait_screen_change(sub {
-    		assert_and_click 'pop_shop_upgrade';
-    	},6000);	
-	}
+   #if (check_screen 'confirm_upgrading_state',60 == undef) {
+       #  wait_screen_change(sub {
+    	#	assert_and_click 'pop_shop_upgrade';
+    	#},6000);	
+	#}
 	
    # check_screen 'confirm_upgrading_state',2000;
     assert_screen 'upgrading_complete',5000;

@@ -29,8 +29,9 @@ sub run {
     assert_screen 'os_upgrade_screen';
     assert_and_click 'os_upgrade_screen_download';
     assert_screen 'os_upgrade_download_complete',2000;
-    assert_and_click 'os_upgrade_screen_upgrade';
-    assert_and_click 'os_upgrade_confirm_upgrade';
+    wait_screen_change(assert_and_click 'os_upgrade_screen_upgrade',300);
+
+    wait_screen_change(assert_and_click 'os_upgrade_confirm_upgrade',300);
 
     assert_screen 'decyrpt_prompt';
     type_string "system76\n";

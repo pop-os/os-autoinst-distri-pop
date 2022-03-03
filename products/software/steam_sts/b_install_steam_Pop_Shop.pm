@@ -26,8 +26,11 @@ sub run {
  type_string 'pop shop';
  send_key 'ret';
  assert_screen 'pop_shop_screen';
- assert_and_click 'pop_pick_steam_install';
- assert_and_click 'install_steam';
+ #assert_and_click 'pop_pick_steam_install';
+ wait_screen_change(sub { assert_and_click 'pop_pick_steam_install';},'install_steam');
+ 
+ wait_screen_change(sub {assert_and_click 'install_steam';},400);
+ 
  assert_screen 'password_dialog';
  type_string "system76\n";
  assert_screen 'pop_pick_steam_installed',400;

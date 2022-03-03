@@ -18,7 +18,7 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
-
+use helpers::apt_update;
 
 sub run {
 
@@ -38,6 +38,7 @@ sub run {
     type_string "system76\n";
     sleep(15);
     assert_screen 'desktop';
+    apt_update;
 
    # disable_screen_blanking '20.04';
 

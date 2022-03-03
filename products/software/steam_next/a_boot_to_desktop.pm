@@ -18,6 +18,7 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
+use helpers::apt_update;
 my $journalctl = '';
 my $script = "echo THIS IS A SCRIPT";
 sub run {
@@ -38,7 +39,7 @@ sub run {
     type_string "system76\n";
     sleep(5);
     assert_screen 'desktop',40;
-
+	apt_update;
    # disable_screen_blanking '20.04';
   
    #script_run($script,20,1,1,1);

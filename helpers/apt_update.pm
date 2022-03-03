@@ -7,7 +7,7 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICselect_console('root-virtio-terminal');ULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
@@ -16,31 +16,20 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
-use helpers::displays;
-use helpers::apt_update;
 
-sub run {
+sub apt_update {
+    my ($version) = @_;
 
-    # restart to get around installer issue
-    eject_cd; 
-    #power("reset");
+# Disable screen lock
+
+    send_key 'super-t';
+    assert_screen 'terminal';
     
-    # Decryption prompt
-
-    assert_screen 'decyrpt_prompt';
+    type_string "sudo apt update && sudo apt -y upgrade && exit\n";
     type_string "system76\n";
-
-    # GDM and Desktop
-
-    assert_screen 'gdm';
-    send_key 'ret';
-    type_string "system76\n";
-    sleep(15);
-    assert_screen 'desktop';
-	apt_update;
-   # disable_screen_blanking '20.04';
+    #type_string "exit\n";
+    #send_key 'ret';
+    #assert_screen 'full_desktop',400;
 
 }
-
 1;

@@ -16,6 +16,7 @@
 use base 'basetest';
 use strict;
 use testapi;
+my $timeout = 400;
 
 sub online_accounts_quick_test {
     my ($version) = @_;
@@ -25,12 +26,12 @@ sub online_accounts_quick_test {
 # It will not connect to these services during this test.
 # This test only checks the services with a webview component.
 
-assert_screen 'initial_dialog_online_accounts';
+assert_screen 'initial_dialog_online_accounts',$timeout;
 
 # Google
-assert_and_click 'online_accounts_google';
-assert_screen 'online_accounts_google_login';
-assert_and_click 'online_accounts_login_close';
+assert_and_click 'online_accounts_google',$timeout;
+assert_screen 'online_accounts_google_login',$timeout;
+assert_and_click 'online_accounts_login_close',$timeout;
 
 # Facebook
 #assert_and_click 'online_accounts_facebook';
@@ -38,19 +39,19 @@ assert_and_click 'online_accounts_login_close';
 #assert_and_click 'online_accounts_login_close';
 
 #Micosoft
-assert_and_click 'online_accounts_microsoft';
-assert_screen 'online_accounts_microsoft_login';
-assert_and_click 'online_accounts_login_close';
+assert_and_click 'online_accounts_microsoft',$timeout;
+assert_screen 'online_accounts_microsoft_login',$timeout;
+assert_and_click 'online_accounts_login_close',$timeout;
 
 #Flickr
-assert_and_click 'online_accounts_flickr';
-assert_screen 'online_accounts_flickr_login';
-assert_and_click 'online_accounts_login_close';
+assert_and_click 'online_accounts_flickr',$timeout;
+assert_screen 'online_accounts_flickr_login',$timeout;
+assert_and_click 'online_accounts_login_close',$timeout;
 
 #Foursquare
-assert_and_click 'online_accounts_foursquare';
-assert_screen 'online_accounts_forsquare_login';
-assert_and_click 'online_accounts_login_close';
+assert_and_click 'online_accounts_foursquare',$timeout;
+assert_screen 'online_accounts_forsquare_login',$timeout;
+assert_and_click 'online_accounts_login_close',$timeout;
 
 
 }
