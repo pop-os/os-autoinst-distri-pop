@@ -19,7 +19,7 @@ use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
 my $timeout = 400;
-sub run {
+sub install {
     # wait for installer language select to apear
     assert_screen 'installer_language_select',$timeout;
 
@@ -47,9 +47,7 @@ sub run {
     send_key 'ret';
 
     # wait for the installer install options to appear
-   # assert_and_click 'installer_install_option',$timeout;
     assert_and_click 'installer_install_option',$timeout;
-    #send_key 'return';
     assert_and_click 'installer_install_option_next',$timeout;
     #send_key 'ret';
 

@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 90,
+      "ypos": 150,
+      "width": 408,
+      "height": 387,
+      "type": "match"
+    },
+    {
+      "xpos": 518,
+      "ypos": 284,
+      "width": 435,
+      "height": 174,
+      "type": "match"
+    },
+    {
+      "xpos": 754,
+      "ypos": 629,
+      "width": 202,
+      "height": 71,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_refresh_option"
+  ]
+}

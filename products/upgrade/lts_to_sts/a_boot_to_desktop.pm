@@ -39,7 +39,7 @@ sub run {
     sleep(10);
     assert_screen 'desktop',400;
 
-    disable_screen_blanking '20.04';
+    #dsable_screen_blanking '20.04';
 
 }
 

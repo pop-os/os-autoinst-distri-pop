@@ -51,10 +51,12 @@ sub run {
     send_key 'ret';
 
     # wait for the installer install options to appear
-    assert_screen 'installer_install_option',$timeout;
+    assert_and_click 'installer_install_option',$timeout;
+   # send_key 'space';
+    assert_and_click 'installer_install_option_next',$timeout;
     #assert_and_click 'installer_custom_option';
     #assert_and_click 'installer_custom_option_confirm';
-    send_key 'ret';
+    #send_key 'ret';
 
     # wait for the installer drive option to appear
     assert_screen 'installer_drive_option',$timeout;

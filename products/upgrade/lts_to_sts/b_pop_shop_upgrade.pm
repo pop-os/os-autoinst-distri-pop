@@ -18,26 +18,27 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
+use helpers::apt_update;
 
 sub run {
-
+	apt_update;
     # Start Pop Shop
-    send_key 'super';
-    type_string 'pop shop';
-    send_key 'ret';
-    if (check_screen 'repo_failure') {
-    	fail();
-    }
-    assert_screen 'pop_shop_screen';
-    assert_and_click 'pop_shop_installed',6000;
-    assert_and_click 'pop_shop_upgrade';
-    if (check_screen 'confirm_upgrading_state',60 == undef) {
-        assert_and_click 'pop_shop_upgrade';	
-	}
+   # send_key 'super';
+   # type_string 'pop shop';
+   # send_key 'ret';
+   # if (check_screen 'repo_failure') {
+   # 	fail();
+   # }
+   # assert_screen 'pop_shop_screen';
+   # assert_and_click 'pop_shop_installed',6000;
+   # wait_screen_change (sub { assert_and_click 'pop_shop_upgrade';},300);
+    #if (check_screen 'confirm_upgrading_state',60 == undef) {
+     #   assert_and_click 'pop_shop_upgrade';	
+	#}
 	
-    check_screen 'confirm_upgrading_state',2000;
-    assert_screen 'upgrading_complete',5000;
-    assert_and_click 'close_pop_shop';
+   # check_screen 'confirm_upgrading_state',2000;
+   # assert_screen 'upgrading_complete',5000;
+   # assert_and_click 'close_pop_shop';
 
 }
 

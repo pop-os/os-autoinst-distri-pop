@@ -45,7 +45,7 @@ sub run {
     send_key 'ret';
 
     # wait for the installer install options to appear
-    assert_screen 'installer_install_option',$timeout;
+    assert_screen 'installer_refresh_option',$timeout;
     assert_and_click 'installer_clean_install',$timeout;
     assert_and_click 'installer_clean_install_next',$timeout;
     assert_and_click 'installer_install_type',$timeout;
