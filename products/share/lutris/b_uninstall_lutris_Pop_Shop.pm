@@ -7,7 +7,7 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICselect_console('root-virtio-terminal');ULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
@@ -16,20 +16,23 @@
 use base 'basetest';
 use strict;
 use testapi;
+#use lib '/var/lib/openqa/tests/pop/';
+#use helpers::displays;
 
-sub apt_update {
-    my ($version) = @_;
 
-# Disable screen lock
+sub run {
 
-    send_key 'super-t';
-    assert_screen 'terminal';
-    
-    type_string "sudo apt update && sudo apt -y --allow-downgrades upgrade && exit\n";
-    type_string "system76\n";
-    #type_string "exit\n";
-    #send_key 'ret';
-    #assert_screen 'full_desktop',400;
-
+ send_key 'super';
+ type_string 'pop shop';
+ send_key 'ret';
+ assert_screen 'pop_shop_screen';
+ assert_and_click 'pop_pick_lutris_install';
+ assert_and_click 'uninstall_lutris';
+ assert_screen 'password_dialog';
+ type_string "system76\n";
+ assert_screen 'install_lutris',400;
+ assert_and_click 'close_pop_shop';
+ 
 }
+
 1;

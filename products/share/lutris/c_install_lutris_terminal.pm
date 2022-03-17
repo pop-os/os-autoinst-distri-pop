@@ -16,26 +16,30 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
+#use lib '/var/lib/openqa/tests/pop/';
 #use helpers::displays;
 
 
 sub run {
+send_key 'super-t';
+assert_screen 'terminal';
+type_string "sudo apt -y install lutris";
+send_key 'ret';
+type_string "system76";
+send_key 'ret';
+#capture_screen();
+assert_screen 'lutris_installed_terminal',1800;
+type_string "lutris && exit";
+send_key 'ret';
+assert_screen "lutris";
+sleep(5);
+send_key 'super-t';
+assert_screen 'terminal';
+type_string "killall -9 lutris\n";
+type_string "exit\n";
+assert_screen 'desktop';
 
- send_key 'super';
- type_string 'pop shop';
- send_key 'ret';
- assert_screen 'pop_shop_screen';
- wait_screen_change(sub {
- 	assert_and_click 'pop_pick_lutris_install';
- }, 400);
- wait_screen_change(sub {
- assert_and_click 'install_lutris';
- }, 400);
- assert_screen 'password_dialog';
- type_string "system76\n";
- assert_screen 'pop_pick_lutris_installed',1400;
- assert_and_click 'close_pop_shop';
+
 }
 
 1;
