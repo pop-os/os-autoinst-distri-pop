@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "width": 455,
+      "type": "match",
+      "height": 527,
+      "ypos": 97,
+      "xpos": 502
+    },
+    {
+      "xpos": 735,
+      "ypos": 631,
+      "width": 219,
+      "height": 49,
+      "type": "match",
+      "click_point": {
+        "xpos": 158.5,
+        "ypos": 22.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_keyboard_region"
+  ]
+}

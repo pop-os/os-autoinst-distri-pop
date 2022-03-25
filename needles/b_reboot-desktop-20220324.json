@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 75,
+      "ypos": 700,
+      "type": "match",
+      "height": 66,
+      "width": 626
+    },
+    {
+      "ypos": 6,
+      "xpos": 857,
+      "width": 167,
+      "type": "match",
+      "height": 24
+    },
+    {
+      "xpos": 1,
+      "ypos": 5,
+      "type": "match",
+      "height": 24,
+      "width": 228
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "desktop"
+  ]
+}

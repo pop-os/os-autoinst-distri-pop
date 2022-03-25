@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "ypos": 634,
+      "click_point": {
+        "xpos": 57.5,
+        "ypos": 18.5
+      },
+      "width": 111,
+      "type": "match",
+      "height": 37,
+      "xpos": 841,
+      "match": 90
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_lauguage_region_select"
+  ]
+}
