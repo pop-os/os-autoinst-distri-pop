@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 305,
+      "ypos": 267,
+      "type": "match",
+      "height": 221,
+      "width": 414
+    }
+  ],
+  "properties": [
+    {
+      "value": "Possible theme issue.",
+      "name": "workaround"
+    }
+  ],
+  "tags": [
+    "gdm"
+  ]
+}

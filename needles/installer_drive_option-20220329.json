@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "ypos": 151,
+      "type": "match",
+      "height": 436,
+      "xpos": 100,
+      "width": 380
+    },
+    {
+      "xpos": 634,
+      "height": 79,
+      "type": "match",
+      "ypos": 322,
+      "width": 217
+    },
+    {
+      "ypos": 629,
+      "height": 45,
+      "type": "match",
+      "xpos": 608,
+      "width": 345
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_drive_option"
+  ]
+}

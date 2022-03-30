@@ -1,0 +1,27 @@
+{
+  "area": [
+    {
+      "ypos": 225,
+      "type": "match",
+      "xpos": 94,
+      "width": 296,
+      "height": 227,
+      "match": 80
+    },
+    {
+      "click_point": {
+        "xpos": 25.5,
+        "ypos": 32
+      },
+      "height": 64,
+      "width": 51,
+      "xpos": 408,
+      "type": "match",
+      "ypos": 229
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_partitions_confirm_boot"
+  ]
+}

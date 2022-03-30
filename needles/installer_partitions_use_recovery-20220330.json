@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "ypos": 223,
+      "click_point": {
+        "ypos": 25.5,
+        "xpos": 153
+      },
+      "width": 224,
+      "height": 59,
+      "xpos": 152,
+      "match": 80
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_partitions_use_recovery"
+  ]
+}

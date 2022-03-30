@@ -7,7 +7,7 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICselect_console('root-virtio-terminal');ULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
@@ -16,19 +16,19 @@
 use base 'basetest';
 use strict;
 use testapi;
-my $timeout = 400;
+
 sub run {
-    # wait for boot to finish
-    assert_and_click "system_menu",$timeout;
-    assert_and_click "system_menu_power_off",$timeout;
-    assert_and_click "system_menu_power_off_power_off",$timeout;
-    assert_and_click "dialog_power_off",$timeout;
-    assert_screen "system_down",$timeout*2;
-    #eject_cd;
-    #power('off');
-    assert_shutdown(120);
-    
+
+	assert_screen 'desktop';
+
+     send_key 'super-t';
+     assert_screen 'terminal';
+
+    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
+    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n"; 
+    type_string "gsettings set org.gnome.desktop.session idle-delay 0\n";
+    type_string "gsettings set org.gnome.settings-daemon.plugins.power idle-dim false\n";  
+    type_string "exit\n";
 
 }
-
 1;

@@ -1,0 +1,40 @@
+{
+  "area": [
+    {
+      "width": 431,
+      "click_point": {
+        "ypos": 183,
+        "xpos": 59.5
+      },
+      "xpos": 519,
+      "height": 266,
+      "type": "match",
+      "ypos": 228
+    },
+    {
+      "width": 430,
+      "ypos": 147,
+      "xpos": 73,
+      "type": "match",
+      "height": 448
+    },
+    {
+      "xpos": 70,
+      "type": "match",
+      "height": 62,
+      "ypos": 621,
+      "width": 180
+    },
+    {
+      "ypos": 625,
+      "xpos": 746,
+      "type": "match",
+      "height": 56,
+      "width": 206
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_custom_option"
+  ]
+}

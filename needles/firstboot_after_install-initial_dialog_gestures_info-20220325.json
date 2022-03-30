@@ -1,0 +1,23 @@
+{
+  "area": [
+    {
+      "ypos": 123,
+      "xpos": 160,
+      "type": "match",
+      "height": 118,
+      "width": 713,
+      "match": 80
+    },
+    {
+      "width": 349,
+      "ypos": 252,
+      "height": 310,
+      "type": "match",
+      "xpos": 345
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_gestures_info"
+  ]
+}

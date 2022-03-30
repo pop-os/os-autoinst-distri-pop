@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "ypos": 145,
+      "type": "match",
+      "height": 444,
+      "xpos": 85,
+      "width": 427
+    },
+    {
+      "width": 406,
+      "height": 315,
+      "type": "match",
+      "xpos": 534,
+      "ypos": 215
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_recovery_options"
+  ]
+}

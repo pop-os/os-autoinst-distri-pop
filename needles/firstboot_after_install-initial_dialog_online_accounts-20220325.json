@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "width": 500,
+      "ypos": 99,
+      "height": 93,
+      "type": "match",
+      "xpos": 264
+    },
+    {
+      "ypos": 641,
+      "xpos": 255,
+      "type": "match",
+      "height": 25,
+      "width": 514
+    },
+    {
+      "ypos": 258,
+      "type": "match",
+      "height": 424,
+      "xpos": 253,
+      "width": 513
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_online_accounts"
+  ]
+}

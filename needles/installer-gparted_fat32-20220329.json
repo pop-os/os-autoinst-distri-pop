@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "height": 289,
+      "ypos": 312,
+      "click_point": {
+        "ypos": 217.5,
+        "xpos": 20
+      },
+      "xpos": 674,
+      "width": 162,
+      "match": 80
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "gparted_fat32"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "area": [
+    {
+      "width": 327,
+      "click_point": {
+        "xpos": 165.5,
+        "ypos": 204
+      },
+      "xpos": 697,
+      "height": 252,
+      "type": "match",
+      "ypos": 34
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Switching back to dark theme not propagating to menu"
+    }
+  ],
+  "tags": [
+    "system_menu_power_off"
+  ]
+}
