@@ -1,0 +1,24 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "height": 342,
+      "width": 326,
+      "xpos": 687,
+      "ypos": 41,
+      "click_point": {
+        "xpos": 116,
+        "ypos": 301
+      }
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Possible theme issue."
+    }
+  ],
+  "tags": [
+    "system_menu_power_off_power_off"
+  ]
+}

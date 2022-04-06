@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "width": 220,
+      "height": 31,
+      "type": "match",
+      "xpos": 622,
+      "ypos": 338
+    },
+    {
+      "ypos": 693,
+      "xpos": 40,
+      "type": "match",
+      "height": 74,
+      "width": 583
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_cosmic_dock_no_extend_check"
+  ]
+}
