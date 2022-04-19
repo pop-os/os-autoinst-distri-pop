@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "width": 990,
+      "xpos": 13,
+      "ypos": 70,
+      "height": 593,
+      "type": "match"
+    },
+    {
+      "width": 161,
+      "xpos": 433,
+      "ypos": 35,
+      "type": "match",
+      "height": 41
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_appearance"
+  ]
+}
