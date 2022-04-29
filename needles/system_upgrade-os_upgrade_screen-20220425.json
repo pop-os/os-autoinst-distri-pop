@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 253,
+      "height": 170,
+      "ypos": 80,
+      "type": "match",
+      "width": 757
+    },
+    {
+      "height": 191,
+      "ypos": 252,
+      "xpos": 256,
+      "type": "match",
+      "width": 753
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "os_upgrade_screen"
+  ]
+}

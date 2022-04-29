@@ -23,7 +23,7 @@ sub run {
 
     # Start Pop Shop
     send_key 'super';
-    type_string 'pop shop';
+    type_string 'pop!_shop\n';
     send_key 'ret';
     if (check_screen 'repo_failure') {
     	fail();

@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "width": 549,
+      "ypos": 80,
+      "type": "match",
+      "height": 213,
+      "xpos": 62
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Boot splash went by too quick."
+    }
+  ],
+  "tags": [
+    "boot_splash"
+  ]
+}

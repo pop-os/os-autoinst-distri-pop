@@ -28,7 +28,7 @@ sub run {
     assert_and_click 'os_upgrade';
     assert_screen 'os_upgrade_screen';
     assert_and_click 'os_upgrade_screen_download';
-    assert_screen 'os_upgrade_download_complete',2000;
+    assert_screen 'os_upgrade_download_complete',20000;
     wait_screen_change(sub {assert_and_click 'os_upgrade_screen_upgrade';},300);
 
     wait_screen_change(sub {assert_and_click 'os_upgrade_confirm_upgrade';},300);
