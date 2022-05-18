@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "height": 649,
+      "xpos": 9,
+      "ypos": 34,
+      "width": 273,
+      "type": "match"
+    },
+    {
+      "xpos": 754,
+      "ypos": 32,
+      "width": 263,
+      "height": 643,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "avatar_file_select_screen"
+  ]
+}

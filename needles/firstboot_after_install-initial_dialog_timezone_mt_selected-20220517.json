@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "height": 386,
+      "type": "match",
+      "width": 178,
+      "ypos": 273,
+      "xpos": 130
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "initial_dialog_timezone_mt_selected"
+  ]
+}

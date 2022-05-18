@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "click_point": {
+        "xpos": 249,
+        "ypos": 22.5
+      },
+      "width": 292,
+      "ypos": 32,
+      "height": 41,
+      "xpos": 732
+    },
+    {
+      "height": 326,
+      "ypos": 265,
+      "xpos": 760,
+      "width": 261,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "avatar_file_select_confirm"
+  ]
+}

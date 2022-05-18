@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "xpos": 66,
+      "height": 567,
+      "ypos": 114,
+      "width": 890
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_launched"
+  ]
+}
