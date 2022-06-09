@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 242,
+      "ypos": 195,
+      "width": 539,
+      "height": 476,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "virtualbox"
+  ]
+}

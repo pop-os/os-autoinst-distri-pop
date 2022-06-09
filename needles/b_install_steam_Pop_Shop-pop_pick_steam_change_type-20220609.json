@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 85,
+      "ypos": 102,
+      "width": 191,
+      "height": 164,
+      "type": "match"
+    },
+    {
+      "xpos": 274,
+      "ypos": 192,
+      "width": 191,
+      "height": 45,
+      "type": "match",
+      "click_point": {
+        "xpos": 95.5,
+        "ypos": 22.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_pick_steam_change_type"
+  ]
+}

@@ -7,7 +7,7 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICselect_console('root-virtio-terminal');ULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
@@ -16,25 +16,31 @@
 use base 'basetest';
 use strict;
 use testapi;
+#use lib '/var/lib/openqa/tests/pop/';
+#use helpers::displays;
 
-sub apt_update {
-    my ($version) = @_;
-
-# Disable screen lock
-
-    send_key 'super-t';
-    assert_screen 'terminal';
-    
-    type_string "sudo apt update && sudo apt -y --allow-downgrades upgrade && exit\n";
-    type_string "system76\n";
-    type_string "exit\n";
-    send_key 'ret';
-    assert_screen 'desktop',400;
-    
-
-}
 
 sub run {
-	apt_update;
+send_key 'super-t';
+assert_screen 'terminal';
+type_string "virtualbox && exit\n";
+
+assert_screen 'virtualbox';
+#type_string "system76QA";
+#send_key 'tab';
+#type_string "System76 9202269269";
+#send_key 'tab';
+
+#assert_and_click "steam_login_logon";
+#assert_screen "steam";
+sleep(5);
+send_key 'super-t';
+assert_screen 'terminal';
+type_string "killall -9 VirtualBox\n";
+type_string "exit\n";
+assert_screen 'desktop';
+
+
 }
+
 1;

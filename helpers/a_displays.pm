@@ -17,24 +17,18 @@ use base 'basetest';
 use strict;
 use testapi;
 
-sub apt_update {
-    my ($version) = @_;
-
-# Disable screen lock
-
-    send_key 'super-t';
-    assert_screen 'terminal';
-    
-    type_string "sudo apt update && sudo apt -y --allow-downgrades upgrade && exit\n";
-    type_string "system76\n";
-    type_string "exit\n";
-    send_key 'ret';
-    assert_screen 'desktop',400;
-    
-
-}
-
 sub run {
-	apt_update;
+
+	assert_screen 'desktop';
+
+     send_key 'super-t';
+     assert_screen 'terminal';
+
+    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
+    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n"; 
+    type_string "gsettings set org.gnome.desktop.session idle-delay 0\n";
+    type_string "gsettings set org.gnome.settings-daemon.plugins.power idle-dim false\n";  
+    type_string "exit\n";
+
 }
 1;
