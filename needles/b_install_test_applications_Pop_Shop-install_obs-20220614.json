@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "xpos": 126,
+      "ypos": 91,
+      "width": 150,
+      "height": 167,
+      "type": "match"
+    },
+    {
+      "xpos": 279,
+      "ypos": 119,
+      "width": 159,
+      "height": 65,
+      "type": "match"
+    },
+    {
+      "xpos": 758,
+      "ypos": 113,
+      "width": 128,
+      "height": 45,
+      "type": "match",
+      "click_point": {
+        "xpos": 64,
+        "ypos": 22.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "install_obs"
+  ]
+}

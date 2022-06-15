@@ -1,0 +1,40 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "height": 25,
+      "width": 80,
+      "ypos": 128,
+      "xpos": 277
+    },
+    {
+      "type": "match",
+      "height": 21,
+      "width": 122,
+      "ypos": 161,
+      "xpos": 279
+    },
+    {
+      "type": "match",
+      "height": 135,
+      "width": 140,
+      "xpos": 135,
+      "ypos": 122
+    },
+    {
+      "type": "match",
+      "width": 294,
+      "height": 70,
+      "ypos": 92,
+      "xpos": 594,
+      "click_point": {
+        "xpos": 225,
+        "ypos": 46
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "uninstall_steam"
+  ]
+}

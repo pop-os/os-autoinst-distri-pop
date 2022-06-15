@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 753,
+      "width": 136,
+      "height": 53,
+      "type": "match",
+      "ypos": 112
+    },
+    {
+      "xpos": 127,
+      "width": 143,
+      "height": 136,
+      "type": "match",
+      "ypos": 107
+    },
+    {
+      "width": 403,
+      "xpos": 274,
+      "ypos": 109,
+      "height": 85,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_gimp_installed"
+  ]
+}

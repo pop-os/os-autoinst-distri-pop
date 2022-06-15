@@ -1,0 +1,34 @@
+{
+  "area": [
+    {
+      "xpos": 136,
+      "ypos": 120,
+      "width": 137,
+      "height": 131,
+      "type": "match"
+    },
+    {
+      "xpos": 278,
+      "ypos": 120,
+      "width": 161,
+      "height": 69,
+      "type": "match"
+    },
+    {
+      "xpos": 757,
+      "ypos": 103,
+      "width": 129,
+      "height": 66,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Icon missing"
+    }
+  ],
+  "tags": [
+    "pop_obs_installed"
+  ]
+}

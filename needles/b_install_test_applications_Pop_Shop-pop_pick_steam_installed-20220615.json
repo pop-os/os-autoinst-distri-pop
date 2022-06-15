@@ -1,0 +1,34 @@
+{
+  "area": [
+    {
+      "xpos": 138,
+      "ypos": 106,
+      "width": 133,
+      "height": 148,
+      "type": "match"
+    },
+    {
+      "xpos": 278,
+      "ypos": 121,
+      "width": 148,
+      "height": 62,
+      "type": "match"
+    },
+    {
+      "xpos": 674,
+      "ypos": 98,
+      "width": 219,
+      "height": 70,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Icon missing"
+    }
+  ],
+  "tags": [
+    "pop_pick_steam_installed"
+  ]
+}

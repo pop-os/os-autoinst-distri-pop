@@ -32,10 +32,10 @@ sub run {
     if (check_screen 'confirm_upgrading_state',60 == undef) {
         assert_and_click 'pop_shop_upgrade';	
 	}
-	if (check_screen 'pop_shop_no_updates',60 == undef) {
+	#if (check_screen 'pop_shop_no_updates',60 == undef) {
     	check_screen 'confirm_upgrading_state',2000;
     	assert_screen 'upgrading_complete',5000;
-    }
+   #}
     #assert_and_click 'close_pop_shop';
  	
  	assert_and_click 'close_pop_shop';

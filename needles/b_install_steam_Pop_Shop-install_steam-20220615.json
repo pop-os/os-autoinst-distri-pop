@@ -1,0 +1,38 @@
+{
+  "area": [
+    {
+      "ypos": 115,
+      "height": 142,
+      "type": "match",
+      "width": 164,
+      "xpos": 111
+    },
+    {
+      "width": 153,
+      "ypos": 627,
+      "height": 65,
+      "type": "match",
+      "xpos": 220
+    },
+    {
+      "ypos": 106,
+      "xpos": 616,
+      "width": 281,
+      "click_point": {
+        "xpos": 220,
+        "ypos": 32
+      },
+      "type": "match",
+      "height": 70
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Flatpak not deb"
+    }
+  ],
+  "tags": [
+    "install_steam"
+  ]
+}

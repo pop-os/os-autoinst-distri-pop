@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "xpos": 147,
+      "ypos": 111,
+      "width": 122,
+      "height": 140,
+      "type": "match"
+    },
+    {
+      "xpos": 280,
+      "ypos": 118,
+      "width": 425,
+      "height": 71,
+      "type": "match"
+    },
+    {
+      "xpos": 739,
+      "ypos": 102,
+      "width": 167,
+      "height": 58,
+      "type": "match",
+      "click_point": {
+        "xpos": 82.5,
+        "ypos": 36
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "install_gimp"
+  ]
+}

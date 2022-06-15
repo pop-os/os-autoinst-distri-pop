@@ -1,0 +1,36 @@
+{
+  "area": [
+    {
+      "ypos": 113,
+      "type": "match",
+      "height": 143,
+      "width": 145,
+      "xpos": 132
+    },
+    {
+      "ypos": 122,
+      "height": 35,
+      "type": "match",
+      "width": 73,
+      "xpos": 283
+    },
+    {
+      "width": 138,
+      "xpos": 279,
+      "type": "match",
+      "height": 25,
+      "ypos": 159
+    },
+    {
+      "ypos": 95,
+      "height": 89,
+      "type": "match",
+      "width": 276,
+      "xpos": 679
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_pick_steam_installed"
+  ]
+}

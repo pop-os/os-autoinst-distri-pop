@@ -1,0 +1,33 @@
+{
+  "area": [
+    {
+      "ypos": 112,
+      "type": "match",
+      "height": 141,
+      "width": 124,
+      "xpos": 147
+    },
+    {
+      "type": "match",
+      "height": 99,
+      "click_point": {
+        "ypos": 70.5,
+        "xpos": 193
+      },
+      "width": 256,
+      "ypos": 66,
+      "xpos": 628
+    },
+    {
+      "xpos": 278,
+      "width": 77,
+      "height": 77,
+      "type": "match",
+      "ypos": 136
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "uninstall_lutris"
+  ]
+}

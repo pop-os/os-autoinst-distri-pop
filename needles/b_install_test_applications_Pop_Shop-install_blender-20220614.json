@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 130,
+      "ypos": 116,
+      "width": 140,
+      "height": 139,
+      "type": "match"
+    },
+    {
+      "xpos": 282,
+      "ypos": 130,
+      "width": 143,
+      "height": 65,
+      "type": "match"
+    },
+    {
+      "xpos": 756,
+      "ypos": 113,
+      "width": 155,
+      "height": 45,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "install_blender"
+  ]
+}

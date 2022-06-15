@@ -1,0 +1,20 @@
+{
+  "area": [
+    {
+      "xpos": 207,
+      "ypos": 169,
+      "width": 667,
+      "height": 415,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Pop! Shop uninstall error."
+    }
+  ],
+  "tags": [
+    "install_steam"
+  ]
+}

@@ -44,8 +44,8 @@ wait_screen_change(sub {
  			send_key 'ret',"uninstall_steam";
 # 		}
 #},400);
- check_screen "pop_shop_uninstall_error";
- assert_and_click "pop_shop_uninstall_error";
+ #check_screen "pop_shop_uninstall_error";
+ #assert_and_click "pop_shop_uninstall_error";
  	
  	
  assert_screen "install_steam",400;

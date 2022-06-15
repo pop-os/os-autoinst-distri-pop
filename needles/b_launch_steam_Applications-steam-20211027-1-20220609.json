@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "height": 594,
+      "width": 140,
+      "ypos": 34,
+      "xpos": 5
+    },
+    {
+      "ypos": 38,
+      "xpos": 879,
+      "width": 139,
+      "height": 64,
+      "type": "match"
+    },
+    {
+      "type": "match",
+      "xpos": 881,
+      "ypos": 574,
+      "height": 117,
+      "width": 141
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "steam"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "width": 327,
+      "type": "match",
+      "height": 53,
+      "ypos": 34,
+      "xpos": 695
+    },
+    {
+      "click_point": {
+        "ypos": 30,
+        "xpos": 255.5
+      },
+      "type": "match",
+      "height": 58,
+      "width": 1017,
+      "xpos": 6,
+      "ypos": 213
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_shop_search_gimp"
+  ]
+}
