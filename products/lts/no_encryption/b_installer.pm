@@ -25,10 +25,8 @@ sub run {
     assert_screen 'installer_language_select',$timeout;
 
     # press enter to advance 
+#    send_key 'tab';
     send_key 'ret';
-    
-    # Disable screen lock
-    #disable_screen_blanking '20.04';
     
    #disable_screen_blanking '21.04';
 
@@ -52,10 +50,8 @@ sub run {
 
     # wait for the installer install options to appear
     assert_and_click 'installer_install_option',$timeout;
-   # send_key 'space';
     assert_and_click 'installer_install_option_next',$timeout;
-    #assert_and_click 'installer_custom_option';
-    #assert_and_click 'installer_custom_option_confirm';
+    
     #send_key 'ret';
 
     # wait for the installer drive option to appear
@@ -68,7 +64,6 @@ sub run {
     type_string "System 76";
     
     avatar_selection_test;
-    
     assert_and_click 'installer_user_account_confirm',$timeout;
 
     # wait for password screen 
@@ -86,9 +81,9 @@ sub run {
     # wait for installation to finish
 
     check_screen 'installer_partitioning',$timeout;
-    wait_screen_change ( sub {
+    wait_screen_change {
         assert_screen 'installler_extracting_files',$timeout;
-    },400);
+    };
     
     if(check_screen 'installer_failed',80){
        die;
@@ -96,9 +91,11 @@ sub run {
    
     assert_screen 'installer_finished',20*$timeout;
     assert_and_click 'installer_finished_reboot',$timeout;
-
+    
+    assert_screen 'boot_splash',400;
+    power("reset");
+    eject_cd();
     #assert_screen 'desktop',80;
-    #eject_cd();    
       
 }
 

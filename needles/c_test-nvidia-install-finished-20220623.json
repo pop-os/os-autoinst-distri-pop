@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 105,
+      "ypos": 407,
+      "width": 796,
+      "height": 190,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "nvidia-install-finished"
+  ]
+}

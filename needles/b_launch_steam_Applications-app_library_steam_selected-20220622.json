@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 142,
+      "width": 742,
+      "ypos": 31,
+      "type": "match",
+      "height": 72
+    },
+    {
+      "xpos": 564,
+      "ypos": 260,
+      "type": "match",
+      "height": 152,
+      "click_point": {
+        "xpos": 111,
+        "ypos": 76
+      },
+      "width": 222
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "app_library_steam_selected"
+  ]
+}

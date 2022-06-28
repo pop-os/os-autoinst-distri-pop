@@ -16,30 +16,29 @@
 use base 'basetest';
 use strict;
 use testapi;
-#use lib '/var/lib/openqa/tests/pop/';
+use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
 use helpers::installer::online_accounts;
 
 sub run {
     
     #assert_screen 'boot_splash';
-    eject_cd();
-    power("reset");
+    #eject_cd();
+    #power("reset");
     
     # Decryption prompt
 
-    assert_screen 'decyrpt_prompt';
-    type_string "system76\n";
+    #assert_screen 'decyrpt_prompt';
+    #type_string "system76\n";
 
 
     # GDM and Desktop
  
-    assert_screen 'gdm',200;
-    send_key 'ret';
-    type_string "system76\n";
-    assert_screen 'desktop';
+    #assert_screen 'gdm',200;
+    #send_key 'ret';
+    #type_string "system76\n";
+    #assert_screen 'desktop';
     
-    #disable_screen_blanking '20.04';
     
     # Disable screen lock
     

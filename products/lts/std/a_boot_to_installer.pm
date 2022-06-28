@@ -16,18 +16,23 @@
 use base 'basetest';
 use strict;
 use testapi;
-#use lib '/var/lib/openqa/tests/pop/';
-#use helpers::displays;
+use lib '/var/lib/openqa/tests/pop/';
+use helpers::displays;
 use helpers::workarounds;
 my $timeout = 400;
-
 sub run {
     # wait for boot to finish
     assert_screen 'boot_finish',$timeout;
 
-	sleep(15);
-    assert_screen 'desktop',$timeout;
+    # press enter to boot right away
+    #send_key 'ret';
+
+    # wait for the desktop to appear
+    assert_screen 'installer_language_select',$timeout;
     
+    # Disable screen lock
+#    disable_screen_blanking '21.04';
+    #restart_gdm 'install';
 }
 
 1;

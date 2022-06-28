@@ -19,31 +19,37 @@ use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 use helpers::installer::avatar_tests;
 my $timeout = 400;
+
 sub run {
     # wait for installer language select to apear
     assert_screen 'installer_language_select';
+    for (my $i = 0;$i < 5;$i++) {
+    	send_key 'down';
+    }
+
+	assert_screen 'installer_language_russian_select';
 
     # press enter to advance 
     send_key 'ret';
     
     # Disable screen lock
-    #disable_screen_blanking '20.04';
+#    disable_screen_blanking '20.04';
 
     # wait for the installer language region to appear
-    assert_screen 'installer_language_region';
+    assert_screen 'installer_language_russian_region';
 
     #assert_and_click 'installer_lauguage_region_select';
 
     send_key 'ret';
     
     # wait for the installer keyboard layout to appear
-    assert_screen 'installer_keyboard_layout';
+    assert_screen 'installer_keyboard_russian_layout';
 
     send_key 'ret';
 
 
     # wait for the installer keyboard region to appear
-    assert_screen 'installer_keyboard_region';
+    assert_screen 'installer_keyboard_russian_region';
     
     send_key 'ret';
 
@@ -63,7 +69,7 @@ sub run {
     
     avatar_selection_test;
     
-    assert_and_click 'installer_user_account_confirm';
+    assert_and_click 'installer_russian_user_account_confirm';
 
     # wait for password screen 
     assert_screen 'installer_password_screen';
@@ -90,7 +96,8 @@ sub run {
     assert_and_click 'installer_finished_reboot';
 
     #assert_screen 'desktop',80;
-    
+    power("reset");
+    eject_cd();
       
 }
 

@@ -20,18 +20,15 @@ use testapi;
 sub run {
 
     eject_cd();
-    #hold_key 'f12';
+    hold_key 'f12';
     assert_screen 'uefi';
     #send_key_until_needlematch('boot_options','f12',[1,30]);
  
     assert_screen 'boot_options';
 
-	assert_screen 'decyrpt_prompt';
-    type_string "system76\n";
-
     # wait for boot to finish
-    assert_screen 'boot_finish';
-	
+ #   assert_screen 'boot_finish';
+
     # press enter to boot right away
     #send_key 'ret';
 
@@ -45,16 +42,16 @@ sub run {
   #  send_key '1';
   #  release_key 'ctrl';
     
-    send_key 'super-t';
+  #  send_key 'super';
   #  type_string 'terminal';
   #  hold_key 'ctrl';
   #  send_key '1';
   #  release_key 'ctrl';
     
-    assert_screen 'terminal';
-    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
-    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "exit\n";
+  #  assert_screen 'terminal';
+  #  type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
+  #  type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
+  #  type_string "exit\n";
 }
 
 1;

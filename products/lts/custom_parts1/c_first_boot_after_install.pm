@@ -20,38 +20,116 @@ use lib '/var/lib/openqa/tests/pop/';
 use helpers::displays;
 use helpers::installer::online_accounts;
 my $timeout = 400;
+
 sub run {
-    #assert_screen 'uefi',$timeout;
-    power("reset");
-    eject_cd();
+    #power("reset");
+	#eject_cd;
     
     # Decryption prompt
 
-    #assert_screen 'decyrpt_prompt';
+    #assert_screen 'decyrpt_prompt',$timeout;
     #type_string "system76\n";
 
 
     # GDM and Desktop
  
-    assert_screen 'gdm',$timeout;
-    send_key 'ret';
-    type_string "system76\n";
-    sleep(10);
-    assert_screen 'desktop';
+    #assert_screen 'gdm',$timeout;
+    #send_key 'ret';
+    #type_string "system76\n";
+    #assert_screen 'desktop',$timeout;
 
     # Initial Setup
 
-    assert_screen 'initial_dialog',$timeout;
-    send_key 'ret';
+#    assert_screen 'initial_dialog',$timeout;
+#    send_key 'ret';
 
-    
+    #disable_screen_blanking '21.04';
+	
+
     # Typing screen 
  
-    assert_screen 'initial_dialog_typing',$timeout;
+#    assert_screen 'initial_dialog_typing',$timeout;
 
       # Need to add input tests.
 
-    send_key 'ret';
+#    send_key 'ret';
+
+    # Cosmic Dock options
+
+    assert_screen 'initial_dialog_cosmic_dock',$timeout;
+
+    assert_and_click 'initial_dialog_cosmic_dock_no_dock',$timeout;
+    assert_screen 'initial_dialog_cosmic_dock_no_dock_check',$timeout;
+    
+    assert_and_click 'initial_dialog_cosmic_dock_extend_dock',$timeout;
+    assert_screen 'initial_dialog_cosmic_dock_extend_check',$timeout;
+
+    assert_and_click 'initial_dialog_cosmic_dock_no_extend_dock',$timeout;
+    assert_screen 'initial_dialog_cosmic_dock_no_extend_check',$timeout;
+
+    assert_and_click 'initial_dialog_cosmic_dock_extend_dock',$timeout;
+    assert_screen 'initial_dialog_cosmic_dock_extend_check',$timeout;
+    
+
+    assert_and_click 'initial_dialog_cosmic_dock_click',$timeout;
+    
+    # Cosmic Top Bar
+
+    assert_screen 'inital_dialog_top_bar',$timeout;
+
+    assert_and_click 'initial_dialog_top_bar_workspace_off',$timeout;
+    assert_screen 'initial_dialog_top_bar_workspace_off_check',$timeout;
+
+    assert_and_click 'initial_dialog_top_bar_applications_off',$timeout;
+    assert_screen 'initial_dialog_top_bar_applications_off_check',$timeout;
+
+    assert_and_click 'initial_dialog_top_bar_workspace_on',$timeout;
+    assert_screen 'initial_dialog_top_bar_workspace_on_check',$timeout;
+
+    assert_and_click 'initial_dialog_top_bar_applications_on',$timeout;
+    assert_screen 'initial_dialog_top_bar_applications_on_check',$timeout;
+
+    assert_and_click 'initial_dialog_top_bar_datetime_list',$timeout;
+    assert_screen 'initial_dialog_top_bar_datetime_list_check',$timeout;
+
+    assert_and_click 'initial_dialog_top_bar_datetime_left',$timeout;
+    assert_screen 'initial_dialog_top_bar_datetime_left_check',$timeout;
+    
+    send_key('ret');
+    send_key('down');
+    send_key('ret');
+
+    assert_screen 'initial_dialog_top_bar_datetime_right_check',$timeout;
+    
+    send_key('ret');
+    send_key('up');
+    send_key('up');
+    send_key('ret');
+    
+    assert_screen 'initial_dialog_top_bar_datetime_center_check',$timeout;
+
+    assert_and_click 'initial_dialog_cosmic_dock_click',$timeout;
+    #send_key('ret');
+
+    # Launcher info
+   
+    assert_screen 'initial_dialog_launcher_info',$timeout;
+
+    #assert_and_click 'initial_dialog_cosmic_dock_click';
+    send_key('ret');
+
+
+    # Gestures
+   
+    assert_screen 'initial_dialog_gestures_info',$timeout;
+    send_key('ret');
+
+    # Appearance
+    
+    assert_screen 'initial_dialog_appearance',$timeout;
+    assert_and_click 'initial_dialog_appearance_light',$timeout;
+    assert_and_click 'initial_dialog_appearance_dark',$timeout;
+    assert_and_click 'initial_dialog_appearance_next',$timeout;
 
     # Privacy
 
@@ -63,14 +141,20 @@ sub run {
 
     # Time Zone screen
 
-    check_screen 'system_timezone_updated',$timeout;
+    check_screen 'system_timezone_updated';
     
     assert_screen 'initial_dialog_timezone',$timeout;
 
       # Need to add map click test
 
     assert_and_click 'initial_dialog_timezone_select_search',$timeout;
-    type_string "Denver\n";
+    type_string "Denver";
+    send_key('ret');
+    assert_and_click 'initial_dialog_timezone_select_mt',$timeout;
+
+    assert_screen 'initial_dialog_timezone_mt_selected',$timeout;
+
+
     assert_and_click 'initial_dialog_timezone_next',$timeout;
 
     # Online Accounts 

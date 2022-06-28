@@ -31,13 +31,13 @@ sub run {
  send_key 'ret';
  type_string "system76";
  send_key 'ret';
- assert_screen 'pr_added',300;
+ assert_screen 'pr_added',500;
  type_string 'exit';
  send_key 'ret';
  assert_screen 'desktop';
  
  apt_update();
- assert_screen 'full_desktop',400;
+ assert_screen 'full_desktop',800;
 }
 
 1;

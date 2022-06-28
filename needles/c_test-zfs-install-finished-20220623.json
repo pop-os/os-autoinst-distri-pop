@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 104,
+      "ypos": 279,
+      "width": 798,
+      "height": 322,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "zfs-install-finished"
+  ]
+}

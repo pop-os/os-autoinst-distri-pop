@@ -16,10 +16,7 @@
 use base 'basetest';
 use strict;
 use testapi;
-#use lib '/var/lib/openqa/tests/pop/';
-#use helpers::displays;
-#use helpers::installer::online_accounts;
-
+my $timeout = 400;
 sub run {
     eject_cd();
     assert_screen 'uefi';
@@ -35,20 +32,15 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     sleep(10);
-    assert_screen 'desktop';
-    
+    assert_screen 'desktop',400;
 
-     wait_screen_change( sub {
+    # changing boot option
+    wait_screen_change(sub {
     	send_key 'super-t';
-    	#type_string 'terminal';
-    	#send_key 'ret';
-    	
-    },6000);
-    #assert_screen 'terminal',$timeout;
+    },$timeout);
+    
     assert_screen 'terminal';
-    type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
-    type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n";   
-    type_string "killall totem\n";
+
     type_string "sudo su\n";
     type_string "system76\n";
     type_string "cd /boot/efi/loader\n";

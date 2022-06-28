@@ -16,14 +16,13 @@
 use base 'basetest';
 use strict;
 use testapi;
-use lib '/var/lib/openqa/tests/pop/';
 my $timeout = 400;
 sub run {
     eject_cd();
-    assert_screen 'uefi',$timeout;
+    assert_screen 'uefi';
     # Decryption prompt
 
-    assert_screen 'decyrpt_prompt',$timeout;
+    assert_screen 'decyrpt_prompt';
     type_string "system76\n";
 
 
@@ -32,17 +31,23 @@ sub run {
     assert_screen 'gdm',$timeout;
     send_key 'ret';
     type_string "system76\n";
-    sleep(10);
     assert_screen 'desktop',$timeout;
-    
+
     # changing boot option
     
-    wait_screen_change( sub {
+    #hold_key 'super';
+    #send_key 'a';
+    #release_key 'super';
+    #type_string 'terminal';
+    #send_key 'ret';
+    #hold_key 'ctrl';
+    #send_key '1';
+    #release_key 'ctrl';
+    wait_screen_change (sub {
     	send_key 'super-t';
-    	
-    },600);
-    assert_screen 'terminal';
+    },$timeout);
     
+    assert_screen 'terminal',$timeout;
     type_string "sudo su\n";
     type_string "system76\n";
     type_string "cd /boot/efi/loader\n";

@@ -29,7 +29,7 @@ sub apt_update {
     type_string "system76\n";
     type_string "exit\n";
     send_key 'ret';
-    assert_screen 'desktop',400;
+    assert_screen 'desktop',4000;
     
 
 }

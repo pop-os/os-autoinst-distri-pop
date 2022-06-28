@@ -16,17 +16,15 @@
 use base 'basetest';
 use strict;
 use testapi;
-#use lib '/var/lib/openqa/tests/pop/';
+
 sub run {
-    sleep(10);
-	assert_screen 'desktop';
-    #my ($version) = @_;
+        sleep(10);
+	assert_screen 'desktop',400;
 
 # Disable screen lock
  
-
-     send_key 'super-t';
-     assert_screen 'terminal';
+    send_key 'super-t';
+    assert_screen 'terminal';
 
     type_string "gsettings set org.gnome.desktop.screensaver lock-enabled false\n";
     type_string "gsettings set org.gnome.desktop.screensaver idle-activation-enabled false\n"; 
@@ -35,6 +33,4 @@ sub run {
     type_string "exit\n";
 
 }
-
-
 1;

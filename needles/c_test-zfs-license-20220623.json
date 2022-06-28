@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 104,
+      "ypos": 124,
+      "width": 805,
+      "height": 476,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "zfs-license"
+  ]
+}

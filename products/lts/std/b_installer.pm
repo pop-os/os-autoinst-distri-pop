@@ -17,21 +17,23 @@ use base 'basetest';
 use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
-use helpers::installer::avatar_tests;
+use helpers::displays;
 my $timeout = 400;
 sub run {
     # wait for installer language select to apear
     assert_screen 'installer_language_select',$timeout;
 
+    #disable_screen_blanking '21.04';
+	#send_key 'tab';
     # press enter to advance 
     send_key 'ret';
 
     # wait for the installer language region to appear
     assert_screen 'installer_language_region',$timeout;
 
-    #assert_and_click 'installer_lauguage_region_select';
+    assert_and_click 'installer_lauguage_region_select',$timeout;
 
-    send_key 'ret';
+    #send_key 'ret';
     
     # wait for the installer keyboard layout to appear
     assert_screen 'installer_keyboard_layout',$timeout;
@@ -45,9 +47,10 @@ sub run {
     send_key 'ret';
 
     # wait for the installer install options to appear
+   # assert_and_click 'installer_install_option',$timeout;
     assert_and_click 'installer_install_option',$timeout;
+    #send_key 'return';
     assert_and_click 'installer_install_option_next',$timeout;
-    
     #send_key 'ret';
 
     # wait for the installer drive option to appear
@@ -58,9 +61,6 @@ sub run {
     # wait for create user account screen to appear
     assert_screen 'installer_user_account_screen',$timeout;
     type_string "System 76";
-    
-    avatar_selection_test;
-    
     assert_and_click 'installer_user_account_confirm',$timeout;
 
     # wait for password screen 
@@ -68,26 +68,32 @@ sub run {
     type_string "system76";
     send_key 'tab';
     type_string "system76";
-   assert_and_click 'installer_password_confirm',$timeout;
+    assert_and_click 'installer_password_confirm',$timeout;
 
     # wait for encryption screen
     assert_screen 'installer_encryption_screen',$timeout;
     send_key 'ret';
-   # assert_and_click 'installer_encryption_confirm',$timeout;
+    #assert_and_click 'installer_encryption_confirm',$timeout;
 
     # wait for installation to finish
 
     assert_screen 'installer_partitioning',$timeout;
-    assert_screen 'installler_extracting_files',$timeout;
-
+    wait_screen_change {
+        assert_screen 'installler_extracting_files',$timeout;
+    };
     if(check_screen 'installer_failed',80){
        die;
     }
- 
-    assert_screen 'installer_finished',20*$timeout;
-    assert_and_click 'installer_finished_reboot',$timeout;
-
+   
+    assert_screen 'installer_finished',$timeout*20;
     
+    assert_and_click 'installer_finished_reboot',$timeout;
+	assert_screen 'boot_splash',$timeout;
+    power("reset");
+    eject_cd();
+    #assert_screen 'desktop',80;
+    
+      
 }
 
 1;

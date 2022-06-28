@@ -6,25 +6,19 @@ use testapi;
 #use helpers::installer::online_accounts;
 my $timeout = 400;
 
-sub run {
-	assert_screen 'boot_splash',$timeout;
-    power("reset");
-    eject_cd();
-    
-    # Decryption prompt not available in custom installs
+sub run {    
+    # Decryption prompt
 
-    #assert_screen 'decyrpt_prompt',$timeout;
-    #type_string "system76\n";
+   # assert_screen 'decyrpt_prompt',$timeout;
+   # type_string "system76\n";
 
 
     # GDM and Desktop
  
     assert_screen 'gdm',$timeout;
     send_key 'ret';
-    type_string "system76";
-    send_key 'ret';
-    sleep(10);
-    assert_screen 'desktop';
+    type_string "system76\n";
+    assert_screen 'desktop',$timeout;
    
 }
 1;

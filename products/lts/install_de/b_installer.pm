@@ -20,6 +20,7 @@ use lib '/var/lib/openqa/tests/pop/';
 use helpers::installer::avatar_tests;
 use helpers::displays;
 my $timeout = 400;
+
 sub run {
     # wait for installer language select to apear
     assert_screen 'installer_language_select';
@@ -28,7 +29,7 @@ sub run {
     send_key 'ret';
     
     # Disable screen lock
-    #disable_screen_blanking '20.04';
+#    disable_screen_blanking '20.04';
 
     # wait for the installer language region to appear
     assert_screen 'installer_language_region';
@@ -91,6 +92,8 @@ sub run {
     assert_and_click 'installer_finished_reboot';
 
     #assert_screen 'desktop',80;
+    power("reset");
+    eject_cd();
     
       
 }

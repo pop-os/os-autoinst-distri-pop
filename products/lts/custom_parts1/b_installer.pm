@@ -23,57 +23,55 @@ use helpers::installer::avatar_tests;
 my $timeout = 400;
 sub run {
     # wait for installer language select to apear
-    assert_screen 'installer_language_select',$timeout;
+    assert_screen 'installer_language_select';
 
     # press enter to advance 
+#    send_key 'tab';
     send_key 'ret';
     
-    # Disable screen lock
-    #disable_screen_blanking '20.04';
-
+   #disable_screen_blanking '21.04';
 
     # wait for the installer language region to appear
-    assert_screen 'installer_language_region',$timeout;
+    assert_screen 'installer_language_region';
 
     #assert_and_click 'installer_lauguage_region_select';
 
     send_key 'ret';
     
     # wait for the installer keyboard layout to appear
-    assert_screen 'installer_keyboard_layout',$timeout;
+    assert_screen 'installer_keyboard_layout';
 
     send_key 'ret';
 
 
     # wait for the installer keyboard region to appear
-    assert_screen 'installer_keyboard_region',$timeout;
+    assert_screen 'installer_keyboard_region';
     
     send_key 'ret';
 
     # wait for the installer install options to appear
-    assert_screen 'installer_install_option',$timeout;
-    assert_and_click 'installer_custom_option',$timeout;
-    assert_and_click 'installer_custom_confirm',$timeout;
+    assert_screen 'installer_install_option';
+    assert_and_click 'installer_custom_option';
+    assert_and_click 'installer_custom_confirm';
     
     # create partitions (this should be moved to a helper)
     custom_partitions;
 
-    assert_and_click 'installer_erase_and_install',$timeout;    
+    assert_and_click 'installer_erase_and_install';    
     
     # wait for create user account screen to appear
-    assert_screen 'installer_user_account_screen',$timeout;
+    assert_screen 'installer_user_account_screen';
     type_string "System 76";
     
     avatar_selection_test;
-    
-    assert_and_click 'installer_user_account_confirm',$timeout;
+    assert_and_click 'installer_user_account_confirm';
 
     # wait for password screen 
-    assert_screen 'installer_password_screen',$timeout;
+    assert_screen 'installer_password_screen';
     type_string "system76";
     send_key 'tab';
     type_string "system76";
-    assert_and_click 'installer_password_confirm',$timeout;
+    assert_and_click 'installer_password_confirm';
 
     # wait for encryption screen
 #    assert_screen 'installer_encryption_screen';
@@ -83,19 +81,20 @@ sub run {
     # wait for installation to finish
 
     check_screen 'installer_partitioning';
-    wait_screen_change ( sub {
-        assert_screen 'installler_extracting_files',$timeout;
-    }),400;
+    wait_screen_change {
+        assert_screen 'installler_extracting_files';
+    };
     
     if(check_screen 'installer_failed',80){
        die;
     }
    
     assert_screen 'installer_finished',20*$timeout;
-    assert_and_click 'installer_finished_reboot',$timeout;
+    assert_and_click 'installer_finished_reboot';
 
-    #assert_screen 'desktop',80;
-    #eject_cd();    
+    assert_screen 'boot_splash',$timeout;
+    power("reset");
+    eject_cd();  
       
 }
 
