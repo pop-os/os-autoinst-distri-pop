@@ -1,0 +1,34 @@
+{
+  "area": [
+    {
+      "width": 140,
+      "ypos": 98,
+      "height": 162,
+      "xpos": 134,
+      "type": "match"
+    },
+    {
+      "xpos": 280,
+      "type": "match",
+      "height": 76,
+      "ypos": 106,
+      "width": 155
+    },
+    {
+      "ypos": 83,
+      "width": 236,
+      "height": 71,
+      "xpos": 662,
+      "type": "match"
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "broken icon"
+    }
+  ],
+  "tags": [
+    "pop_obs_installed"
+  ]
+}

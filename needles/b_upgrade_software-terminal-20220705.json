@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "ypos": 135,
+      "width": 799,
+      "height": 421,
+      "xpos": 4
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "terminal"
+  ]
+}
