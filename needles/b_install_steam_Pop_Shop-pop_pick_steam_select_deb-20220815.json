@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "height": 178,
+      "ypos": 94,
+      "type": "match",
+      "xpos": 83,
+      "width": 193
+    },
+    {
+      "xpos": 276,
+      "width": 198,
+      "click_point": {
+        "ypos": 57,
+        "xpos": 54
+      },
+      "ypos": 195,
+      "height": 82,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "pop_pick_steam_select_deb"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 441,
+      "ypos": 106,
+      "width": 139,
+      "height": 143,
+      "type": "match",
+      "click_point": {
+        "xpos": 69.5,
+        "ypos": 71.5
+      }
+    },
+    {
+      "xpos": 242,
+      "ypos": 49,
+      "width": 543,
+      "height": 50,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "obs_studio"
+  ]
+}

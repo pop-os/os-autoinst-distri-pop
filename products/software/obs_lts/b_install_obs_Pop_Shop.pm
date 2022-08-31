@@ -23,7 +23,7 @@ use lib '/var/lib/openqa/tests/pop/';
 sub run {
 
  send_key 'super';
- type_string 'pop shop';
+ type_string 'pop!_shop';
  send_key 'ret';
  assert_screen 'pop_shop_screen';
  assert_and_click 'pop_shop_search';

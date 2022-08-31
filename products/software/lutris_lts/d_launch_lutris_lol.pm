@@ -31,7 +31,7 @@ assert_and_click "lutris-sources-lutris";
 assert_and_click "lutris-sources-lutris-community_Installers";
 assert_and_click "lutris-search";
 assert_screen "lutris-search-focus";
-type_string "League of Legends";
+type_string " League of Legends";
 send_key "ret";
 assert_screen "lutris-found-games";
 assert_and_click "lutris-lol-installer";

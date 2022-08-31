@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "width": 1020,
+      "xpos": 4,
+      "ypos": 520,
+      "height": 147,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "obs_main_screen"
+  ]
+}

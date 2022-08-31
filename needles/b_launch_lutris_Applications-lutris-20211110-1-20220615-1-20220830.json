@@ -1,0 +1,29 @@
+{
+  "area": [
+    {
+      "xpos": 780,
+      "type": "match",
+      "ypos": 693,
+      "width": 82,
+      "height": 70
+    },
+    {
+      "xpos": 115,
+      "ypos": 88,
+      "type": "match",
+      "height": 407,
+      "width": 196
+    },
+    {
+      "type": "match",
+      "ypos": 39,
+      "xpos": 116,
+      "height": 43,
+      "width": 705
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "lutris"
+  ]
+}

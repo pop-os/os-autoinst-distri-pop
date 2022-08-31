@@ -26,10 +26,14 @@ sub run {
  type_string 'pop shop';
  send_key 'ret';
  assert_screen 'pop_shop_screen';
- assert_and_click 'pop_pick_lutris_install';
+ 
+ assert_and_click 'pop_shop_search';
+ type_string "lutris";
+ assert_and_click 'pop_shop_lutris';
+ 
  assert_and_click 'uninstall_lutris';
- assert_screen 'password_dialog';
- type_string "system76\n";
+ #assert_screen 'password_dialog';
+ #type_string "system76\n";
  assert_screen 'install_lutris',400;
  assert_and_click 'close_pop_shop';
  

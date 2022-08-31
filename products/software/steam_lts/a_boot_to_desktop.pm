@@ -37,7 +37,7 @@ sub run {
     send_key 'ret';
     type_string "system76\n";
     sleep(15);
-    assert_screen 'desktop';
+    assert_screen 'desktop',400;
 	apt_update;
    # disable_screen_blanking '20.04';
 

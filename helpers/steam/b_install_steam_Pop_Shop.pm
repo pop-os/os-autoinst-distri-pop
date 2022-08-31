@@ -23,10 +23,13 @@ use lib '/var/lib/openqa/tests/pop/';
 sub run {
 
  send_key 'super';
- type_string 'pop shop';
+ type_string 'pop!_shop';
  send_key 'ret';
  assert_screen 'pop_shop_screen';
- assert_and_click 'pop_pick_steam_install';
+#assert_and_click 'pop_pick_steam_install';
+ assert_and_click 'pop_shop_search';
+ type_string "steam\n";
+ assert_and_click 'pop_shop_search_steam';
  assert_and_click 'pop_pick_steam_change_type';
  assert_and_click 'pop_pick_steam_select_deb';
  assert_and_click 'install_steam';

@@ -24,7 +24,7 @@ sub run {
 
 send_key 'super-a';
 type_string 'obs studio';
-send_key 'ret';
+assert_and_click 'obs_studio';
 assert_screen 'obs_main_screen',400;
 assert_and_click 'obs_wizard_page1';
 assert_and_click 'obs_wizard_page2';
