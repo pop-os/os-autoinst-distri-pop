@@ -31,7 +31,7 @@ send_key 'ret';
 assert_screen 'lutris_installed_terminal',1800;
 type_string "lutris && exit";
 send_key 'ret';
-assert_screen "lutris";
+assert_screen "lutris",1800;
 sleep(5);
 send_key 'super-t';
 assert_screen 'terminal';

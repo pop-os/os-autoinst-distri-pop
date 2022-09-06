@@ -21,10 +21,11 @@ use lib '/var/lib/openqa/tests/pop/';
 
 
 sub run {
-
-send_key 'super';
+sleep(20);
+send_key 'super-a';
 type_string 'lutris';
-send_key 'ret';
+#send_key 'ret';
+assert_and_click 'applications-lutris';
 assert_screen "lutris",1800;
 sleep(20);
 send_key 'super-t';

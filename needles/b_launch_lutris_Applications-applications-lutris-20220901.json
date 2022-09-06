@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "height": 152,
+      "xpos": 423,
+      "click_point": {
+        "xpos": 90,
+        "ypos": 74
+      },
+      "width": 177,
+      "ypos": 111,
+      "type": "match"
+    },
+    {
+      "height": 56,
+      "xpos": 230,
+      "ypos": 51,
+      "width": 567,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "applications-lutris"
+  ]
+}

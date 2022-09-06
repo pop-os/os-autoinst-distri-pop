@@ -1,0 +1,31 @@
+{
+  "area": [
+    {
+      "xpos": 238,
+      "ypos": 43,
+      "width": 552,
+      "height": 58,
+      "type": "match"
+    },
+    {
+      "xpos": 421,
+      "ypos": 110,
+      "width": 184,
+      "height": 145,
+      "type": "match",
+      "click_point": {
+        "xpos": 92,
+        "ypos": 72.5
+      }
+    }
+  ],
+  "properties": [
+    {
+      "name": "workaround",
+      "value": "Icon missing"
+    }
+  ],
+  "tags": [
+    "applications-lutris"
+  ]
+}

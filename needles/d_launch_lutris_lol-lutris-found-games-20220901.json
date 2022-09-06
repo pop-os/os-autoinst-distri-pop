@@ -1,0 +1,26 @@
+{
+  "area": [
+    {
+      "xpos": 204,
+      "ypos": 383,
+      "width": 617,
+      "height": 68,
+      "type": "match",
+      "click_point": {
+        "xpos": 105.5,
+        "ypos": 36
+      }
+    },
+    {
+      "xpos": 203,
+      "ypos": 186,
+      "width": 615,
+      "height": 102,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "lutris-found-games"
+  ]
+}

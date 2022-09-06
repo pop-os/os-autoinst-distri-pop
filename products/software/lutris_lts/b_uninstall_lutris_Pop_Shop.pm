@@ -23,7 +23,7 @@ use testapi;
 sub run {
 
  send_key 'super';
- type_string 'pop shop';
+ type_string 'pop!_shop';
  send_key 'ret';
  assert_screen 'pop_shop_screen';
  
