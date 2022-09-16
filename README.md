@@ -2,55 +2,62 @@
 
 Tests are run on both released and debug isos. 
 
-### LTS 
+### LTS
 
-| Test         | Status     | Depends on |
-|--------------|-----------|------------|
-| Install | Working*     | NA        |
-| Custom Partitions | Working* | NA |
-| No Encryption | Working* | NA |
-| Refresh from  OS   | Working  | Install |
-| Refresh from USB | Working | Install |
-| Update from LTS to STS | Working | Install |
+| Test                    | Status   | Depends on |
+| ----------------------- | -------- | ---------- |
+| Install                 | Working* | NA         |
+| Custom Partitions       | Working* | NA         |
+| No Encryption           | Working* | NA         |
+| Refresh from Recovery   | Working  | Install    |
+| Reinstall from Recovery | Working  | Install    |
+| Refresh from  OS        | Not used | Install    |
+| Refresh from USB        | Working  | Install    |
+| Update from LTS to STS  | Not Used | Install    |
+| Legacy Install (bios)   | Working  | NA         |
 
-### STS 
+* Minor soft failures 
 
-| Test         | Status     | Depends on |
-|--------------|-----------|------------|
-| Install | Working*     | NA        |
-| Custom Partitions | Working* | NA |
-| No Encryption | Working* | NA |
-| Refresh from  OS   | Working  | Install |
-| Refresh from USB | Working | Install |
-| Update from STS to Beta | Working | Install |
+### Software
 
-### Beta 
+| Package     | Status   | Release tested |
+| ----------- | -------- | -------------- |
+| Steam       | Working  | LTS            |
+| OBS         | Working  | LTS            |
+| Lynis       | Working* | LTS            |
+| Lutris      | Working  | LTS            |
+| Pop!_Shop   | Working  | LTS            |
+| Virtual Box | Working  | LTS            |
 
-| Test         | Status     | Depends on |
-|--------------|-----------|------------|
-| Install | Working*     | NA |
-| Custom Partitions | Working* | NA |
-| No Encryption | Working* | NA |
-| Refresh from  OS   | Working  | Install |
-| Refresh from USB | Working | Install |
+### PRs
 
-\* Minor soft failures 
+Work is on going.
 
-### Software 
+| Package       | Status   | Based on      |
+| ------------- | -------- | ------------- |
+| Kernel        | Working  | NA            |
+| Lutris        | Working  | Software Test |
+| Steam         | Working  | Software Test |
+| Nvidia Driver | Working* |               |
 
-| Package         | Status     | Release tested |
-|--------------|-----------|------------|
-| Steam | Working     | LTS,STS |
+\* Install and dkms only. Driver needs hardware to test viability
 
+
+
+
+
+### Further Documentation
+
+SOP, test documentation, and templates for new tests can be found in the docs folder. 
 
 ---
+
 # Original Readme
 
 ## Communication
 
 If you have questions, visit us on IRC in
 [#opensuse-factory](irc://chat.freenode.net/opensuse-factory)
-
 
 ## Contribute
 

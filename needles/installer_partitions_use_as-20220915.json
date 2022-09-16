@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "click_point": {
+        "xpos": 177,
+        "ypos": 23
+      },
+      "height": 43,
+      "xpos": 167,
+      "ypos": 324,
+      "width": 265
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "installer_partitions_use_as"
+  ]
+}

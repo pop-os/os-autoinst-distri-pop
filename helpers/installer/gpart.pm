@@ -30,7 +30,7 @@ sub custom_partitions {
     assert_and_click 'gparted_new_PT_format_gpt',$timeout;
     assert_and_click 'gparted_create_new_PT_confirm',$timeout;
 
-    my @a = (500,4096);
+    my @a = (1024,4096);
     for my $i (@a) { 
     	assert_and_click 'gparted_create_new_partition',$timeout;
     	assert_screen 'gparted_new_partition',$timeout;
