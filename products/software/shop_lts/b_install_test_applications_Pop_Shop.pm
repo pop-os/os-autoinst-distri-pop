@@ -18,7 +18,7 @@ use strict;
 use testapi;
 use lib '/var/lib/openqa/tests/pop/';
 #use helpers::displays;
-my @apps = ("pick_steam","pick_lutris","gimp","blender","obs");
+my @apps = ("steam","lutris","gimp","blender","obs");
 
 sub run {
  my $length = @apps;
@@ -37,21 +37,29 @@ sub run {
  		},400);
  		assert_and_click "pop_shop_search_".$apps[$i];
  	}
+ 	assert_and_click "change_type";
+ 	assert_and_click "change_type_deb";
  	assert_and_click "install_".$apps[$i];
  	
- 	wait_screen_change(sub {
- 		if (check_screen 'password_dialog',40 != undef) {
- 			save_screenshot();
- 			type_string "system76";
- 			send_key 'ret';
- 		}
- 	},400);
+ 	#wait_screen_change(sub {
+ 	#    record_info("screen changed");
+ 	    if (check_screen 'password_dialog',180 != undef) {
+ 	    
+ 	    #if (check_screen 'password_dialog',60 != undef) {
+ 	           save_screenshot();
+ 			    type_string "system76";
+ 			    send_key 'ret';
+ 		} else {
+ 		    record_info("No dialog");
+ 		    }
+ 	#},400);
  	
  	assert_screen "pop_".$apps[$i]."_installed",1800;
  	force_soft_failure(["install may have malfunctioned"]);
  	assert_and_click 'close_pop_shop';
  	sleep(5);
  	assert_screen 'desktop';
+ 	#sleep(120);
 	}
 }
 

@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "ypos": 209,
+      "height": 57,
+      "click_point": {
+        "xpos": 53.5,
+        "ypos": 41.5
+      },
+      "xpos": 283,
+      "width": 147
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "change_type_deb"
+  ]
+}
