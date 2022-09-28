@@ -1,0 +1,24 @@
+{
+  "area": [
+    {
+      "width": 170,
+      "xpos": 850,
+      "type": "match",
+      "height": 615,
+      "ypos": 76,
+      "match": 80
+    },
+    {
+      "xpos": 6,
+      "ypos": 99,
+      "width": 138,
+      "height": 588,
+      "type": "match",
+      "match": 80
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "obs_main_screen"
+  ]
+}

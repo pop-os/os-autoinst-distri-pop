@@ -35,9 +35,9 @@ assert_screen "lutris",1800;
 sleep(5);
 send_key 'super-t';
 assert_screen 'terminal';
-type_string "killall -9 lutris\n";
+type_string "killall -9 lutris && exit\n";
 type_string "exit\n";
-assert_screen 'desktop';
+assert_screen 'full_desktop';
 
 
 }

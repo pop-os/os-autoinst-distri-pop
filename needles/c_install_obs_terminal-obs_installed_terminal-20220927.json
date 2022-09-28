@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 104,
+      "ypos": 402,
+      "width": 460,
+      "height": 23,
+      "type": "match"
+    },
+    {
+      "xpos": 103,
+      "ypos": 542,
+      "width": 218,
+      "height": 27,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "obs_installed_terminal"
+  ]
+}

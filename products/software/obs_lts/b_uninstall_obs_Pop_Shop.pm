@@ -25,12 +25,20 @@ sub run {
  send_key 'super';
  type_string 'pop shop';
  send_key 'ret';
- assert_screen 'pop_shop_screen';
- assert_and_click 'pop_pick_steam_install';
- assert_and_click 'uninstall_steam';
- assert_screen 'password_dialog';
- type_string "system76\n";
- assert_screen 'install_steam',400;
+  assert_screen 'pop_shop_screen';
+ assert_and_click 'pop_shop_search';
+ type_string "obs";
+ send_key 'ret';
+ assert_and_dclick "pop_shop_search_obs";
+ assert_and_click "uninstall_obs",400;
+ wait_screen_change(sub {
+ 	if (check_screen 'password_dialog',40 != undef) {
+ 			save_screenshot();
+ 			type_string "system76";
+ 			send_key 'ret';
+ 		}
+ },400);
+ assert_screen 'install_obs',400;
  assert_and_click 'close_pop_shop';
  
 }

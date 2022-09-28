@@ -23,12 +23,12 @@ use testapi;
 sub run {
 send_key 'super-t';
 assert_screen 'terminal';
-type_string "sudo apt -y remove steam";
+type_string "sudo apt -y remove obs-studio";
 send_key 'ret';
 type_string "system76";
 send_key 'ret';
 #capture_screen();
-assert_screen 'steam_uninstalled_terminal';
+assert_screen 'obs_uninstalled_terminal';
 type_string "exit";
 send_key 'ret';
 }

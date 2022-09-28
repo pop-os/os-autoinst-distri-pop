@@ -21,7 +21,7 @@ use lib '/var/lib/openqa/tests/pop/';
 
 
 sub run {
-
+sleep(10);
 send_key 'super-a';
 type_string 'obs studio';
 assert_and_click 'obs_studio';

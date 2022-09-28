@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "click_point": {
+        "xpos": 386,
+        "ypos": 373.5
+      },
+      "type": "match",
+      "xpos": 283,
+      "width": 500,
+      "ypos": 127,
+      "height": 400
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "obs_wizard_page2"
+  ]
+}

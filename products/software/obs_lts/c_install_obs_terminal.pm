@@ -23,27 +23,23 @@ use testapi;
 sub run {
 send_key 'super-t';
 assert_screen 'terminal';
-type_string "sudo apt -y install steam";
+type_string "sudo apt -y install obs-studio";
 send_key 'ret';
 type_string "system76";
 send_key 'ret';
 #capture_screen();
-assert_screen 'steam_installed_terminal';
-type_string "steam && exit";
-send_key 'ret';
-assert_screen 'steam_login_account';
-#type_string "system76QA";
-#send_key 'tab';
-type_string "System76 9202269269";
-send_key 'tab';
-assert_and_click "steam_login_logon";
-assert_screen "steam";
+assert_screen 'obs_installed_terminal',500;
+type_string "obs && exit\n";
+#send_key 'ret';
+assert_screen 'obs_main_screen',400;
 sleep(5);
 send_key 'super-t';
 assert_screen 'terminal';
-type_string "killall -9 steam\n";
-type_string "exit\n";
-assert_screen 'desktop';
+type_string "killall -9 obs && exit\n";
+send_key 'tab';
+type_string "\nexit";
+send_key 'ret';
+assert_screen 'full_desktop';
 
 
 }

@@ -73,7 +73,8 @@ sub run {
     assert_screen 'installer_refresh_start',$timeout;
     assert_screen 'installer_finished',$timeout*20;
     assert_and_click 'installer_finished_reboot',$timeout;
-    assert_screen 'boot_splash',$timeout;
+    sleep(10);
+    #assert_screen 'boot_splash',$timeout;
     power("reset");
     eject_cd();
       
